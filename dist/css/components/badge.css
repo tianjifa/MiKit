@@ -1,0 +1,105 @@
+/* ========================================================================
+   UI CSS: Badge
+ ========================================================================== */ 
+
+.mi-badge {
+    display: inline-block;
+    font-size: 13px;
+    background: #e0e1e1;
+    line-height: 18px;
+    padding: 0 10px;
+    font-weight: 500;
+    color: #313439;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.mi-badge a,
+.mi-badge a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mi-badge.mi-badge-big {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 12px;
+}
+
+.mi-badge.mi-badge-upper {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.mi-badge.mi-badge-outline {
+    background: none;
+    border-color: #bdbdbd;
+}
+
+.mi-badge.mi-badge-success {
+    background: #35beb1;
+    color: #fff;
+}
+
+.mi-badge.mi-badge-success.mi-badge-outline {
+    background: none;
+    border-color: #35beb1;
+    color: #35beb1;
+}
+
+.mi-badge.mi-badge-error {
+    background: #f03c69;
+    color: #fff;
+}
+
+.mi-badge.mi-badge-error.mi-badge-outline {
+    background: none;
+    border-color: #f03c69;
+    color: #f03c69;
+}
+
+.mi-badge.mi-badge-warning {
+    background: #f7ba45;
+    color: #0a0a0a;
+}
+
+.mi-badge.mi-badge-warning.mi-badge-outline {
+    background: none;
+    border-color: #f7ba45;
+    color: #f7ba45;
+}
+
+.mi-badge.mi-badge-focus {
+    background: #1c86f2;
+    color: #fff;
+}
+
+.mi-badge.mi-badge-focus.mi-badge-outline {
+    background: none;
+    border-color: #1c86f2;
+    color: #1c86f2;
+}
+
+.mi-badge.mi-badge-black {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.mi-badge.mi-badge-black.mi-badge-outline {
+    background: none;
+    border-color: #0a0a0a;
+    color: #0a0a0a;
+}
+
+.mi-badge.mi-badge-inverted {
+    background: #fff;
+    color: #0a0a0a;
+}
+
+.mi-badge.mi-badge-inverted.mi-badge-outline {
+    background: none;
+    border-color: #fff;
+    color: #fff;
+}

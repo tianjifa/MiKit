@@ -1,0 +1,52 @@
+.mi-badge {
+    display: inline-block;
+    font-size: 13px;
+    background: $color-silver;
+    line-height: 18px;
+    padding: 0 10px;
+    font-weight: 500;
+    color: $color-text;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 4px;
+	& a,
+	& a:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+.mi-badge.mi-badge-big {
+    font-size: $font-size-small;
+    line-height: 24px;
+    padding: 0 12px;
+}
+.mi-badge.mi-badge-upper {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+// Outline
+.mi-badge.mi-badge-outline {
+    background: none;
+    border-color: $color-gray;
+}
+
+.mi-badge.mi-badge-success {
+    @include badge(#fff, $color-success);
+}
+.mi-badge.mi-badge-error {
+    @include badge(#fff, $color-error);
+}
+.mi-badge.mi-badge-warning {
+    @include badge($color-black, $color-warning);
+}
+.mi-badge.mi-badge-focus {
+    @include badge(#fff, $color-focus);
+}
+.mi-badge.mi-badge-black {
+    @include badge(#fff, $color-black);
+}
+.mi-badge.inverted {
+    @include badge($color-black, $color-inverted);
+}

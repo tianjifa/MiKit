@@ -1,0 +1,9 @@
+@mixin badge($text, $back) {
+    background: $back;
+    color: $text;
+    &.mi-badge-outline {
+        background: none;
+        border-color: $back;
+        color: $back;
+    }
+}

@@ -1,0 +1,46 @@
+/* ========================================================================
+   UI CSS: Breadcrumb
+ ========================================================================== */ 
+ 
+.mi-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.mi-breadcrumb ul {
+    display: flex;
+    align-items: center;
+}
+
+.mi-breadcrumb.mi-breadcrumb-push-center ul {
+    justify-content: center;
+}
+
+.mi-breadcrumb span,
+.mi-breadcrumb a {
+    font-style: normal;
+    padding: 0 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.mi-breadcrumb li:after {
+    display: inline-block;
+    content: '/';
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.mi-breadcrumb li:last-child:after {
+    display: none;
+}
+
+.mi-breadcrumb li:first-child span,
+.mi-breadcrumb li:first-child a {
+    padding-left: 0;
+}
+
+.mi-breadcrumb li.mi-active a {
+    color: #313439;
+    text-decoration: none;
+    cursor: text;
+}

@@ -1,0 +1,386 @@
+html {
+    box-sizing: border-box;
+}
+html,
+body {
+    font-size: $font-size;
+    line-height: $base-line;
+}
+body {
+	font-family: $text-font-family;
+	color: $color-text;
+	background-color: transparent;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+img,
+video,
+audio {
+    max-width: 100%;
+}
+img,
+video {
+    height: auto;
+}
+svg {
+    max-height: 100%;
+}
+iframe {
+    border: none;
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+// Links
+a {
+	color: $color-link;
+}
+a:hover {
+	color: $color-link-hover;
+}
+
+// Headings
+h1.mi-title, h1, h2, h3, h4, h5, h6 {
+	font-family: $headings-font-family;
+	font-weight: bold;
+	color: $color-headings;
+	text-rendering: optimizeLegibility;
+    margin-bottom: $heading-margin-bottom;
+}
+h1.mi-title {
+	font-size: $heading-font-size-title;
+    font-size: $heading-font-size-title-rem;
+    line-height: $heading-base-line-title;
+	line-height: $heading-base-line-title-rem;
+    margin-bottom: $heading-margin-bottom/2;
+}
+h1,
+.mi-h1 {
+    font-size: $heading-font-size-1;
+    font-size: $heading-font-size-rem-1;
+	line-height: $heading-base-line-1;
+    line-height: $heading-base-line-rem-1;	
+}
+h2,
+.mi-h2 {
+    font-size: $heading-font-size-2;
+	font-size: $heading-font-size-rem-2;
+    line-height: $heading-base-line-2;
+    line-height: $heading-base-line-rem-2;
+}
+h3,
+.mi-h3 {
+    font-size: $heading-font-size-3;
+	font-size: $heading-font-size-rem-3;
+    line-height: $heading-base-line-3;
+    line-height: $heading-base-line-rem-3;
+}
+h4,
+.mi-h4 {
+    font-size: $heading-font-size-4;
+	font-size: $heading-font-size-rem-4;
+    line-height: $heading-base-line-4;
+    line-height: $heading-base-line-rem-4;
+}
+h5,
+.mi-h5 {
+    font-size: $heading-font-size-5;
+	font-size: $heading-font-size-rem-5;
+    line-height: $heading-base-line-5;
+    line-height: $heading-base-line-rem-5;
+}
+h6,
+.mi-h6 {
+    font-size: $heading-font-size-6;
+	font-size: $heading-font-size-rem-6;
+    line-height: $heading-base-line-6;
+    line-height: $heading-base-line-rem-6;
+}
+
+// Lists
+ul,
+ol {
+    &,
+    & ul,
+    & ol {
+	    margin: 0 0 0 $base-line;
+	}
+}
+ol ol li {
+	list-style-type: lower-alpha;
+}
+ol ol ol li {
+	list-style-type: lower-roman;
+}
+ul.mi-list-unstyled {
+    & {
+        margin-left: 0;
+    }
+    &,
+    & ul {
+        list-style: none;
+    }
+}
+
+nav {
+    & ul,
+    & ol {
+        margin: 0;
+	    list-style: none;
+	    & ul,
+	    & ol {
+    	    margin-left: $base-line;
+	    }
+	}
+}
+dl dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: $base-line;
+}
+hr {
+	box-sizing: content-box;
+    border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	margin-top: -1px;
+}
+blockquote {
+	padding-left: 1rem;
+	border-left: 4px solid rgba(0, 0, 0, .1);
+	font-style: italic;
+	color: rgba($color-text, .65);
+	& p {
+    	margin-bottom: .5rem;
+	}
+}
+blockquote:before {
+    content: none;
+}
+// Inline
+time, cite, small, figcaption {
+	font-size: 87.5%;
+}
+cite {
+    opacity: .6;
+}
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted rgba(0, 0, 0, .5);
+	cursor: help;
+}
+var {
+    font-size: $font-size;
+	opacity: .6;
+	font-style: normal;
+}
+mark, code, samp, kbd {
+    position: relative;
+    top: -1px;
+	padding: 4px 4px 2px 4px;
+	display: inline-block;
+	line-height: 1;
+	color: rgba($color-text, .85);
+}
+code {
+	background: $color-silver;
+}
+mark {
+	background: $color-warning;
+}
+samp {
+	color: #fff;
+	background: $color-focus;
+}
+kbd {
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+sub,
+sup {
+    font-size: x-small;
+	line-height: 0;
+	margin-left: 1rem/4;
+	position: relative;
+}
+sup {
+	top: 0;
+}
+sub {
+	bottom: 1px;
+}
+
+// Preformatted
+pre, code, samp, var, kbd {
+	font-family: $monospace-font-family;
+}
+pre, code, samp, var, kbd, mark {
+	font-size: 87.5%;
+}
+pre,
+pre code {
+    background: $color-aluminum;
+	padding: 0;
+	top: 0;
+    display: block;
+    line-height: $base-line-small;
+    color: rgba($color-text, .85);
+	overflow: none;
+	white-space: pre-wrap;
+}
+pre {
+    padding: 1rem;
+}
+
+// Figure
+figcaption {
+	opacity: .6;
+}
+figure figcaption {
+    position: relative;
+    top: -1rem/2;
+}
+figure pre {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+}
+
+// Form
+input {
+    line-height: normal
+}
+
+button {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: 1px solid silver;
+}
+
+// Alignment
+.mi-align-left {
+	text-align: left;
+}
+.mi-align-center {
+	text-align: center;
+}
+.mi-align-right {
+	text-align: right;
+}
+
+// Text style
+.mi-font-upper {
+    text-transform: uppercase;
+}
+.mi-font-lower {
+    text-transform: lowercase;
+}
+.mi-font-italic {
+    font-style: italic !important;
+}
+.mi-font-strong {
+    font-weight: bold !important;
+}
+.mi-font-normal {
+    font-weight: normal !important;
+}
+.mi-font-muted {
+    opacity: .55;
+}
+.mi-font-muted:hover {
+    opacity: 1;
+}
+.mi-text-smaller {
+	font-size: $font-size-smaller;
+	line-height: $base-line-smaller;
+}
+.mi-text-small {
+	font-size: $font-size-small;
+	line-height: $base-line-small;
+}
+.mi-text-big {
+	font-size: $font-size-big;
+	line-height: $base-line-big;
+}
+.mi-text-large {
+	font-size: $font-size-large;
+	line-height: $base-line-large;
+}

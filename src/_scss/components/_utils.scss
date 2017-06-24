@@ -1,0 +1,156 @@
+// Flex Alignment
+.mi-flex {
+    @include flex;
+
+    &.align-middle {
+        @include flex-items-middle;
+    }
+    &.align-right {
+        @include flex-items-right;
+    }
+    &.align-center {
+        @include flex-items-center;
+    }
+}
+@include breakpoint(sm) {
+    .flex-column-sm {
+        @include flex-items-column;
+    }
+    .flex-w100-sm {
+        @include flex-item-width(100%);
+    }
+}
+
+
+@include breakpoint(sm) {
+    .mi-flex.align-left-sm { @include flex-items-left; }
+}
+
+// Float
+.mi-float-right {
+	float: right;
+}
+.mi-float-left {
+	float: left;
+}
+@include breakpoint(sm) {
+    .mi-float-right { float: none; }
+    .mi-float-left  { float: none; }
+}
+
+// Fixed
+.mi-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-over-content;
+	width: 100%;
+}
+
+// Display
+.mi-display-block {
+    display: block;
+}
+
+.mi-display-inline-block {
+    display: inline-block;
+}
+
+.mi-display-inline {
+    display: inline;
+}
+
+// Visibility
+.mi-invisible {
+	visibility: hidden;
+}
+.mi-visible {
+	visibility: visible;
+}
+
+.mi-hide {
+	display: none !important;
+}
+
+@include breakpoint(sm) {
+	.mi-hide-sm {
+		display: none !important;
+	}
+}
+
+@include breakpoint($min: $sm) {
+    .mi-show-sm {
+    	display: none !important;
+	}
+}
+
+// Print
+@media print {
+	.mi-hide-print {
+		display: none !important;
+	}
+	.mi-show-print {
+		display: block !important;
+	}
+}
+
+// NoScroll
+.mi-no-scroll {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100% !important;
+}
+
+// ScrollbarMeasure
+.mi-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+
+// Close
+.mi-close {
+    display: inline-block;
+    min-height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12px;
+    opacity: .6;
+
+    &:hover {
+        opacity: 1;
+    }
+    &.mi-close-small {
+        font-size: 8px;
+    }
+    &.mi-close-big {
+        font-size: 18px;
+    }
+    &.mi-close-white {
+        color: #fff;
+    }
+}
+
+// Overlay
+.mi-overlay {
+    position: fixed;
+    z-index: $z-over-control;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay-background-color;
+
+    & > .mi-close {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+}

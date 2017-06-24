@@ -1,0 +1,65 @@
+// Grid Row
+.mi-row {
+    @include grid-row;
+
+    // Gutters
+    &.mi-gutters,
+    &.mi-gutters > .mi-row {
+        margin-left: -$grid-gutter;
+
+        @include breakpoint(sm) {
+            margin-left: 0;
+        }
+
+        & > .mi-col {
+            margin-left: $grid-gutter;
+
+            @include breakpoint(sm) {
+                margin-left: 0;
+            }
+        }
+    }
+	&.mi-around {
+		@include flex-items-space-around;
+	}
+	&.mi-between {
+		@include flex-items-space-between;
+	}
+	&.mi-auto {
+    	& .mi-col {
+        	@include flex-item-grow(1);
+        }
+	}
+}
+
+// Grid Columns
+@include generate-grid-columns;
+
+// Offset
+[class^='mi-offset-'],
+[class*=' mi-offset-'] {
+    @include breakpoint(sm) {
+        margin-left: 0;
+    }
+}
+
+// Ordering
+.mi-first-item    { order: -1; }
+.mi-last-item     { order: 1;  }
+
+@include breakpoint(sm) {
+    .mi-row {
+
+        & .mi-col {
+            margin-left: 0;
+            width: 100%;
+        }
+        &.mi-gutters {
+            & .mi-col {
+                margin-bottom: $text-margin-bottom;
+            }
+        }
+    }
+	.mi-first-sm { order: -1; }
+	.mi-last-sm  { order: 1;  }
+}

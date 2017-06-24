@@ -1,0 +1,55 @@
+/* ========================================================================
+   Component CSS Style: Modal
+ ========================================================================== */ 
+
+.mi-modal {
+    position: relative;
+    margin: auto;
+    margin-top: 16px;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .mi-modal input,
+    .mi-modal textarea {
+        font-size: 16px;
+    }
+}
+
+.mi-modal .mi-close {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    cursor: pointer;
+    opacity: .3;
+}
+
+.mi-modal .mi-close:hover {
+    opacity: 1;
+}
+
+.mi-modal-header {
+    padding: 24px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mi-modal-header:empty {
+    display: none;
+}
+
+.mi-modal-body {
+    padding: 36px 56px;
+}
+
+@media (max-width: 768px) {
+    .mi-modal-header,
+    .mi-modal-body {
+        padding: 24px;
+    }
+}

@@ -1,0 +1,51 @@
+.mi-message {
+    font-family: $monospace-font-family;
+    font-size: $font-size-small;
+    line-height: $base-line-small;
+    background: $color-silver;
+    color: $color-text;
+    padding: 1rem;
+    padding-right: 2.5em;
+    padding-bottom: .75rem;
+    margin-bottom: $base-line;
+    position: relative;
+
+    & a {
+        color: inherit;
+    }
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        margin-bottom: 0;
+    }
+    & .mi-close {
+        position: absolute;
+        right: 1rem;
+        top: 1.1rem;
+        cursor: pointer;
+    }
+}
+.mi-message.mi-message-error {
+    background: $color-error;
+    color: #fff;
+}
+.mi-message.mi-message-success {
+    background: $color-success;
+    color: #fff;
+}
+.mi-message.mi-message-warning {
+    background: $color-warning;
+}
+.mi-message.mi-message-focus {
+    background: $color-focus;
+    color: #fff;
+}
+.mi-message.mi-message-black {
+    background: $color-black;
+    color: #fff;
+}
+.mi-message.mi-message-inverted {
+    background: $color-inverted;
+}

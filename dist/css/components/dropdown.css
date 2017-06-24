@@ -1,0 +1,83 @@
+/* ========================================================================
+   Component CSS Style: Dropdown
+ ========================================================================== */ 
+
+.mi-dropdown {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 280px;
+    color: #000;
+    font-size: 15px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mi-dropdown.mi-dropdown-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: none;
+    border: none;
+}
+
+.mi-caret.mi-down,
+.mi-caret.mi-up {
+    font-family: 'Mikit' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-caret.mi-down:before {
+    content: "\e64b";
+}
+
+.mi-caret.mi-up:before {
+    content: "\e64e";
+}
+
+.mi-dropdown .mi-close {
+    margin: 20px auto;
+}
+
+.mi-dropdown.mi-open {
+    overflow: auto;
+}
+
+.mi-dropdown ul {
+    list-style: none;
+    margin: 0;
+}
+
+.mi-dropdown ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.mi-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.mi-dropdown ul a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #000;
+}
+
+.mi-dropdown ul a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}

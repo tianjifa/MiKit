@@ -1,0 +1,219 @@
+// BREAKPOINTS
+// ---------------------------------------------------------------------------
+$sm: 768px !default;
+$md: 1024px !default;
+$lg: 1200px !default;
+
+
+// WIDTH
+// ---------------------------------------------------------------------------
+$w-small: 480px !default;
+$w-medium: 600px !default;
+$w-big: 740px !default;
+$w-large: 840px !default;
+
+
+// Z-INDEX
+// ---------------------------------------------------------------------------
+$z-over-content: 100 !default;
+$z-over-control: 200 !default;
+$z-over-page: 300 !default;
+$z-over-screen: 400 !default;
+$z-over-all: 500 !default;
+
+
+// GRID
+// ---------------------------------------------------------------------------
+$grid-columns: 12 !default;
+$grid-gutter: 2% !default;
+
+
+// FONT FAMILY
+// ---------------------------------------------------------------------------
+$text-font-family: "Segoe UI",Segoe,Tahoma,Arial,Verdana,sans-serif !default;
+$monospace-font-family: Consolas, Monaco, 'Courier New', monospace !default;
+$headings-font-family: $text-font-family !default;
+$buttons-font-family: $text-font-family !default;
+$input-font-family: $text-font-family !default;
+
+
+// COLORS
+// ---------------------------------------------------------------------------
+
+$color-text: #353535 !default;
+$color-headings: #0d0d0d !default;
+
+$color-link: #3794de !default;
+$color-link-hover: #f03c69 !default;
+
+$color-button-primary: #1c86f2 !default;
+$color-button-primary-text: #fff !default;
+$color-button-secondary: #313439 !default;
+$color-button-secondary-text: #fff !default;
+
+$color-error: #f03c69 !default;
+$color-success: #35beb1 !default;
+$color-warning: #f7ba45 !default;
+$color-focus: #1c86f2 !default;
+
+$color-inverted: #fff !default;
+$color-highlight: #edf2ff !default; // color-focus 15% opacity
+
+$color-black: #0a0a0a !default;
+$color-darkgray: #313439 !default;
+$color-midgray: #676b72 !default;
+$color-gray: #bdbdbd !default;
+$color-lightgray: #d4d4d4 !default;
+$color-silver: #e0e1e1 !default;
+$color-aluminum: #f8f8f8 !default;
+
+
+// TEXT
+// ---------------------------------------------------------------------------
+
+$font-size: 16px !default;
+$font-size-smaller: $font-size - 4px !default;
+$font-size-small: $font-size - 2px !default;
+$font-size-big: $font-size + 2px !default;
+$font-size-large: $font-size + 4px !default;
+
+$base-line: 24px !default;
+$base-line-smaller: 20px !default;
+$base-line-small: 20px !default;
+$base-line-big: 28px !default;
+$base-line-large: 32px !default;
+
+$text-margin-bottom: $font-size !default;
+
+
+// HEADINGS
+// ---------------------------------------------------------------------------
+
+$heading-font-size-title: 60px !default;
+$heading-font-size-1: 48px !default;
+$heading-font-size-2: 36px !default;
+$heading-font-size-3: 24px !default;
+$heading-font-size-4: 21px !default;
+$heading-font-size-5: 18px !default;
+$heading-font-size-6: 16px !default;
+
+$heading-font-size-title-rem: 3.75rem !default;
+$heading-font-size-rem-1: 3rem !default;
+$heading-font-size-rem-2: 2.25rem !default;
+$heading-font-size-rem-3: 1.5rem !default;
+$heading-font-size-rem-4: 1.3125rem !default;
+$heading-font-size-rem-5: 1.125rem !default;
+$heading-font-size-rem-6: 1rem !default;
+
+$heading-base-line-title: 64px !default;
+$heading-base-line-1: 52px !default;
+$heading-base-line-2: 40px !default;
+$heading-base-line-3: 32px !default;
+$heading-base-line-4: 32px !default;
+$heading-base-line-5: 28px !default;
+$heading-base-line-6: 24px !default;
+
+$heading-base-line-title-rem: 0rem !default;
+$heading-base-line-rem-1: 3.25rem !default;
+$heading-base-line-rem-2: 2.5rem !default;
+$heading-base-line-rem-3: 2rem !default;
+$heading-base-line-rem-4: 2rem !default;
+$heading-base-line-rem-5: 1.75rem !default;
+$heading-base-line-rem-6: 1.5rem !default;
+
+$heading-margin-bottom: $font-size !default;
+
+
+// TABLES
+// ---------------------------------------------------------------------------
+
+$table-font-size: $font-size - 1px !default;
+
+$table-base-line: 24px !default;
+
+$table-padding-tb: 1rem !default;
+$table-padding-rl: 1rem !default;
+
+$table-border: 1px solid rgba(0, 0, 0, .05) !default;
+
+$table-background-striped: $color-aluminum !default;
+
+
+// BUTTONS
+// ---------------------------------------------------------------------------
+
+$button-font-size: 15px !default;
+$button-font-size-smaller: $button-font-size - 4px !default;
+$button-font-size-small: $button-font-size - 2px !default;
+$button-font-size-big: $button-font-size + 2px !default;
+$button-font-size-large: $button-font-size + 4px !default;
+
+$button-base-line: 20px !default;
+
+$button-height: 40px !default;
+$button-height-small: 36px !default;
+$button-height-big: 48px !default;
+$button-height-large: 56px !default;
+
+$button-padding-tb: 8px !default;
+$button-padding-rl: 20px !default;
+$button-padding-small-tb: 6px !default;
+$button-padding-small-rl: 20px !default;
+$button-padding-big-tb: 13px !default;
+$button-padding-big-rl: 24px !default;
+$button-padding-large-tb: 20px !default;
+$button-padding-large-rl: 36px !default;
+
+$button-font-weight: 500 !default;
+
+$button-border-radius: 3px !default;
+
+
+// Form
+// ---------------------------------------------------------------------------
+
+$input-font-size: 15px !default;
+$input-font-size-smaller: $input-font-size - 4px !default;
+$input-font-size-small: $input-font-size - 2px !default;
+$input-font-size-big: $input-font-size + 2px !default;
+$input-font-size-large: $input-font-size + 4px !default;
+
+$textarea-base-line: $base-line !default;
+
+$input-height: 40px !default;
+$input-height-small: 36px !default;
+$input-height-big: 48px !default;
+$input-height-large: 56px !default;
+
+$input-padding-rl: 12px !default;
+$input-padding-small-rl: 12px !default;
+$input-padding-big-rl: 12px !default;
+$input-padding-large-rl: 12px !default;
+$input-textarea-padding-tb: 8px !default;
+
+$input-border-width: 1px !default;
+$input-border-color: $color-lightgray !default;
+$input-background-color: #fff !default;
+$input-box-shadow: none !default;
+
+$input-focus-background-color: #fff !default;
+$input-focus-border-color: $color-focus !default;
+$input-focus-box-shadow: 0 0 1px $color-focus inset !default;
+
+$input-error-background-color: $color-error !default;
+$input-error-border-color: $color-error !default;
+$input-error-focus-box-shadow: 0 0 1px $color-error inset !default;
+
+$input-success-background-color: $color-success !default;
+$input-success-border-color: $color-success !default;
+$input-success-focus-box-shadow: 0 0 1px $color-success inset !default;
+
+$input-disabled-opacity: .6;
+$input-disabled-color: rgba(0, 0, 0, .5);
+
+$input-border-radius: 3px !default;
+
+
+// OVERLAY
+// ---------------------------------------------------------------------------
+$overlay-background-color: rgba(#fff, .95);

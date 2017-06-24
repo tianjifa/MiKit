@@ -1,0 +1,50 @@
+/* ========================================================================
+   Component CSS Style: Tab
+ ========================================================================== */
+
+.mi-tab {
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.mi-tab li em,
+.mi-tab li.mi-active a {
+    color: #313439;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: default;
+    text-decoration: none;
+    background: none;
+}
+
+.mi-tab em,
+.mi-tab a {
+    position: relative;
+    top: 1px;
+    font-style: normal;
+    display: block;
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.mi-tab a:hover {
+    -moz-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+    color: #313439;
+    text-decoration: underline;
+    background-color: #F0F0F0;
+}
+
+@media (min-width: 768px) {
+    .mi-tab ul {
+        display: flex;
+        margin-top: -1px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .mi-tab li em,
+    .mi-tab li.mi-active a {
+        border-bottom: 1px solid #fff;
+    }
+}

@@ -1,0 +1,107 @@
+// Width
+.mi-w5   { width: 5%;   }
+.mi-w10  { width: 10%;  }
+.mi-w15  { width: 15%;  }
+.mi-w20  { width: 20%;  }
+.mi-w25  { width: 25%;  }
+.mi-w30  { width: 30%;  }
+.mi-w35  { width: 35%;  }
+.mi-w40  { width: 40%;  }
+.mi-w45  { width: 45%;  }
+.mi-w50  { width: 50%;  }
+.mi-w55  { width: 55%;  }
+.mi-w60  { width: 60%;  }
+.mi-w65  { width: 65%;  }
+.mi-w70  { width: 70%;  }
+.mi-w75  { width: 75%;  }
+.mi-w80  { width: 80%;  }
+.mi-w85  { width: 85%;  }
+.mi-w90  { width: 90%;  }
+.mi-w95  { width: 95%;  }
+.mi-w100 { width: 100%; }
+
+.mi-w-auto { width: auto; }
+
+// Content Width
+.mi-w-small  { width: $w-small;   }
+.mi-w-medium { width: $w-medium; }
+.mi-w-big    { width: $w-big;   }
+.mi-w-large  { width: $w-large; }
+
+@include breakpoint(sm) {
+    .mi-w-auto-sm {
+        width: auto;
+    }
+    .mi-w100-sm,
+    .mi-w-small,
+    .mi-w-medium,
+    .mi-w-big,
+    .mi-w-large {
+        width: 100%;
+    }
+}
+
+// Max Width
+.mi-max-w5   { max-width: 5%;   }
+.mi-max-w10  { max-width: 10%;  }
+.mi-max-w15  { max-width: 15%;  }
+.mi-max-w20  { max-width: 20%;  }
+.mi-max-w25  { max-width: 25%;  }
+.mi-max-w30  { max-width: 30%;  }
+.mi-max-w35  { max-width: 35%;  }
+.mi-max-w40  { max-width: 40%;  }
+.mi-max-w45  { max-width: 45%;  }
+.mi-max-w50  { max-width: 50%;  }
+.mi-max-w55  { max-width: 55%;  }
+.mi-max-w60  { max-width: 60%;  }
+.mi-max-w65  { max-width: 65%;  }
+.mi-max-w70  { max-width: 70%;  }
+.mi-max-w75  { max-width: 75%;  }
+.mi-max-w80  { max-width: 80%;  }
+.mi-max-w85  { max-width: 85%;  }
+.mi-max-w90  { max-width: 90%;  }
+.mi-max-w95  { max-width: 95%;  }
+.mi-max-w100 { max-width: 100%; }
+
+// Content Max Width
+.mi-max-w-small  { max-width: $w-small;   }
+.mi-max-w-medium { max-width: $w-medium; }
+.mi-max-w-big    { max-width: $w-big;   }
+.mi-max-w-large  { max-width: $w-large; }
+
+@include breakpoint(sm) {
+    .mi-max-w-auto-sm,
+    .mi-max-w-small,
+    .mi-max-w-medium,
+    .mi-max-w-big,
+    .mi-max-w-large {
+        max-width: auto;
+    }
+}
+
+// Min Width
+.mi-min-w5   { min-width: 5%;   }
+.mi-min-w10  { min-width: 10%;  }
+.mi-min-w15  { min-width: 15%;  }
+.mi-min-w20  { min-width: 20%;  }
+.mi-min-w25  { min-width: 25%;  }
+.mi-min-w30  { min-width: 30%;  }
+.mi-min-w35  { min-width: 35%;  }
+.mi-min-w40  { min-width: 40%;  }
+.mi-min-w45  { min-width: 45%;  }
+.mi-min-w50  { min-width: 50%;  }
+.mi-min-w55  { min-width: 55%;  }
+.mi-min-w60  { min-width: 60%;  }
+.mi-min-w65  { min-width: 65%;  }
+.mi-min-w70  { min-width: 70%;  }
+.mi-min-w75  { min-width: 75%;  }
+.mi-min-w80  { min-width: 80%;  }
+.mi-min-w85  { min-width: 85%;  }
+.mi-min-w90  { min-width: 90%;  }
+.mi-min-w95  { min-width: 95%;  }
+.mi-min-w100 { min-width: 100%; }
+
+// Height
+.mi-h25  { height: 25%;  }
+.mi-h50  { height: 50%;  }
+.mi-h100 { height: 100%; }

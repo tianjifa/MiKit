@@ -1,0 +1,35 @@
+/* ========================================================================
+   Component UI CSS: Offcanvas
+ ========================================================================== */
+
+.mi-offcanvas {
+    background: #fff;
+    position: fixed;
+    padding: 24px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    overflow-y: scroll;
+}
+
+.mi-offcanvas .mi-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    text-decoration: none;
+}
+
+.mi-offcanvas-left {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mi-offcanvas-right {
+    left: auto;
+    right: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mi-offcanvas-push-body {
+    position: relative;
+}

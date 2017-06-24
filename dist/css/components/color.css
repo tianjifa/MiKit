@@ -1,0 +1,105 @@
+/* ========================================================================
+   UI CSS: Colors
+ ========================================================================== */ 
+
+/* Text Colors */
+.mi-color-black {
+    color: #010101;
+}
+
+.mi-color-inverted {
+    color: #fff;
+}
+
+.mi-color-error {
+    color: #f03c69;
+}
+
+.mi-color-success {
+    color: #35beb1;
+}
+
+.mi-color-warning {
+    color: #f7ba45;
+}
+
+.mi-color-focus {
+    color: #1c86f2;
+}
+
+.mi-color-aluminum {
+    color: #f8f8f8;
+}
+
+.mi-color-silver {
+    color: #e0e1e1;
+}
+
+.mi-color-lightgray {
+    color: #d4d4d4;
+}
+
+.mi-color-gray {
+    color: #bdbdbd;
+}
+
+.mi-color-midgray {
+    color: #676b72;
+}
+
+.mi-color-darkgray {
+    color: #313439;
+}
+
+/* Background Colors */ 
+.mi-bg-black {
+    background-color: #0a0a0a;
+}
+
+.mi-bg-inverted {
+    background-color: #fff;
+}
+
+.mi-bg-error {
+    background-color: #f03c69;
+}
+
+.mi-bg-success {
+    background-color: #35beb1;
+}
+
+.mi-bg-warning {
+    background-color: #f7ba45;
+}
+
+.mi-bg-focus {
+    background-color: #1c86f2;
+}
+
+.mi-bg-aluminum {
+    background-color: #f8f8f8;
+}
+
+.mi-bg-silver {
+    background-color: #e0e1e1;
+}
+
+.mi-bg-lightgray {
+    background-color: #d4d4d4;
+}
+
+.mi-bg-gray {
+    background-color: #bdbdbd;
+}
+
+.mi-bg-midgray {
+    background-color: #676b72;
+}
+
+.mi-bg-darkgray {
+    background-color: #313439;
+}
+
+.mi-bg-highlight {
+    background-color: #edf2ff;
+}
