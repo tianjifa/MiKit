@@ -736,7 +736,7 @@ fieldset {
     margin-left: 100%;
 }
 
-.mi-row.mi-gutters>.mi-col-1 {
+.mi-gutters>.mi-col-1 {
     width: calc(8.33333% - 2%);
 }
 
@@ -744,7 +744,7 @@ fieldset {
     margin-left: calc(8.33333% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-2 {
+.mi-gutters>.mi-col-2 {
     width: calc(16.66667% - 2%);
 }
 
@@ -752,7 +752,7 @@ fieldset {
     margin-left: calc(16.66667% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-3 {
+.mi-gutters>.mi-col-3 {
     width: calc(25% - 2%);
 }
 
@@ -760,7 +760,7 @@ fieldset {
     margin-left: calc(25% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-4 {
+.mi-gutters>.mi-col-4 {
     width: calc(33.33333% - 2%);
 }
 
@@ -768,7 +768,7 @@ fieldset {
     margin-left: calc(33.33333% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-5 {
+.mi-gutters>.mi-col-5 {
     width: calc(41.66667% - 2%);
 }
 
@@ -776,7 +776,7 @@ fieldset {
     margin-left: calc(41.66667% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-6 {
+.mi-gutters>.mi-col-6 {
     width: calc(50% - 2%);
 }
 
@@ -784,7 +784,7 @@ fieldset {
     margin-left: calc(50% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-7 {
+.mi-gutters>.mi-col-7 {
     width: calc(58.33333% - 2%);
 }
 
@@ -792,7 +792,7 @@ fieldset {
     margin-left: calc(58.33333% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-8 {
+.mi-gutters>.mi-col-8 {
     width: calc(66.66667% - 2%);
 }
 
@@ -800,7 +800,7 @@ fieldset {
     margin-left: calc(66.66667% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-9 {
+.mi-gutters>.mi-col-9 {
     width: calc(75% - 2%);
 }
 
@@ -808,7 +808,7 @@ fieldset {
     margin-left: calc(75% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-10 {
+.mi-gutters>.mi-col-10 {
     width: calc(83.33333% - 2%);
 }
 
@@ -816,7 +816,7 @@ fieldset {
     margin-left: calc(83.33333% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-11 {
+.mi-gutters>.mi-col-11 {
     width: calc(91.66667% - 2%);
 }
 
@@ -824,7 +824,7 @@ fieldset {
     margin-left: calc(91.66667% + 2%) !important;
 }
 
-.mi-row.mi-gutters>.mi-col-12 {
+.mi-gutters>.mi-col-12 {
     width: calc(100% - 2%);
 }
 
