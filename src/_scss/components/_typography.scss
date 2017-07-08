@@ -256,7 +256,7 @@ pre code {
     display: block;
     line-height: $base-line-small;
     color: rgba($color-text, .85);
-	overflow: none;
+	overflow: hidden;
 	white-space: pre-wrap;
 }
 pre {
