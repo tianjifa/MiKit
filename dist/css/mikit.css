@@ -327,7 +327,7 @@ pre code {
     display: block;
     line-height: 20px;
     color: rgba(49, 52, 57, 0.85);
-    overflow: none;
+    overflow: hidden;
     white-space: pre-wrap;
 }
 
