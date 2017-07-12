@@ -66,66 +66,66 @@ audio:not([controls]) {
 
 // Links
 a {
-	color: $color-link;
+    color: $color-link;
 }
 a:hover {
-	color: $color-link-hover;
+    color: $color-link-hover;
 }
 
 // Headings
 h1.mi-title, h1, h2, h3, h4, h5, h6 {
-	font-family: $headings-font-family;
-	font-weight: bold;
-	color: $color-headings;
-	text-rendering: optimizeLegibility;
+    font-family: $headings-font-family;
+    font-weight: bold;
+    color: $color-headings;
+    text-rendering: optimizeLegibility;
     margin-bottom: $heading-margin-bottom;
 }
 h1.mi-title {
-	font-size: $heading-font-size-title;
+    font-size: $heading-font-size-title;
     font-size: $heading-font-size-title-rem;
     line-height: $heading-base-line-title;
-	line-height: $heading-base-line-title-rem;
+    line-height: $heading-base-line-title-rem;
     margin-bottom: $heading-margin-bottom/2;
 }
 h1,
 .mi-h1 {
     font-size: $heading-font-size-1;
     font-size: $heading-font-size-rem-1;
-	line-height: $heading-base-line-1;
+    line-height: $heading-base-line-1;
     line-height: $heading-base-line-rem-1;	
 }
 h2,
 .mi-h2 {
     font-size: $heading-font-size-2;
-	font-size: $heading-font-size-rem-2;
+    font-size: $heading-font-size-rem-2;
     line-height: $heading-base-line-2;
     line-height: $heading-base-line-rem-2;
 }
 h3,
 .mi-h3 {
     font-size: $heading-font-size-3;
-	font-size: $heading-font-size-rem-3;
+    font-size: $heading-font-size-rem-3;
     line-height: $heading-base-line-3;
     line-height: $heading-base-line-rem-3;
 }
 h4,
 .mi-h4 {
     font-size: $heading-font-size-4;
-	font-size: $heading-font-size-rem-4;
+    font-size: $heading-font-size-rem-4;
     line-height: $heading-base-line-4;
     line-height: $heading-base-line-rem-4;
 }
 h5,
 .mi-h5 {
     font-size: $heading-font-size-5;
-	font-size: $heading-font-size-rem-5;
+    font-size: $heading-font-size-rem-5;
     line-height: $heading-base-line-5;
     line-height: $heading-base-line-rem-5;
 }
 h6,
 .mi-h6 {
     font-size: $heading-font-size-6;
-	font-size: $heading-font-size-rem-6;
+    font-size: $heading-font-size-rem-6;
     line-height: $heading-base-line-6;
     line-height: $heading-base-line-rem-6;
 }
@@ -140,10 +140,10 @@ ol {
 	}
 }
 ol ol li {
-	list-style-type: lower-alpha;
+    list-style-type: lower-alpha;
 }
 ol ol ol li {
-	list-style-type: lower-roman;
+    list-style-type: lower-roman;
 }
 ul.mi-list-unstyled {
     & {
@@ -167,16 +167,16 @@ nav {
 	}
 }
 dl dt {
-	font-weight: bold;
+    font-weight: bold;
 }
 dd {
-	margin-left: $base-line;
+    margin-left: $base-line;
 }
 hr {
-	box-sizing: content-box;
+    box-sizing: content-box;
     border: none;
-	border-bottom: 1px solid rgba(0, 0, 0, .1);
-	margin-top: -1px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-top: -1px;
 }
 blockquote {
 	padding-left: 1rem;
@@ -184,7 +184,7 @@ blockquote {
 	font-style: italic;
 	color: rgba($color-text, .65);
 	& p {
-    	margin-bottom: .5rem;
+    	    margin-bottom: .5rem;
 	}
 }
 blockquote:before {
@@ -192,27 +192,27 @@ blockquote:before {
 }
 // Inline
 time, cite, small, figcaption {
-	font-size: 87.5%;
+    font-size: 87.5%;
 }
 cite {
     opacity: .6;
 }
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted rgba(0, 0, 0, .5);
-	cursor: help;
+    border-bottom: 1px dotted rgba(0, 0, 0, .5);
+    cursor: help;
 }
 var {
     font-size: $font-size;
-	opacity: .6;
-	font-style: normal;
+    opacity: .6;
+    font-style: normal;
 }
 mark, code, samp, kbd {
     position: relative;
     top: -1px;
-	padding: 4px 4px 2px 4px;
-	display: inline-block;
-	line-height: 1;
-	color: rgba($color-text, .85);
+    padding: 4px 4px 2px 4px;
+    display: inline-block;
+    line-height: 1;
+    color: rgba($color-text, .85);
 }
 code {
 	background: $color-silver;
