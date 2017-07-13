@@ -476,6 +476,28 @@ fieldset {
 }
 
 
+/* Text Columns */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mi-columns-2,
+    .mi-columns-3,
+    .mi-columns-4 {
+        column-gap: 24px;
+    }
+
+    .mi-columns-2 {
+        column-count: 2;
+    }
+
+    .mi-columns-3 {
+        column-count: 3;
+    }
+
+    .mi-columns-4 {
+        column-count: 4;
+    }
+}
+
 
 /* ========================================================================
    UI CSS: Colors
@@ -2478,27 +2500,65 @@ button:hover,
 
 
 /* ========================================================================
-   UI CSS: Utils
- ========================================================================== */ 
-
-.mi-flex {
-    display: flex;
+   UI CSS: Positioning
+ ========================================================================== */
+.mi-gutters .mi-column.mi-push-left,
+.mi-push-left {
+    margin-right: auto;
 }
 
-.mi-flex.mi-align-middle {
+.mi-gutters .mi-column.mi-push-right,
+.mi-push-right {
+    margin-left: auto;
+}
+
+.mi-gutters .mi-column.mi-push-center,
+.mi-push-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mi-gutters .mi-column.mi-push-middle,
+.mi-push-middle {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mi-push-bottom {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .mi-gutters .mi-column.mi-push-left-sm,
+    .mi-push-left-sm {
+        margin-left: 0;
+    }
+
+    .mi-gutters .mi-column.mi-push-center-sm,
+    .mi-push-center-sm {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mi-push-top-sm {
+        margin-top: 0;
+    }
+}
+
+.mi-align-middle {
     align-items: center;
 }
 
-.mi-flex.mi-align-right {
+.mi-align-right {
     justify-content: flex-end;
 }
 
-.mi-flex.mi-align-center {
+.mi-align-center {
     justify-content: center;
 }
 
 @media (max-width: 768px) {
-    .mi-flex.align-left-sm {
+    .align-left-sm {
         justify-content: flex-start;
     }
 }
@@ -2528,6 +2588,12 @@ button:hover,
     z-index: 100;
     width: 100%;
 }
+
+
+
+/* ========================================================================
+   UI CSS: Utils
+ ========================================================================== */ 
 
 .mi-display-block {
     display: block;
