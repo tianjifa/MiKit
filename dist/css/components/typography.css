@@ -466,3 +466,24 @@ fieldset {
     font-size: 20px;
     line-height: 32px;
 }
+
+/* Text Columns */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mi-columns-2,
+    .mi-columns-3,
+    .mi-columns-4 {
+        column-gap: 24px;
+    }
+
+    .mi-columns-2 {
+        column-count: 2;
+    }
+
+    .mi-columns-3 {
+        column-count: 3;
+    }
+
+    .mi-columns-4 {
+        column-count: 4;
+    }
+}
