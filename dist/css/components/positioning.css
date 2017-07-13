@@ -1,0 +1,89 @@
+/* ========================================================================
+   UI CSS: Positioning
+ ========================================================================== */
+.mi-gutters .mi-column.mi-push-left,
+.mi-push-left {
+    margin-right: auto;
+}
+
+.mi-gutters .mi-column.mi-push-right,
+.mi-push-right {
+    margin-left: auto;
+}
+
+.mi-gutters .mi-column.mi-push-center,
+.mi-push-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mi-gutters .mi-column.mi-push-middle,
+.mi-push-middle {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mi-push-bottom {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .mi-gutters .mi-column.mi-push-left-sm,
+    .mi-push-left-sm {
+        margin-left: 0;
+    }
+
+    .mi-gutters .mi-column.mi-push-center-sm,
+    .mi-push-center-sm {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mi-push-top-sm {
+        margin-top: 0;
+    }
+}
+
+.mi-align-middle {
+    align-items: center;
+}
+
+.mi-align-right {
+    justify-content: flex-end;
+}
+
+.mi-align-center {
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .align-left-sm {
+        justify-content: flex-start;
+    }
+}
+
+.mi-float-right {
+    float: right;
+}
+
+.mi-float-left {
+    float: left;
+}
+
+@media (max-width: 768px) {
+    .mi-float-right {
+        float: none;
+    }
+
+    .mi-float-left {
+        float: none;
+    }
+}
+
+.mi-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
