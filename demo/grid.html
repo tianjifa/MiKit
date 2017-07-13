@@ -1,0 +1,543 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .section-head {
+                padding-top: 80px;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 20px;
+                margin-bottom: 16px;
+            }
+
+            .demo-grid .mi-row {
+                margin-bottom: 4px;
+                background: #ebf4fc;
+            }
+
+            .demo-grid .mi-col {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                padding: 8px 12px;
+                background: #d8e9fa;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .demo-grid .mi-row.mi-gutters {
+                background: none;
+            }
+        </style>
+    </head>
+    <body>
+
+<!------------------------------------------------------------------>
+
+<div class="component-index-box">
+    <ol>
+        <li>
+            <a href="#h-columns">Columns</a>
+        </li>
+        <li>
+            <a href="#h-gutters">Gutters</a>
+        </li>
+        <li>
+            <a href="#h-auto-width">Auto Width</a>
+        </li>
+        <li>
+            <a href="#h-bricks">Bricks</a>
+        </li>
+        <li>
+            <a href="#h-offset">Offset</a>
+        </li>
+        <li>
+            <a href="#h-nested">Nested</a>
+        </li>
+        <li>
+            <a href="#h-equal-height">Equal Height</a>
+        </li>
+        <li>
+            <a href="#h-reordering">Reordering</a>
+        </li>
+        <li>
+            <a href="#h-around">Around</a>
+        </li>
+        <li>
+            <a href="#h-between">Between</a>
+        </li>
+        <li>
+            <a href="#h-align">Alignment</a>
+        </li>
+        <li>
+            <a href="#h-push">Push</a>
+        </li>
+        <li>
+            <a href="#h-fixed-column">Fixed Width Column</a>
+        </li>
+        <li>
+            <a href="#h-media-grid">Media Grid</a>
+        </li>
+    </ol>
+</div>
+
+<div class="component-show">
+    
+    <h3 id="h-columns" class="section-head">网格</h3>
+    <p>Columns are building blocks for many websites. Here's how columns are formed in Mikit, and here's how you can use them right away.</p>
+    <div class="example demo-grid">
+        <div class="mi-row">
+            <div class="mi-col mi-col-1">1</div>
+            <div class="mi-col mi-col-11">11</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-2">2</div>
+            <div class="mi-col mi-col-10">10</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-9">9</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-4">4</div>
+            <div class="mi-col mi-col-8">8</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-5">5</div>
+            <div class="mi-col mi-col-7">7</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-6">6</div>
+            <div class="mi-col mi-col-6">6</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-7">7</div>
+            <div class="mi-col mi-col-5">5</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-8">8</div>
+            <div class="mi-col mi-col-4">4</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-9">9</div>
+            <div class="mi-col mi-col-3">3</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-10">10</div>
+            <div class="mi-col mi-col-2">2</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-11">11</div>
+            <div class="mi-col mi-col-1">1</div>
+        </div>
+        <div class="mi-row">
+            <div class="mi-col mi-col-12">12</div>
+        </div>
+
+        <div class="demo-code">
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 id="h-gutters" class="section-head">网格间距 Gutters</h3>
+    <div class="example demo-grid">
+        <div class="mi-row mi-gutters">
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-9">9</div>
+        </div>
+        <div class="demo-code">
+<pre class="prettyprint lang-html">&lt;div class="mi-row mi-gutters"&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-9"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->    
+
+    <h3 id="h-auto-width" class="section-head">自动宽度Auto</h3>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-auto">
+            <div class="mi-col">auto</div>
+            <div class="mi-col">auto</div>
+            <div class="mi-col">auto</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>自动宽度Auto + 间距Gutters</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-gutters mi-auto">
+            <div class="mi-col">auto</div>
+            <div class="mi-col">auto</div>
+            <div class="mi-col">auto</div>
+            <div class="mi-col">auto</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-bricks">Bricks</h3>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-6">50%</div>
+            <div class="mi-col mi-col-6">50%</div>
+            <div class="mi-col mi-col-6">50%</div>
+            <div class="mi-col mi-col-6">50%</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Bricks + Gutters</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-gutters">
+            <div class="mi-col mi-col-4">33%</div>
+            <div class="mi-col mi-col-4">33%</div>
+            <div class="mi-col mi-col-4">33%</div>
+            <div class="mi-col mi-col-4">33%</div>
+            <div class="mi-col mi-col-4">33%</div>
+            <div class="mi-col mi-col-4">33%</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-offset">Offset</h3>
+
+    <p>Offsetting columns is very simple in Mikit. Just use column's class as usual, for example, <code>mi-col mi-col-2</code> and then add the offset value <code>mi-offset-4</code>. This will offset this column and all following columns by 4.</p>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-2">2</div>
+            <div class="mi-col mi-col-6 mi-offset-4">6</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-reordering">Reordering</h3>
+
+    <h5>First</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-4">4</div>
+            <div class="mi-col mi-col-8 mi-first-item">8</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Last</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-3 mi-last-item">3</div>
+            <div class="mi-col mi-col-9">9</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-around">Around</h3>
+
+    <p>When you want your columns to be surrounded by an even margins on both sides, just use <code>.around</code> class.</p>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-around">
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-3">3</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-between">Between</h3>
+
+    <p>Sometime you just need space between columns, and not around them. Well, there's a class for that: <code>.between</code></p>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-between">
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-3">3</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-alignment">Alignment</h3>
+
+    <h5>Align Center</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-align-center">
+            <div class="mi-col mi-col-6">6</div>
+        </div>
+
+        <div class="demo-code">
+<pre>
+&lt;div class="mi-row mi-align-center"&gt;
+    &lt;div class="mi-col mi-col-6">6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Align Right</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-align-right">
+            <div class="mi-col mi-col-3">3</div>
+            <div class="mi-col mi-col-3">3</div>
+        </div>
+
+        <div class="demo-code">
+<pre>
+&lt;div class="mi-row mi-align-right"&gt;
+    &lt;div class="mi-col mi-col-3">3&lt;/div&gt;
+    &lt;div class="mi-col mi-col-3">3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Align Middle</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row mi-align-middle" style="height: 104px; border: 1px solid #eee;">
+            <div class="mi-col mi-col-4" style="height: 36px;">4</div>
+            <div class="mi-col mi-col-4" style="height: 56px;">4</div>
+            <div class="mi-col mi-col-4" style="height: 36px;">4</div>
+        </div>
+
+        <div class="demo-code">
+<pre>
+&lt;div class="mi-row mi-align-middle" style="height: 104px; border: 1px solid #eee;"&gt;
+    &lt;div class="mi-col mi-col-4" style="height: 36px;">4&lt;/div&gt;
+    &lt;div class="mi-col mi-col-4" style="height: 56px;">4&lt;/div&gt;
+    &lt;div class="mi-col mi-col-4" style="height: 36px;">4&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <h3 class="section-head" id="h-push">Push</h3>
+
+    <h5>Push Center</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-4 mi-push-center">.push-center</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Push Right</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-6">...</div>
+            <div class="mi-col mi-col-4 mi-push-right">.push-right</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <h5>Push Middle</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row" style="height: 104px;">
+            <div class="mi-col mi-col-8 mi-push-middle">.push-middle</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Push Mixed</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row" style="height: 104px;">
+            <div class="mi-col mi-col-8 mi-push-middle mi-push-center">.push-middle.push-center</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h5>Push Bottom</h5>
+    <div class="example demo-grid">
+
+        <div class="mi-row" style="height: 104px;">
+            <div class="mi-col mi-col-8 mi-push-bottom">.push-bottom</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-fixed-column">Fixed Width Column</h3>
+
+    <p>Here's one more bit of magic. You can set a fixed width column and still have a responsive and flexible layout right beside this fixed width column.</p>
+
+    <div class="example demo-grid">
+
+        <div id="demo-container">
+            <div id="demo-sidebar">sidebar</div>
+            <div id="demo-content">content</div>
+        </div>
+
+        <div class="demo-code">
+            demo-code
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 id="h-gutters" class="section-head">标题</h3>
+    <div class="example demo-grid">
+        <span>Demo</span>
+        <div class="demo-code">
+            Code
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 id="h-gutters" class="section-head">标题</h3>
+    <div class="example demo-grid">
+        <span>Demo</span>
+        <div class="demo-code">
+            Code
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->
+</div>    
+    </body>
+</html>
