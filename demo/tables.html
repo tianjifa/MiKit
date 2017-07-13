@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px 0 60px;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .section-head {
+                padding-top: 80px;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-base">默认</a></li>
+            <li><a href="#h-bordered">边框</a></li>
+            <li><a href="#h-striped">条纹</a></li>
+            <li><a href="#h-unstyled">无样式</a></li>
+            <li><a href="#h-mixed">混合</a></li>
+            <li><a href="#h-width">宽度</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+	
+		<!-- -------------------------------------- -->
+		
+        <h3 class="section-head" id="h-base">Base</h3>
+        <div class="example demo-tables">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="space">&nbsp;</p>
+
+            <pre class="code">&lt;<span class="hljs-keyword">table</span>&gt;...&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+			
+        </div>
+		
+		<!-- -------------------------------------- -->
+
+        <h3 class="section-head" id="h-bordered">Bordered</h3>
+
+        <div class="example demo-tables">
+            <table class="mi-table-bordered">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="space">&nbsp;</p>
+
+            <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"mi-table-bordered"</span>&gt;...&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+        </div>
+		
+		<!-- -------------------------------------- -->
+
+        <h3 class="section-head" id="h-striped">Striped</h3>
+
+        <div class="example demo-tables">
+            <table class="mi-table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="space">&nbsp;</p>
+
+            <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"mi-table-striped"</span>&gt;...&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+        </div>
+
+		<!-- -------------------------------------- -->
+		
+        <h3 class="section-head" id="h-unstyled">Unstyled</h3>
+
+        <div class="example demo-tables">
+            <table class="mi-table-unstyled">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="space">&nbsp;</p>
+
+            <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"mi-table-unstyled"</span>&gt;...&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+        </div>
+		
+		<!-- -------------------------------------- -->
+
+        <h3 class="section-head" id="h-mixed">Mixed</h3>
+
+        <div class="example demo-tables">
+            <table class="mi-table-bordered mi-table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="space">&nbsp;</p>
+            <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"mi-table-bordered mi-table-striped"</span>&gt;...&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+        </div>
+		
+		<!-- -------------------------------------- -->
+
+        <h3 class="section-head" id="h-width">Width</h3>
+
+        <div class="example demo-tables">
+
+            <table class="mi-table-bordered">
+                <thead>
+                    <tr>
+                        <th class="mi-w40">First Name</th>
+                        <th class="mi-w40">Last Name</th>
+                        <th class="mi-w20">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="space">&nbsp;</p>
+<pre class="code"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-w40"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-w40"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-w20"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></pre>
+
+        </div>
+
+    </div>
+
+    </body>
+</html>
