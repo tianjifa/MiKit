@@ -1,55 +1,7 @@
 /* ========================================================================
    UI CSS: Utils
  ========================================================================== */ 
-
-.mi-flex {
-    display: flex;
-}
-
-.mi-flex.mi-align-middle {
-    align-items: center;
-}
-
-.mi-flex.mi-align-right {
-    justify-content: flex-end;
-}
-
-.mi-flex.mi-align-center {
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .mi-flex.align-left-sm {
-        justify-content: flex-start;
-    }
-}
-
-.mi-float-right {
-    float: right;
-}
-
-.mi-float-left {
-    float: left;
-}
-
-@media (max-width: 768px) {
-    .mi-float-right {
-        float: none;
-    }
-
-    .mi-float-left {
-        float: none;
-    }
-}
-
-.mi-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-}
-
+ 
 .mi-display-block {
     display: block;
 }
@@ -155,3 +107,4 @@
     position: fixed;
     top: 1rem;
     right: 1rem;
+}
