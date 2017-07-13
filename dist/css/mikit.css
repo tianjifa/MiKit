@@ -2211,7 +2211,7 @@ button:hover,
     h4 {
         page-break-after: avoid;
     }
-    @    page {
+    @page {
         margin: 0.5cm;
     }
 }
