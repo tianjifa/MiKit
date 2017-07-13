@@ -204,6 +204,10 @@ dd {
     margin-left: 24px;
 }
 
+p, blockquote, hr, pre, ol, ul, dl, table, fieldset, figure, address, form {
+    margin-bottom: 16px;
+}
+
 hr {
     box-sizing: content-box;
     border: none;
