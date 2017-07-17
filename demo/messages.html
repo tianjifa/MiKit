@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .example-inverted-box {
+                display: inline-block;
+                padding: 6px 8px 6px 8px;
+                line-height: 1;
+                vertical-align: middle;
+                background: #d4d4d4;
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+		<ol>
+			<li><a href="#h-usage">Usage</a></li>
+			<li><a href="#h-options">Options</a></li>
+			<li><a href="#h-methods">Methods</a></li>
+			<li><a href="#h-callbacks">Callbacks</a></li>
+		</ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+        <h3 class="section-head" id="h-usage"><a href="#h-usage">Usage</a></h3>
+        <div class="example">
+            <div class="mi-message" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+<pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-error" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+            <pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message mi-message-error"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-success" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+<pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message mi-message-success"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-warning" data-component="message"><h5>Warning!</h5>You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+<pre class="code skip"><span class="mijs-tag">&lt;<span class="mijs-name">div</span> <span class="mijs-attr">class</span>=<span class="mijs-string">"mi-message mi-message-warning"</span> <span class="mijs-attr">data-component</span>=<span class="mijs-string">"mi-message"</span>&gt;</span>
+    <span class="mijs-tag">&lt;<span class="mijs-name">h5</span>&gt;</span>...<span class="mijs-tag">&lt;/<span class="mijs-name">h5</span>&gt;</span>
+    ...
+    <span class="mijs-tag">&lt;<span class="mijs-name">span</span> <span class="mijs-attr">class</span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;</span><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span>
+<span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span>
+</pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-focus" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+<pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message mi-message-focus"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-black" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+<pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message mi-message-black"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <div class="example">
+            <div class="mi-message mi-message-inverted" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+
+<pre class="code">&lt;div <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-message mi-message-inverted"</span> data-component=<span class="mijs-string">"message"</span>&gt; ...  &lt;span <span class="mijs-class"><span class="mijs-keyword">class</span></span>=<span class="mijs-string">"mi-close mi-icon-close"</span>&gt;<span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">span</span>&gt;</span></span><span class="xml"><span class="mijs-tag">&lt;/<span class="mijs-name">div</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+        <h3 class="section-head" id="h-options"><a href="#h-options">Options</a></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="mi-w30">Name</th>
+                    <th class="mi-w30">Type</th>
+                    <th class="mi-w40">Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>closeSelector</code></td>
+                    <td><var>string</var></td>
+                    <td>.close</td>
+                </tr>
+                <tr>
+                    <td><code>closeEvent</code></td>
+                    <td><var>string</var></td>
+                    <td>click</td>
+                </tr>
+                <tr>
+                    <td><code>animationOpen</code></td>
+                    <td><var>string</var></td>
+                    <td>fadeIn</td>
+                </tr>
+                <tr>
+                    <td><code>animationClose</code></td>
+                    <td><var>string</var></td>
+                    <td>fadeOut</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Set an option</h4>
+
+        <p>Via data attribute:</p>
+
+<pre class="code skip">&lt;<span class="mijs-keyword">div</span> <span class="mijs-built_in">class</span>=<span class="mijs-string">"mi-message"</span> data-component=<span class="mijs-string">"message"</span> data-close-selector=<span class="mijs-string">".my-custom-close"</span>&gt;
+    ... &lt;span <span class="mijs-built_in">class</span>=<span class="mijs-string">"my-custom-close"</span>&gt;&lt;/span&gt;
+&lt;/<span class="mijs-keyword">div</span>&gt;
+</pre>
+
+        <p>Via Javascript:</p>
+
+<pre class="code skip"><span class="mijs-variable">$(</span><span class="mijs-string">'#my-message'</span>).message({
+    <span class="mijs-symbol">closeSelector:</span> <span class="mijs-string">'.my-custom-close'</span>
+});
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-methods"><a href="#h-methods">Methods</a></h3>
+        <p>
+            <button onclick="$('#message-1').message('open')">Open</button>
+            <button onclick="$('#message-1').message('close')">Close</button>
+        </p>
+        <div class="mi-message mi-open" id="message-1" data-component="message">You have 2 modules waiting to installation. <span class="mi-close mi-icon-close"></span></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>close</code></td>
+                    <td>Manually closes a message.</td>
+                </tr>
+                <tr>
+                    <td><code>open</code></td>
+                    <td>Opens a message if it has been closed.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Example</h4>
+
+<pre class="code">$(<span class="mijs-string">'#my-message'</span>).<span class="mijs-keyword">message</span>(<span class="mijs-string">'close'</span>);</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-callbacks"><a href="#h-callbacks">Callbacks</a></h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Callback</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>open</code></td>
+                    <td>This event fires immediately when the open instance method is called.</td>
+                </tr>
+                <tr>
+                    <td><code>opened</code></td>
+                    <td>This event is fired when the message has been opened, will wait for CSS animation to complete.</td>
+                </tr>
+                <tr>
+                    <td><code>close</code></td>
+                    <td>This event fires immediately when the close instance method is called.</td>
+                </tr>
+                <tr>
+                    <td><code>closed</code></td>
+                    <td>This event is fired when the message has been closed, will wait for CSS animation to complete.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Example</h4>
+
+<pre class="code skip">$(<span class="mijs-string">'#my-message'</span>).on(<span class="mijs-string">'closed.message'</span>, <span class="mijs-function"><span class="mijs-keyword">function</span>(<span class="mijs-params"></span>)
+</span>{
+    <span class="mijs-comment">// do something</span>
+})
+</pre>        
+
+    </div>
+
+    </body>
+</html>
