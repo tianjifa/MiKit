@@ -1,0 +1,311 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-primary">Primary</a></li>
+            <li><a href="#h-secondary">Secondary</a></li>
+            <li><a href="#h-outline">Outline</a></li>
+            <li><a href="#h-disabled">Disabled</a></li>
+            <li><a href="#h-small">Small</a></li>
+            <li><a href="#h-big">Big</a></li>
+            <li><a href="#h-large">Large</a></li>
+            <li><a href="#h-upper">Upper</a></li>
+            <li><a href="#h-round">Round</a></li>
+            <li><a href="#h-inverted">Inverted</a></li>
+            <li><a href="#h-width">Width</a></li>
+            <li><a href="#h-width">Icons</a></li>
+            <li><a href="#h-custom">Custom</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-primary">Primary</h3>
+        <div class="example demo-buttons">
+            <button class="mi-button">Button</button>
+            <a href="#" class="mi-button">Button</a>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-secondary">Secondary</h3>
+
+        <div class="example demo-buttons">
+            <button class="mi-button mi-button-secondary">Button</button>
+            <a href="#" class="mi-button mi-button-secondary">Button</a>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-outline">Outline</h3>
+
+        <p>Outline class does exactly what it is supposed to do: styles a button with an mi-button-outline with no fill color.</p>
+
+        <div class="example demo-buttons">
+            <button class="mi-button mi-button-outline">Button</button>
+            <button class="mi-button mi-button-secondary mi-button-outline">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code">&lt;<span class="mikit-keyword">button</span> class=<span class="mikit-string">"mi-button mi-button-outline"</span>&gt;<span class="mikit-keyword">Button</span>&lt;/<span class="mikit-keyword">button</span>&gt;
+&lt;<span class="mikit-keyword">button</span> class=<span class="mikit-string">"mi-button mi-button-secondary mi-button-outline"</span>&gt;<span class="mikit-keyword">Button</span>&lt;/<span class="mikit-keyword">button</span>&gt;</pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-disabled">Disabled</h3>
+
+        <p>Disabled buttons are automatically styles with muted colors, inactive and not clickable. As you can see, there's no need to set disabled class for the button element, and disabled argument is enough. Having this said, both a link and a button input require disabled class.</p>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button mi-button-disabled" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary" disabled>Button</button>
+            <button class="mi-button  mi-button-outline" disabled>Button</button>
+            <button class="mi-button mi-button-secondary mi-button-outline" disabled>Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-disabled"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary"</span> <span class="mikit-attr">disabled</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-small">Small</h3>
+
+        <p>Buttons come in all sizes and shapes.</p>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button mi-button-small" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary mi-button-small">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-small"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary mi-button-small"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-big">Big</h3>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button mi-button-big" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary mi-button-big">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-big"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary mi-button-big"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-large">Large</h3>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button mi-button-large" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary mi-button-large">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-large"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary mi-button-large"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-upper">Upper</h3>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button upper" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary upper">Button</button>
+            <a href="#" class="mi-button upper mi-button-outline" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary upper mi-button-outline">Button</button>
+
+            <p class="space"></p>
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button upper"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary upper"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button upper mi-button-outline"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary upper mi-button-outline"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-round">Round</h3>
+
+        <div class="example demo-buttons">
+            <a href="#" class="mi-button round" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary round">Button</button>
+            <a href="#" class="mi-button round mi-button-outline" role="mi-button">Link</a>
+            <button class="mi-button mi-button-secondary round mi-button-outline">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button round"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary round"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button round mi-button-outline"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary round mi-button-outline"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-inverted">Inverted</h3>
+
+        <p>For use on darker backgrounds, you can just introduce inverted class to have your button flip its color to the opposite one.</p>
+
+        <div class="example mi-bg-darkgray">
+            <a href="#" class="mi-button mi-button-inverted" role="mi-button">Link</a> &nbsp;
+            <button class="mi-button mi-button-inverted mi-button-outline">Button</button> &nbsp;
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">a</span> <span class="mikit-attr">href</span>=<span class="mikit-string">"#"</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-inverted"</span> <span class="mikit-attr">role</span>=<span class="mikit-string">"mi-button"</span>&gt;</span>Link<span class="mikit-tag">&lt;/<span class="mikit-name">a</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-inverted mi-button-outline"</span>&gt;</span>Button<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+
+        </div>
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-width">Width</h3>
+
+
+        <div class="example demo-buttons">
+            <p><button class="mi-button mi-w100">100%</button></p>
+            <p><button class="mi-button mi-button-secondary mi-w50">50%</button></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-w100"</span>&gt;</span>...<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary mi-w50"</span>&gt;</span>...<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-icons">Icons</h3>
+
+        <div class="example demo-buttons">
+            <button class="mi-button"><i class="mi-icon mi-icon-calendar"></i></button>
+            <button class="mi-button mi-button-secondary"><i class="mi-icon mi-icon-calendar"></i> Change</button>
+
+            <button class="mi-button mi-button-outline"><i class="mi-icon mi-icon-search"></i></button>
+            <button class="mi-button mi-button-secondary mi-button-outline"><i class="mi-icon mi-icon-search"></i> Search</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button"</span>&gt;</span><span class="mikit-tag">&lt;<span class="mikit-name">i</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mikit-calendar"</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">i</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary"</span>&gt;</span><span class="mikit-tag">&lt;<span class="mikit-name">i</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mikit-calendar"</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">i</span>&gt;</span> Change<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-outline"</span>&gt;</span><span class="mikit-tag">&lt;<span class="mikit-name">i</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mikit-search"</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">i</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span>
+<span class="mikit-tag">&lt;<span class="mikit-name">button</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mi-button mi-button-secondary mi-button-outline"</span>&gt;</span><span class="mikit-tag">&lt;<span class="mikit-name">i</span> <span class="mikit-attr">class</span>=<span class="mikit-string">"mikit-search"</span>&gt;</span><span class="mikit-tag">&lt;/<span class="mikit-name">i</span>&gt;</span> Search<span class="mikit-tag">&lt;/<span class="mikit-name">button</span>&gt;</span></pre>
+
+        </div>
+
+		<!------------------------------------------------------------------>
+		
+        <h3 class="section-head" id="h-custom">Custom</h3>
+
+        <p>With some Sass magic, you can customize your buttons in a snap. Just include a color class declaration and set the color itself, and you're done.</p>
+
+        <div class="example demo-buttons">
+            <style>
+                .mi-button.mi-button-red {
+                    color: #fff;
+                    background-color: #ff3366;
+                }
+                .mi-button.mi-button-red.mi-button-outline {
+                    background: none;
+                    color: #ff3366;
+                    border-color: #ff3366;
+                }
+                .mi-button.mi-button-red:hover {
+                    color: #fff;
+                    background-color: #ff99b3;
+                }
+                .mi-button.mi-button-red.mi-button-outline {
+                    background: none;
+                    color: #ff3366;
+                    border-color: #ff3366;
+                }
+                .mi-button.mi-button-red.mi-button-outline:hover {
+                    color: rgba(255, 51, 102, 0.6);
+                    border-color: rgba(255, 51, 102, 0.5);
+                }
+            </style>
+            <button class="mi-button mi-button-red">Button</button>
+            <button class="mi-button mi-button-red mi-button-outline">Button</button>
+
+            <p class="space"></p>
+
+<pre class="code"><span class="mikit-comment">// scss</span>
+.mi-button.mi-button-red {
+    <span class="mikit-comment">// $text-color, $back-color</span>
+    @include <span class="mikit-keyword">button</span>(<span class="mikit-meta">#fff, #ff3366);</span>
+}
+
+<span class="mikit-comment">// html</span>
+&lt;<span class="mikit-keyword">button</span> class=<span class="mikit-string">"mi-button mi-button-red"</span>&gt;<span class="mikit-keyword">Button</span>&lt;/<span class="mikit-keyword">button</span>&gt;
+&lt;<span class="mikit-keyword">button</span> class=<span class="mikit-string">"mi-button mi-button-red mi-button-outline"</span>&gt;<span class="mikit-keyword">Button</span>&lt;/<span class="mikit-keyword">button</span>&gt;</pre>
+        </div>
+
+
+    </div>
+
+    </body>
+</html>
