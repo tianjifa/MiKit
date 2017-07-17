@@ -2431,73 +2431,73 @@ button:hover,
     }
 }
 
-.mi-fadeIn {
+.fadeIn {
     animation: fadeIn 250ms;
 }
 
-.mi-fadeOut {
+.fadeOut {
     animation: fadeOut 250ms;
 }
 
-.mi-zoomIn {
+.zoomIn {
     animation: zoomIn 200ms;
 }
 
-.mi-zoomOut {
+.zoomOut {
     animation: zoomOut 500ms;
 }
 
-.mi-slideInRight {
+.slideInRight {
     animation: slideInRight 500ms;
 }
 
-.mi-slideInLeft {
+.slideInLeft {
     animation: slideInLeft 500ms;
 }
 
-.mi-slideInDown {
+.slideInDown {
     animation: slideInDown 500ms;
 }
 
-.mi-slideOutLeft {
+.slideOutLeft {
     animation: slideOutLeft 500ms;
 }
 
-.mi-slideOutRight {
+.slideOutRight {
     animation: slideOutRight 500ms;
 }
 
-.mi-slideOutUp {
+.slideOutUp {
     animation: slideOutUp 500ms;
 }
 
-.mi-slideUp {
+.slideUp {
     overflow: hidden;
     animation: slideUp 200ms ease-in-out;
 }
 
-.mi-slideDown {
+.slideDown {
     overflow: hidden;
     animation: slideDown 80ms ease-in-out;
 }
 
-.mi-flipIn {
+.flipIn {
     animation: flipIn 250ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
 }
 
-.mi-flipOut {
+.flipOut {
     animation: flipOut 500ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
 }
 
-.mi-rotate {
+.rotate {
     animation: rotate 500ms;
 }
 
-.mi-pulse {
+.pulse {
     animation: pulse 250ms 2;
 }
 
-.mi-shake {
+.shake {
     animation: shake 500ms;
 }
 
@@ -2825,7 +2825,7 @@ button:hover,
 .mi-message .mi-close {
     position: absolute;
     right: 1rem;
-    top: 1.0rem;
+    top: 1rem;
     cursor: pointer;
 }
 
