@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .example-inverted-box {
+                display: inline-block;
+                padding: 6px 8px 6px 8px;
+                line-height: 1;
+                vertical-align: middle;
+                background: #d4d4d4;
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+		<ol>
+			<li><a href="#h-base">Base</a></li>
+			<li><a href="#h-outline">Outline</a></li>
+			<li><a href="#h-upper">Upper</a></li>
+			<li><a href="#h-custom">Custom</a></li>
+		</ol>
+    </div>
+
+    <div class="component-show">
+
+		<!------------------------------------------------------------------>
+		
+        <h3 class="section-head" id="h-base">Base</h3>
+
+        <div class="example">
+            <span class="mi-badge">Default</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-success">Success</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-error">Error</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-warning">Warning</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-focus">Focus</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-black">Black</span>
+            &nbsp;
+            <span class="example-inverted-box"><span class="mi-badge mi-badge-inverted">Inverted</span></span>
+
+            <div class="demo-code">
+<pre>
+&lt;span class="mi-badge"&gt;Default&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-error"&gt;Error&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-focus"&gt;Focus&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-black"&gt;Black&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-inverted"&gt;inverted&lt;/span&gt;
+</pre>
+            </div>
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-outline">Outline</h3>
+
+        <div class="example">
+            <span class="mi-badge mi-badge-outline">Default</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-success mi-badge-outline">Success</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-error mi-badge-outline">Error</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-warning mi-badge-outline">Warning</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-focus mi-badge-outline">Focus</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-black mi-badge-outline">Black</span>
+            &nbsp;
+            <span class="example-inverted-box"><span class="mi-badge mi-badge-inverted mi-badge-outline">Inverted</span></span>
+
+            <div class="demo-code">
+<pre>
+&lt;span class="mi-badge mi-badge-outline"&gt;Default&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-success mi-badge-outline"&gt;Success&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-error mi-badge-outline"&gt;Error&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-warning mi-badge-outline"&gt;Warning&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-focus mi-badge-outline"&gt;Focus&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-black mi-badge-outline"&gt;Black&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-inverted mi-badge-outline"&gt;inverted&lt;/span&gt;
+</pre>
+            </div>
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-upper">Upper</h3>
+
+        <div class="example">
+            <span class="mi-badge mi-badge-upper">Default</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-success mi-badge-upper">Success</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-error mi-badge-upper">Error</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-warning mi-badge-upper">Warning</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-focus mi-badge-upper">Focus</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-black mi-badge-upper">Black</span>
+            &nbsp;
+            <span class="example-inverted-box"><span class="mi-badge mi-badge-inverted mi-badge-upper">Inverted</span></span>
+
+            <div class="demo-code">
+<pre>
+&lt;span class="mi-badge mi-badge-upper"&gt;Default&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-success mi-badge-upper"&gt;Success&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-error mi-badge-upper"&gt;Error&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-warning mi-badge-upper"&gt;Warning&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-focus mi-badge-upper"&gt;Focus&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-black mi-badge-upper"&gt;Black&lt;/span&gt;
+&lt;span class="mi-badge mi-badge-inverted mi-badge-upper"&gt;Inverted&lt;/span&gt;
+</pre>
+            </div>            
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-custom">Custom</h3>
+
+        <p>You can use mixins to customize your labels and badges.</p>
+
+        <div class="example">
+            <style>
+                .mi-badge.mi-badge-custom {
+                    background: #ea48a7;
+                    color: #fff;
+                }
+            </style>
+            <span class="mi-badge mi-badge-custom">Label</span>
+            &nbsp;
+            <span class="mi-badge mi-badge-custom">1</span>
+
+<pre class="code skip"><span class="hljs-comment">&lt;!-- scss --&gt;</span>
+.mi-badge.mi-badge-custom {
+    // $text-color, $back-color
+    @include label(#fff, #ea48a7);
+}
+
+<span class="hljs-comment">&lt;!-- html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-badge mi-badge-custom"</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-badge mi-badge-custom"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mi-badge mi-badge-tag mi-badge-custom"</span>&gt;</span>Tag<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</pre>
+        </div>
+
+    </div>
+
+    </body>
+</html>
