@@ -8,7 +8,7 @@
 
 	Mikit.Utils.prototype = {
 		disableBodyScroll: function () {
-			var $body = $('html');
+			var $body = $('body');
 			var windowWidth = window.innerWidth;
 
 			if (!windowWidth) {
@@ -33,7 +33,7 @@
 			return scrollbarWidth;
 		},
 		enableBodyScroll: function () {
-			$('html').css({
+			$('body').css({
 				'overflow': '',
 				'padding-right': ''
 			});
