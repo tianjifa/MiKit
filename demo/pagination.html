@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+		<ol>
+			<li><a href="#h-base">Base</a></li>
+			<li><a href="#h-centered">Centered</a></li>
+			<li><a href="#h-wide">Wide</a></li>
+			<li><a href="#h-pager">Pager</a></li>
+		</ol>
+    </div>
+
+    <div class="component-show">
+
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-base">Base</h3>
+
+        <div class="example">
+            <nav class="mi-pagination">
+                <ul>
+                    <li class="prev"><a href="#">←</a></li>
+                    <li>
+                        <ul>
+                            <li><span>1</span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </li>
+                    <li class="next"><a href="#">→</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"prev"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>&amp;larr;<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+                <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">span</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+                <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+            <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"next"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>&amp;rarr;<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-centered">Centered</h3>
+
+        <div class="example">
+            <nav class="mi-pagination mi-pagination-align-center">
+                <ul>
+                    <li class="prev"><a href="#">←</a></li>
+                    <li>
+                        <ul>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </li>
+                    <li class="next"><a href="#">→</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination mi-pagination-align-center"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"prev"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>&amp;larr;<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+                <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+                <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+            <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"next"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>&amp;rarr;<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-wide">Wide</h3>
+
+        <p>Here you can see an example where previous and next buttons are aligned to the left and to the right, with a link in the center of the page.</p>
+
+        <div class="example">
+            <nav class="mi-pagination mi-pagination-align-center mi-font-upper mi-font-strong">
+                <ul>
+                    <li class="prev"><a href="#">&lt; Prev</a></li>
+                    <li class="mi-w100">
+                        <ul>
+                            <li><a href="#">Back to catalog</a></li>
+                        </ul>
+                    </li>
+                    <li class="next"><a href="#">Next &gt;</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination mi-pagination-align-center mi-font-upper mi-font-strong"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"prev"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>&amp;lt; Prev<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-w100"</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+                <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+            <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"next"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>Next &amp;gt;<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+		
+		<!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-pager">Pager</h3>
+
+        <div class="example">
+            <nav class="mi-pagination mi-pager">
+                <ul>
+                    <li class="mi-pager-prev"><a href="#">Previous</a></li>
+                    <li class="mi-pager-next"><a href="#">Next</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination mi-pager"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pager-prev"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>Previous<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pager-next"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>Next<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+		
+        <div class="example">
+            <nav class="mi-pagination mi-pager mi-pager-align-center">
+                <ul>
+                    <li class="mi-pager-prev"><a href="#">Previous</a></li>
+                    <li class="mi-pager-next"><a href="#">Next</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination mi-pager mi-pager-align-center"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"prev"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>Previous<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"next"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>Next<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+
+        <p>Elements within a single list item can be stacked to create a clean and intuitive pagination elements.</p>
+
+        <div class="example">
+            <nav class="mi-pagination mi-pager mi-pager-flat">
+                <ul>
+                    <li class="mi-pager-prev">
+                        <span>Prev</span>
+                        <a href="#">Learn How to Use Images on Your Website</a>
+                    </li>
+                    <li class="mi-pager-next">
+                        <span>Next</span>
+                        <a href="#">Your Guide to Flat Design</a>
+                    </li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-pagination mi-pager mi-pager-flat"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"prev"</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">span</span>&gt;</span>Prev<span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"next"</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">span</span>&gt;</span>Next<span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+		</div>
+
+    </div>
+
+    </body>
+</html>
