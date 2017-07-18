@@ -51,6 +51,9 @@
     & li.mi-pager-next {
 	    text-align: right;
     }
+    &.mi-pager-align-center ul {
+        justify-content: center;
+    }
     &.mi-pager-align-center li {
         @include flex-basis(auto);
         margin-left: 4px;
