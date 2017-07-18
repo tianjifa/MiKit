@@ -5,7 +5,7 @@
         @include flex;
         margin: 0;
     }
-    &.mi-pagination-center  ul {
+    &.mi-pagination-align-center  ul {
         @include flex-items-center;
     }
     & span,
@@ -51,7 +51,7 @@
     & li.mi-pager-next {
 	    text-align: right;
     }
-    &.mi-pager-center li {
+    &.mi-pager-align-center li {
         @include flex-basis(auto);
         margin-left: 4px;
         margin-right: 4px;
