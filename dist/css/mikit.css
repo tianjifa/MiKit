@@ -1588,7 +1588,7 @@ button:hover,
     text-align: right;
 }
 
-.mi-pager.mi-pagination-center li {
+.mi-pager.mi-pager-center li {
     flex-basis: auto;
     margin-left: 4px;
     margin-right: 4px;
