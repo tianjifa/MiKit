@@ -6,7 +6,7 @@
         @include flex;
         @include flex-items-middle;
     }
-    &.mi-breadcrumb-push-center ul {
+    &.mi-push-center ul {
         @include flex-items-center;
     }
     & span,
