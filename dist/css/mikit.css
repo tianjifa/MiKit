@@ -1489,7 +1489,7 @@ button:hover,
     align-items: center;
 }
 
-.mi-breadcrumb.mi-breadcrumb-push-center ul {
+.mi-breadcrumb.mi-push-center ul {
     justify-content: center;
 }
 
