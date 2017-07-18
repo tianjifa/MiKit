@@ -544,7 +544,7 @@ if (typeof jQuery === 'undefined') {
 
 	Mikit.Utils.prototype = {
 		disableBodyScroll: function () {
-			var $body = $('html');
+			var $body = $('body');
 			var windowWidth = window.innerWidth;
 
 			if (!windowWidth) {
@@ -571,7 +571,7 @@ if (typeof jQuery === 'undefined') {
 			return scrollbarWidth;
 		},
 		enableBodyScroll: function () {
-			$('html').css({
+			$('body').css({
 				'overflow': '',
 				'padding-right': ''
 			});
