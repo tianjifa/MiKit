@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            #breadcrumb-custom-separator li:after {
+                content: '>'; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+		<ol>
+			<li><a href="#h-base">基础</a></li>
+			<li><a href="#h-centered">居中</a></li>
+			<li><a href="#h-custom-separator">自定义分隔符</a></li>
+		</ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+        
+        <h3 class="section-head" id="h-base">基础</h3>
+
+        <div class="example">
+            <nav class="mi-breadcrumb">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><span>Brand</span></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-breadcrumb"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">span</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-centered">居中</h3>
+
+
+        <div class="example">
+            <nav class="mi-breadcrumb mi-breadcrumb-center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li class="active"><a href="">Brand</a></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-breadcrumb mi-breadcrumb-center"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-custom-separator">自定义分隔符</h3>
+
+        <div class="example">
+            <nav id="breadcrumb-custom-separator" class="mi-breadcrumb">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><span>Brand</span></li>
+                </ul>
+            </nav>
+
+<pre class="code skip"><span class="mjs-comment">// css</span>
+<span class="mjs-meta">#breadcrumb-custom-separator li:after {</span>
+<span class="mjs-symbol">    content:</span> <span class="mjs-string">'&gt;'</span>;
+}
+
+<span class="mjs-comment">// html</span>
+<span class="mjs-params">&lt;nav id="breadcrumb-custom-separator" class="mi-breadcrumb"&gt;</span>
+    <span class="mjs-params">&lt;ul&gt;</span>
+        <span class="mjs-params">&lt;li&gt;</span><span class="mjs-params">&lt;a href=""&gt;</span>...<span class="mjs-params">&lt;/a&gt;</span><span class="mjs-params">&lt;/li&gt;</span>
+        <span class="mjs-params">&lt;li&gt;</span><span class="mjs-params">&lt;span&gt;</span>...<span class="mjs-params">&lt;/span&gt;</span><span class="mjs-params">&lt;/li&gt;</span>
+    <span class="mjs-params">&lt;/ul&gt;</span>
+<span class="mjs-params">&lt;/nav&gt;</span>
+</pre>
+
+        </div>
+
+    </div>
+
+    </body>
+</html>
