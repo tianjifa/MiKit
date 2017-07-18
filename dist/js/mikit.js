@@ -563,7 +563,7 @@ if (typeof jQuery === 'undefined') {
 		measureScrollbar: function () {
 			var $body = $('body');
 			var scrollDiv = document.createElement('div');
-			scrollDiv.className = 'scrollbar-measure';
+			scrollDiv.className = 'mi-scrollbar-measure';
 
 			$body.append(scrollDiv);
 			var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
