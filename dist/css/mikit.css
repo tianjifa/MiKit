@@ -1537,7 +1537,7 @@ button:hover,
     margin: 0;
 }
 
-.mi-pagination.mi-pagination-center ul {
+.mi-pagination.mi-pagination-align-center ul {
     justify-content: center;
 }
 
@@ -1588,7 +1588,7 @@ button:hover,
     text-align: right;
 }
 
-.mi-pager.mi-pager-center li {
+.mi-pager.mi-pager-align-center li {
     flex-basis: auto;
     margin-left: 4px;
     margin-right: 4px;
