@@ -1,0 +1,441 @@
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .example-inverted-box {
+                display: inline-block;
+                padding: 6px 8px 6px 8px;
+                line-height: 1;
+                vertical-align: middle;
+                background: #d4d4d4;
+            }
+
+            #livetabs {
+                margin-bottom: 24px;
+                font-size: 14px; 
+            }
+
+            #livetabs ul {
+                display: flex;
+            }
+
+            #livetabs a {
+                color: #000;
+                text-decoration: none;
+                background: #f4f4f4;
+                border-radius: 4px;
+                padding: 4px 12px;
+                border: 1px solid transparent; 
+            }
+            #livetabs a:hover {
+                opacity: .7; 
+            }
+
+            #livetabs li {
+                margin-right: 4px; 
+            }
+
+            #livetabs li.mi-active a {
+                background: #fff;
+                border-color: #eee;
+                color: rgba(0, 0, 0, 0.5);
+                cursor: default; }
+                #livetabs li.active a:hover {
+                    opacity: 1; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+<div class="component-index-box">
+    <ol>
+        <li><a href="#h-base">Base</a></li>
+        <li><a href="#h-javaScript-behavior">JavaScript behavior</a></li>
+        <li><a href="#h-equals">Equals</a></li>
+        <li><a href="#h-livetabs">Livetabs</a></li>
+        <li><a href="#h-active">Active</a></li>
+        <li><a href="#h-settings">Settings</a></li>
+        <li><a href="#h-callbacks">Callbacks</a></li>
+        <li><a href="#h-api">API</a></li>
+    </ol>
+</div>
+
+<div class="component-show">
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-base">Base</h3>
+<p>Here's an example of basic tabs setup. Tabs bar is an unordered list, and each tab in tabs bar is a list item. For each tab there's a corresponding div, which contains the body of the tab (it can be any kind of HTML). </p>
+
+<div class="example">
+    <nav class="mi-tab" data-component="tab">
+        <ul>
+            <li class="mi-active"><a href="#tab1" rel="#tab1">Home</a></li>
+            <li><a href="#tab2" rel="#tab2">Shop</a></li>
+            <li><a href="#tab3" rel="#tab3">Catalog</a></li>
+            <li><a href="#tab4" rel="#tab4">T-Shirts</a></li>
+            <li><a href="#tab5" rel="#tab5">Brand</a></li>
+        </ul>
+    </nav>
+
+    <div id="tab1" class="mi-open">
+        <h5>Home</h5>
+        <p>Home Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab2" class="mi-hide">
+        <h5>Shop</h5>
+        <p>Shop Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab3" class="mi-hide">
+        <h5>Catalog</h5>
+        <p>Catalog Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab4" class="mi-hide">
+        <h5>T-Shirts</h5>
+        <p>T-Shirts Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab5" class="mi-hide">
+        <h5>Brand</h5>
+        <p>Brand Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-tab"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"tab"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+    </pre>
+</div>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-javaScript-behavior">JavaScript behavior</h3>
+<p>Tabs are interactive elements, and can be opened, closed, switched, destroyed and selected programmatically via JavaScript. Try this example, poke around and then have a look at the self-explanatory code example below.</p>
+
+<div class="example">
+    <p>
+        <!--<button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('destroy');">destroy</button>-->
+        <button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('prev');">prev</button>
+        <button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('next');">next</button>
+        <button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('open', 4);">open</button>
+        <button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('close', '#tab-demo9');">close</button>
+        <button class="mi-button mi-button-outline" onclick="$('#tab-demo').tab('closeAll');">closeAll</button>
+    </p>
+    <br>
+
+    <nav id="tab-demo" class="mi-tab" data-component="tab">
+        <ul>
+            <li><a href="#tab-demo6" rel="#tab-demo6">Home</a></li>
+            <li class="mi-active"><a href="#tab-demo7" rel="#tab-demo7">Shop</a></li>
+            <li><a href="#tab-demo8" rel="#tab-demo8">Catalog</a></li>
+            <li><a href="#tab-demo9" rel="#tab-demo9">T-Shirts</a></li>
+            <li><a href="#tab-demo10" rel="#tab-demo10">Brand</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="tab-demo6" class="mi-hide">
+        <h5>Home</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab-demo7" class="mi-open">
+        <h5>Shop</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab-demo8" class="mi-hide">
+        <h5>Catalog</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab-demo9" class="mi-hide">
+        <h5>T-Shirts</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab-demo10" class="mi-hide">
+        <h5>Brand</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+<pre class="code skip"><!--<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('destroy');"</span>&gt;</span>destroy<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>-->
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('prev');"</span>&gt;</span>prev<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('next');"</span>&gt;</span>next<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('open', 4);"</span>&gt;</span>open<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('close', '#tab4');"</span>&gt;</span>close<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#tab').tab('closeAll');"</span>&gt;</span>closeAll<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-tab"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"tab"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab1"</span>&gt;</span>Home<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab2"</span>&gt;</span>Shop<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab3"</span>&gt;</span>Catalog<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab4"</span>&gt;</span>T-Shirts<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab5"</span>&gt;</span>Brand<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab3"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab4"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab4"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+</pre>
+
+</div>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-equals">Equals</h3>
+<p>Often it is important to create tabs that are equal in width regardless of content. <var>data-equals</var> is here to help you with this task.</p>
+
+<div class="example">
+    <nav class="mi-tab" data-component="tab" data-equals="true">
+        <ul>
+            <li class="mi-active"><a href="#tab11" rel="#tab11">Tab 1</a></li>
+            <li><a href="#tab12" rel="#tab12">Tab 2</a></li>
+        </ul>
+    </nav>
+
+    <div id="tab11" class="mi-open" style="min-height: 164px;">
+        <h5>Tab 1</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab12" class="mi-hide" style="min-height: 164px;">
+        <h5>Tab 2</h5>
+        <p>...</p>
+    </div>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-tab"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"tab"</span> <span class="mjs-attr">data-equals</span>=<span class="mjs-string">"true"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#tab12"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"tab2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+</pre>
+</div>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-livetabs">Livetabs</h3>
+<p>Livetabs provide a very seamless and smooth experience by blending content and tabs in this kind of live manner. Set up <var>data-live</var> class, and make sure your tabs have this same class. It's that simple.</p>
+
+<div class="example">
+    <nav id="livetabs" data-component="tab" data-live=".tab-live"><ul><li class="mi-active"><a href="#tab-general" rel="#tab-general">General</a></li><li><a href="#tab-additional" rel="#tab-additional">Additional</a></li></ul></nav>
+
+    <div id="tab-general" data-title="General" class="tab-live open">
+        <h5>General</h5>
+        <p>This is very General Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="tab-additional" data-title="Additional" class="tab-live hide">
+        <h5>Additional</h5>
+        <p>Quite an additional is displayed here: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+<pre class="code skip">&lt;nav <span class="mjs-built_in">id</span>=<span class="mjs-string">"livetabs"</span> data-component=<span class="mjs-string">"tabs"</span> data-live=<span class="mjs-string">".tab-live"</span>&gt;&lt;/nav&gt;
+
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">id</span>=<span class="mjs-string">"tab-general"</span> data-title=<span class="mjs-string">"General"</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"tab-live"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">id</span>=<span class="mjs-string">"tab-additional"</span> data-title=<span class="mjs-string">"Additional"</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"tab-live"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+</div>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-active">Active</h3>
+<p>To denote active tab, and to let users know where they are, use class <var>active</var>.</p>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">nav</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-tab"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-active"</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+</pre>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-settings">Settings</h3>
+
+<h5>equals</h5>
+
+<ul>
+    <li>Type: <var>boolean</var></li>
+    <li>Default: <var>false</var></li>
+</ul>
+<p>Making all tabs in a set equal width</p>
+
+<h5>active</h5>
+
+<ul>
+    <li>Type: <var>string</var></li>
+    <li>Default: <var>false</var></li>
+</ul>
+<p>Responsible for denoting active tab.</p>
+
+<h5>live</h5>
+
+<ul>
+    <li>Type: <var>string</var></li>
+    <li>Default: <var>false</var></li>
+</ul>
+<p>Responsible for live tabs (see <a href="#h-livetabs">Livetabs</a> example)</p>
+
+<h5>hash</h5>
+<ul>
+    <li>Type: <var>boolean</var></li>
+    <li>Default: <var>true</var></li>
+</ul>
+<p>This will add a hash and an ID to the URL.</p>
+
+<!------------------------------------------------------------------>
+
+
+<h3 class="section-head" id="h-callbacks">Callbacks</h3>
+
+<h5>init</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'init.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>next</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'next.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params">$item</span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>prev</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'prev.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params">$item</span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>open</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'open.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>opened</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'opened.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>close</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'close.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>closed</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#tab'</span>).on(<span class="mjs-string">'closed.tabs'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-api">API</h3>
+
+<h5>open</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'open'</span>, <span class="mjs-number">1</span>);
+
+<span class="mjs-regexp">//</span> <span class="mjs-keyword">or</span>
+
+<span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'open'</span>, <span class="mjs-string">'#tab1'</span>);
+</pre>
+
+<h5>close</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'close'</span>, <span class="mjs-number">1</span>);
+
+<span class="mjs-regexp">//</span> <span class="mjs-keyword">or</span>
+
+<span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'close'</span>, <span class="mjs-string">'#tab1'</span>);
+</pre>
+
+<h5>closeAll</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'closeAll'</span>);
+</pre>
+
+<h5>next</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'next'</span>);
+</pre>
+
+
+<h5>prev</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'prev'</span>);
+</pre>
+
+<h5>destroy</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#tab'</span>).tab(<span class="mjs-string">'destroy'</span>);
+</pre>
+
+</div>
+
+    </body>
+</html>
