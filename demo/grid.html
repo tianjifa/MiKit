@@ -45,22 +45,99 @@
                 margin-bottom: 16px;
             }
 
-            .demo-grid .mi-row {
-                margin-bottom: 4px;
-                background: #ebf4fc;
-            }
+			.demo-grid .mi-row {
+				margin-bottom: 4px;
+				background: #f8f8f8;
+			}
 
-            .demo-grid .mi-col {
-                font-family: Consolas, Monaco, "Courier New", monospace;
-                font-size: 12px;
-                padding: 8px 12px;
-                background: #d8e9fa;
-                border-left: 1px solid rgba(0, 0, 0, 0.1);
-            }
+			.demo-grid .mi-col {
+				font-family: Consolas, Monaco, "Courier New", monospace;
+				font-size: 12px;
+				padding: 8px 12px;
+				background: #d8e9fa;
+				border-left: 1px solid rgba(0, 0, 0, 0.1);
+			}
 
-            .demo-grid .mi-row.mi-gutters {
-                background: none;
-            }
+			.demo-grid .mi-row.mi-gutters {
+				background: none;
+			}
+
+			.demo-grid .demo-col-nested {
+				border-left: none !important;
+				padding: 0 !important;
+			}
+
+			.demo-grid .mi-col {
+				font-family: Consolas, Monaco, "Courier New", monospace;
+				font-size: 12px;
+				padding: 8px 12px;
+				background: #d8e9fa;
+				border-left: 1px solid rgba(0, 0, 0, 0.1);
+			}
+
+			#demo-container {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			#demo-sidebar, #demo-content {
+				font-family: Consolas, Monaco, "Courier New", monospace;
+				font-size: 12px;
+				padding: 8px 12px;
+				min-height: 80px;
+			}
+
+			#demo-sidebar {
+				flex: 0 0 300px;
+				background: #c4def7;
+			}
+
+			#demo-content {
+				flex: auto;
+				background: #ebf4fc;
+			}
+
+			#demo-media-grid {
+				-webkit-column-count: 2;
+				-moz-column-count: 2;
+				column-count: 2;
+				-webkit-column-gap: 2%;
+				-moz-column-gap: 2%;
+				column-gap: 2%; 
+			}
+
+			#demo-media-grid > div {
+				display: inline-block;
+				width: 100%; 
+			}
+
+			@media (max-width: 768px) {
+				#demo-media-grid {
+					-webkit-column-count: 1;
+					-moz-column-count: 1;
+					column-count: 1; 
+				} 
+			}
+
+			#demo-media-grid > div {
+				font-family: Consolas, Monaco, "Courier New", monospace;
+				font-size: 12px;
+				padding: 8px 12px;
+				background: #eae2f2;
+				text-align: center;
+				margin-bottom: 20px;
+				height: 80px; 
+			}
+
+			#demo-media-grid > div:nth-child(2n) {
+				height: 200px; 
+			}
+
+			#demo-media-grid > div:nth-child(5n) {
+				height: 120px;
+			}
+
         </style>
     </head>
     <body>
@@ -499,46 +576,116 @@
 
     </div>
 
-    <!-- ---------------------------------------------- -->
+<!-- ---------------------------------------------- -->
+	<h3 class="section-head" id="h-fixed-column">
+		Fixed Width Column
+	</h3>
+	<p>
+		Here's one more bit of magic. You can set a fixed width column and still have a responsive and flexible layout right beside this fixed width column.
+	</p>
+	<div class="example demo-grid">
+		<div id="demo-container">
+			<div id="demo-sidebar">
+				sidebar
+			</div>
+			<div id="demo-content">
+				content
+			</div>
+		</div>
+		<div class="demo-code">
+<pre class="prettyprint lang-html">&lt;!-- scss --&gt;
+#container {
+    @include grid-row;
+}
+#sidebar {
+    @include flex-item-width(300px);
+}
+#content {
+    @include flex-item-auto;
+}
 
-    <h3 class="section-head" id="h-fixed-column">Fixed Width Column</h3>
+&lt;!-- html --&gt;
+&lt;div id="container"&gt;
+    &lt;div id="sidebar"&gt;Sidebar&lt;/div&gt;
+    &lt;div id="content"&gt;Content&lt;/div&gt;
+&lt;/div&gt;</pre>
+<br />
+		</div>
+	</div>
+<!-- ---------------------------------------------- -->
+	<h3 class="section-head" id="h-media-grid">
+		Media Grid
+	</h3>
+	<p>
+		Media grid is a great example of Mikit's flexibility and versatility. Whenever you have some media to display, you can choose to use Media grid. This type of grid is ideal for featuring photos; it adds some visual music and slight randomness to your layout.
+	</p>
+	<div class="example demo-grid">
+		<div id="demo-media-grid">
+			<div>
+				1
+			</div>
+			<div>
+				2
+			</div>
+			<div>
+				3
+			</div>
+			<div>
+				4
+			</div>
+			<div>
+				5
+			</div>
+			<div>
+				6
+			</div>
+			<div>
+				7
+			</div>
+			<div>
+				8
+			</div>
+			<div>
+				9
+			</div>
+			<div>
+				10
+			</div>
+		</div>
+		<div class="demo-code">
+<pre class="prettyprint lang-html">&lt;!-- scss --&gt;
+#media-grid {
 
-    <p>Here's one more bit of magic. You can set a fixed width column and still have a responsive and flexible layout right beside this fixed width column.</p>
+    @include grid-media-columns(2);
 
-    <div class="example demo-grid">
+    &amp; &gt; div {
+        margin-bottom: 20px;
+        height: 80px;
+    }
+    &amp; &gt; div:nth-child(2n) {
+      height: 200px;
+    }
+    &amp; &gt; div:nth-child(5n) {
+      height: 120px;
+    }
+}
 
-        <div id="demo-container">
-            <div id="demo-sidebar">sidebar</div>
-            <div id="demo-content">content</div>
-        </div>
-
-        <div class="demo-code">
-            demo-code
-        </div>
-
-    </div>
-
-    <!-- ---------------------------------------------- -->
-
-    <h3 id="h-gutters" class="section-head">标题</h3>
-    <div class="example demo-grid">
-        <span>Demo</span>
-        <div class="demo-code">
-            Code
-        </div>
-    </div>
-
-    <!-- ---------------------------------------------- -->
-
-    <h3 id="h-gutters" class="section-head">标题</h3>
-    <div class="example demo-grid">
-        <span>Demo</span>
-        <div class="demo-code">
-            Code
-        </div>
-    </div>
-
-    <!-- ---------------------------------------------- -->
+&lt;!-- html --&gt;
+&lt;div id="media-grid"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+  &lt;div&gt;4&lt;/div&gt;
+  &lt;div&gt;5&lt;/div&gt;
+  &lt;div&gt;6&lt;/div&gt;
+  &lt;div&gt;7&lt;/div&gt;
+  &lt;div&gt;8&lt;/div&gt;
+  &lt;div&gt;9&lt;/div&gt;
+  &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;</pre>
+<br />
+		</div>
+	</div>
 </div>    
     </body>
 </html>
