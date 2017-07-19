@@ -2755,11 +2755,11 @@ button:hover,
 }
 
 .mi-caret.mi-down:before {
-    content: "\e64b";
+    content: "\e601";
 }
 
 .mi-caret.mi-up:before {
-    content: "\e64e";
+    content: "\e604";
 }
 
 .mi-dropdown .mi-close {
