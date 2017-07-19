@@ -1154,7 +1154,7 @@ if (typeof jQuery === 'undefined') {
 			var $parent = item.$el.parent();
 			item.$parent = ($parent[0].tagName === 'LI') ? $parent : false;
 
-			var $caret = item.$el.find('.caret');
+			var $caret = item.$el.find('.mi-caret');
 			item.$caret = ($caret.length !== 0) ? $caret : false;
 
 			return item;
