@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            #breadcrumb-custom-separator li:after {
+                content: '>'; 
+            }
+			
+			#demo-nav-collapse,
+			#demo-nav-collapse ul {
+				margin-left: 0;
+				list-style: none; 
+			}
+
+			#demo-nav-collapse li {
+				line-height: 32px; 
+			}
+
+			#demo-nav-collapse ul {
+				margin-left: 20px;
+				font-size: 14px; 
+			}
+
+			#demo-nav-collapse a {
+				color: #000;
+				text-decoration: none;
+				display: block; 
+			}
+			#demo-nav-collapse a:hover {
+				-moz-transition: all linear 0.2s;
+				transition: all linear 0.2s;
+				color: rgba(0, 0, 0, 0.6);
+				text-decoration: underline; 
+			}
+			
+			.my-collapse {
+				margin-bottom: 24px; 
+			}
+
+			.my-collapse h4 {
+				background: #f4f4f4;
+				padding: 8px 16px;
+				margin-bottom: 1px;
+				font-size: 15px;
+				line-height: 24px; 
+			}
+
+			.my-collapse h4 a {
+				text-decoration: none;
+				color: #000;
+				display: block; 
+			}
+
+			.my-collapse div {
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				padding: 24px 32px 1px;
+				margin-bottom: 1px; 
+			}
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-base">Base</a></li>
+            <li><a href="#h-navigation-example">Navigation Example</a></li>
+            <li><a href="#h-settings">Settings</a></li>
+            <li><a href="#h-callbacks">Callbacks</a></li>
+            <li><a href="#h-api">API</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+	
+		<!-- -------------------------------------- -->
+
+		<h3 id="h-base" class="section-head">Base</h3>
+
+		<div class="example">
+			<div id="my-collapse" data-component="collapse" class="my-collapse">
+
+				<h4><a href="#mi-collapse-box-1" class="mi-collapse-toggle" rel="#mi-collapse-box-1">Item 1</a></h4>
+				<div class="mi-collapse-box mi-hide" id="mi-collapse-box-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<h4><a href="#mi-collapse-box-2" class="mi-collapse-toggle" rel="#mi-collapse-box-2">Item 2</a></h4>
+				<div class="mi-collapse-box mi-hide" id="mi-collapse-box-2">
+					<p>I look active on load.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<h4><a href="#mi-collapse-box-3" class="mi-collapse-toggle" rel="#mi-collapse-box-3">Item 3</a></h4>
+				<div class="mi-collapse-box mi-hide" id="mi-collapse-box-3">
+					<h6>Important Heading</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"my-collapse"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"collapse"</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-1"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-2"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-3"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-3"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+</pre>
+
+		</div>
+
+
+		<h3 id="h-navigation-example" class="section-head"><a href="#h-navigation-example">Navigation Example</a></h3>
+
+		<p>Here you can see a list of items forming a navigation menu, with a nested list which acts as a collapsable element</p>
+
+		<div class="example">
+			<ul id="demo-nav-collapse">
+				<li><a href="#">Installation</a></li>
+				<li><a href="#">Configuration</a></li>
+				<li><a href="#">Adding Content</a></li>
+				<li><a href="#">Templates</a></li>
+				<li data-component="collapse" class="mi-active">
+					<a href="#languages-box-2" class="mi-collapse-toggle mi-active" rel="#languages-box-2">Languages <span class="mi-caret mi-up"></span></a>
+					<ul id="languages-box-2" class="mi-collapse-box open">
+						<li><a href="#">Setup</a></li>
+						<li><a href="#">Translating content</a></li>
+						<li><a href="#">Language variables</a></li>
+						<li><a href="#">Supporting RTL</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Callbacks</a></li>
+				<li><a href="#">API</a></li>
+			</ul>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">li</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"collapse"</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#toggle-box"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>
+            Toggle
+            <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-caret mi-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">ul</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"toggle-box"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box"</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+</pre>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+
+		<h3 class="section-head" id="h-settings">Settings</h3>
+		<p>Settings are pretty straightforward: you can toggle, denote active element, turn animation on and off, and more.</p>
+
+		<h5>toggle</h5>
+
+		<ul>
+			<li>Type: <var>boolean</var></li>
+			<li>Default: <var>true</var></li>
+		</ul>
+
+		<h5>active</h5>
+
+		<ul>
+			<li>Type: <var>string or boolean</var></li>
+			<li>Default: <var>false</var></li>
+		</ul>
+
+		<h5>toggleClass</h5>
+
+		<ul>
+			<li>Type: <var>string</var></li>
+			<li>Default: <var>'mi-collapse-toggle'</var></li>
+		</ul>
+		<p>Sets a class of a collapsable object.</p>
+
+		<h5>boxClass</h5>
+
+		<ul>
+			<li>Type: <var>string</var></li>
+			<li>Default: <var>'mi-collapse-box'</var></li>
+		</ul>
+		<p>Sets a class for collapsable object's content</p>
+
+		<h5>animation</h5>
+
+		<ul>
+			<li>Type: <var>boolean</var></li>
+			<li>Default: <var>true</var></li>
+		</ul>
+		<p>Turns animation on and off.</p>
+
+		<!-- -------------------------------------- -->
+
+		<h3 class="section-head" id="h-callbacks">Callbacks</h3>
+
+		<h5>open</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-collapse'</span>).on(<span class="mjs-string">'open.collapse'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+		<h5>opened</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-collapse'</span>).on(<span class="mjs-string">'opened.collapse'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+		<h5>close</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-collapse'</span>).on(<span class="mjs-string">'close.collapse'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+		<h5>closed</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-collapse'</span>).on(<span class="mjs-string">'closed.collapse'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+		<!-- -------------------------------------- -->
+
+		<h3 class="section-head" id="h-api">API</h3>
+
+		<p>We love APIs, and for interactive elements such as collapsable elements we offer ways to programmatically open and close individual elements, or all at once.
+		</p>
+
+		<div class="example">
+			<p>
+				<button class="button outline" onclick="$(&#39;#my-collapse-api&#39;).collapse(&#39;open&#39;, &#39;#box-2&#39;);">Open</button>
+				<button class="button outline" onclick="$(&#39;#my-collapse-api&#39;).collapse(&#39;close&#39;, &#39;#box-2&#39;);">Close</button>
+
+				<button class="button outline" onclick="$(&#39;#my-collapse-api&#39;).collapse(&#39;openAll&#39;);">Open All</button>
+				<button class="button outline" onclick="$(&#39;#my-collapse-api&#39;).collapse(&#39;closeAll&#39;);">Close All</button>
+			</p>
+			<br>
+
+
+			<div id="my-collapse-api" data-component="collapse" class="my-collapse">
+
+				<h4><a href="#box-1" class="mi-collapse-toggle" rel="#box-1">Item 1</a></h4>
+				<div class="mi-collapse-box mi-hide" id="box-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<h4><a href="#box-2" class="mi-collapse-toggle" rel="#box-2">Item 2</a></h4>
+				<div class="mi-collapse-box mi-hide" id="box-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<h4><a href="#box-3" class="mi-collapse-toggle" rel="#box-3">Item 3</a></h4>
+				<div class="mi-collapse-box mi-hide" id="box-3">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+
+<pre class="code skip"><span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#my-collapse-api').collapse('open', '#box-2');"</span>&gt;</span>Open<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#my-collapse-api').collapse('close', '#box-2');"</span>&gt;</span>Close<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#my-collapse-api').collapse('openAll');"</span>&gt;</span>Open All<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">onclick</span>=<span class="mjs-string">"$('#my-collapse-api').collapse('closeAll');"</span>&gt;</span>Close All<span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"my-collapse-api"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"collapse"</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-1"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-1"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-2"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-2"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+    <span class="mjs-tag">&lt;<span class="mjs-name">h4</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#box-3"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-toggle"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">h4</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-collapse-box mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"box-3"</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span></pre>
+
+		</div>
+
+
+		<h5>open</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-collapse'</span>).collapse(<span class="mjs-string">'open'</span>);</pre>
+
+		<h5>close</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-collapse'</span>).collapse(<span class="mjs-string">'close'</span>);</pre>
+
+		<h5>openAll</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-collapse'</span>).collapse(<span class="mjs-string">'openAll'</span>);</pre>
+
+		<h5>closeAll</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-collapse'</span>).collapse(<span class="mjs-string">'closeAll'</span>);</pre>
+
+    </div>
+
+    </body>
+
+</html>
