@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Mikit</title>
@@ -40,100 +41,19 @@
                 margin-bottom: 16px;
             }
 
-            #navbar-demo {
-            display: flex;
-            align-items: center;
-            background: #f8f8f8;
-            padding: 24px 20px;
-            margin-bottom: 24px; 
-            }
-
-            #navbar-brand {
-            margin-right: 24px;
-            }
-
-            #navbar-main ul:after {
-            content: '';
-            display: table;
-            clear: both; 
-            }
-
-            #navbar-main li {
-            float: left;
-            margin-right: 20px; 
-            }
-
-            #navbar-demo.fixed {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-
-            #navbar-main li a {
-            color: #000;
-            text-decoration: none;
-            display: block; 
-            }
-            #navbar-main li a:hover {
-                -moz-transition: all linear 0.2s;
-                transition: all linear 0.2s;
-                color: rgba(0, 0, 0, 0.6);
-                text-decoration: underline; 
-            }
-
-            @media (max-width: 768px) {
-                #navbar-demo {
-                    flex-direction: column;
-                    text-align: center; 
-                }
-                #navbar-brand {
-                    margin: 0;
-                    margin-bottom: 20px; 
-                }
-                #navbar-main li {
-                    float: none;
-                    margin: 0;
-                    margin-bottom: 20px; 
-                } 
-            }
-
-            #demo-nav-collapse,
-            #demo-nav-collapse ul {
-            margin-left: 0;
-            list-style: none; 
-            }
-
-            #demo-nav-collapse li {
-            line-height: 32px; }
-
-            #demo-nav-collapse ul {
-            margin-left: 20px;
-            font-size: 14px; 
-            }
-
-            #demo-nav-collapse a {
-            color: #000;
-            text-decoration: none;
-            display: block; 
-            }
-            #demo-nav-collapse a:hover {
-                -moz-transition: all linear 0.2s;
-                transition: all linear 0.2s;
-                color: rgba(0, 0, 0, 0.6);
-                text-decoration: underline; 
-            }
-
         </style>
     </head>
     <body>
 
-    <div class="component-index-box">
-		<ol>
-        <li><a href="#h-demo">Demo</a></li>
-        <li><a href="#h-settings">Settings</a></li>
-        <li><a href="#h-callbacks">Callbacks</a></li>
-		</ol>
-    </div>
+<div class="component-index-box">
+    <ol>
+    <li><a href="#h-demo">Demo</a></li>
+    <li><a href="#h-settings">Settings</a></li>
+    <li><a href="#h-callbacks">Callbacks</a></li>
+    </ol>
+</div>
 
-    <div class="component-show">
+<div class="component-show">
 
 <!------------------------------------------------------------------>
 
@@ -141,7 +61,7 @@
 
 <div class="example">
     <p>
-        <a href="#" data-component="dropdown" data-target="#dropdown1">Show Dropdown <span class="mi-icon mi-icon-arrows-down"></span></a>
+        <a href="#" data-component="dropdown" data-target="#dropdown1">Show Dropdown <span class="mi-caret mi-down"></span></a>
     </p>
     <div class="mi-dropdown mi-hide" id="dropdown1" style="position: absolute; top: 838px; left: 564.5px;">
         <a href="" class="close show-sm"></a>
@@ -156,11 +76,11 @@
     </div>
 
 <pre class="code skip">// Toggle
-<span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"dropdown"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#my-dropdown"</span>&gt;</span>Show <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-icon-arrows-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"dropdown"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#my-dropdown"</span>&gt;</span>Show <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-caret mi-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
 
 // Dropdown
-<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"dropdown hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"my-dropdown"</span>&gt;</span>
-    <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"close show-sm"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-dropdown mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"my-dropdown"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-close show-sm"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
     <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
         <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
     <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
@@ -170,7 +90,7 @@
 
 <div class="example">
     <p>
-        <button data-component="dropdown" data-target="#dropdown2" class="button outline">Show Dropdown <span class="mi-icon-arrows-down"></span></button>
+        <button data-component="dropdown" data-target="#dropdown2" class="button outline">Show Dropdown <span class="mi-caret mi-down"></span></button>
     </p>
     <div class="mi-dropdown mi-hide" id="dropdown2">
         <div style="padding: 24px;">
@@ -181,7 +101,7 @@
     </div>
 
 <pre class="code skip">// Toggle
-<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"dropdown"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#my-dropdown"</span>&gt;</span>Show Dropdown <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-icon-arrows-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">button</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"dropdown"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#my-dropdown"</span>&gt;</span>Show Dropdown <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-caret mi-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">button</span>&gt;</span>
 
 // Dropdown
 <span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"dropdown hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"my-dropdown"</span>&gt;</span>
@@ -209,7 +129,7 @@
     			<li>
     			    <a href="" data-component="dropdown" data-target="#dropdown-fixed">
                         Account
-                        <span class="mi-icon mi-icon-arrows-down"></span>
+                        <span class="mi-caret mi-down"></span>
                     </a>
                 </li>
     		</ul>
@@ -230,7 +150,7 @@
             <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span>
                 <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"dropdown"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#dropdown-fixed"</span>&gt;</span>
                     Account
-                    <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-icon-arrows-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span>
+                    <span class="mjs-tag">&lt;<span class="mjs-name">span</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-caret mi-down"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span>
                 <span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
             <span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
         <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
@@ -238,7 +158,7 @@
 <span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
 
 // Dropdown
-<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"dropdown hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"dropdown-fixed"</span>&gt;</span>
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-dropdown mi-hide"</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"dropdown-fixed"</span>&gt;</span>
     <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
         <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span><span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">""</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
     <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
@@ -315,8 +235,6 @@
 });</pre>
 
 </div>
-
-    </div>
 
     </body>
 </html>
