@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <script>
+            $(function() {
+                var animate = {
+                    '#slide-up-btn': {
+                        el: '#animation-box-slide-up',
+                        to: 'slideUp',
+                        back: 'slideDown'
+                    },
+                    '#slide-down-btn': {
+                        el: '#animation-box-slide-down',
+                        to: 'slideDown',
+                        back: 'slideUp'
+                    },
+                    '#fade-in-btn': {
+                        el: '#animation-box-fade-in',
+                        to: 'fadeIn',
+                        back: 'fadeOut'
+                    },
+                    '#fade-out-btn': {
+                        el: '#animation-box-fade-out',
+                        to: 'fadeOut',
+                        back: 'fadeIn'
+                    },
+                    '#flip-in-btn': {
+                        el: '#animation-box-flip-in',
+                        to: 'flipIn',
+                        back: 'flipOut'
+                    },
+                    '#flip-out-btn': {
+                        el: '#animation-box-flip-out',
+                        to: 'flipOut',
+                        back: 'flipIn'
+                    },
+                    '#zoom-in-btn': {
+                        el: '#animation-box-zoom-in',
+                        to: 'zoomIn',
+                        back: 'zoomOut'
+                    },
+                    '#zoom-out-btn': {
+                        el: '#animation-box-zoom-out',
+                        to: 'zoomOut',
+                        back: 'zoomIn'
+                    },
+                    '#slide-in-right-btn': {
+                        el: '#animation-box-slide-in-right',
+                        to: 'slideInRight',
+                        back: 'slideOutRight'
+                    },
+                    '#slide-in-left-btn': {
+                        el: '#animation-box-slide-in-left',
+                        to: 'slideInLeft',
+                        back: 'slideOutLeft'
+                    },
+                    '#slide-in-down-btn': {
+                        el: '#animation-box-slide-in-down',
+                        to: 'slideInDown',
+                        back: 'slideOutUp'
+                    },
+                    '#slide-out-right-btn': {
+                        el: '#animation-box-slide-out-right',
+                        to: 'slideOutRight',
+                        back: 'slideInRight'
+                    },
+                    '#slide-out-left-btn': {
+                        el: '#animation-box-slide-out-left',
+                        to: 'slideOutLeft',
+                        back: 'slideInLeft'
+                    },
+                    '#slide-out-up-btn': {
+                        el: '#animation-box-slide-out-up',
+                        to: 'slideOutUp',
+                        back: 'slideInDown'
+                    },
+                };
+
+                for (var key in animate) {
+                    $(key).attr('data-el', animate[key].el);
+                    $(key).attr('data-to', animate[key].to);
+                    $(key).attr('data-back', animate[key].back);
+
+                    $(key).on('click', function(e) {
+                        e.preventDefault();
+                        var $btn = $(e.target);
+                        if ($btn.hasClass('demo-muted-link')) {
+                            return;
+                        }
+
+                        var $el = $($btn.attr('data-el'));
+                        $btn.addClass('demo-muted-link');
+
+                        $el.animation($btn.attr('data-to'));
+                        setTimeout(function() {
+                            $el.animation($btn.attr('data-back'));
+                            $btn.removeClass('demo-muted-link');
+                        }, 1500);
+
+                    });
+                }
+
+
+                $('#rotate-btn').on('click', function(e) {
+                    e.preventDefault();
+                    $('#animation-box-rotate').animation('rotate');
+                });
+
+                $('#shake-btn').on('click', function(e) {
+                    e.preventDefault();
+                    $('#animation-box-shake').animation('shake');
+                });
+
+                $('#pulse-btn').on('click', function(e) {
+                    e.preventDefault();
+                    $('#animation-box-pulse').animation('pulse');
+                });
+
+            });
+        </script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .demo-animation-wrap {
+                margin-bottom: 24px; 
+            }
+            .demo-animation-wrap:after {
+                content: '';
+                display: table;
+                clear: both; 
+            }
+
+            .demo-animation-box {
+                float: left;
+                margin-right: 16px;
+                width: 202px;
+                height: 82px;
+                border: 1px dashed rgba(0, 0, 0, 0.15); 
+            }
+            .demo-animation-box > div {
+                width: 200px;
+                height: 80px;
+                background: #f8f8f8;
+                text-align: center;
+                line-height: 80px;
+                color: rgba(0, 0, 0, 0.4);
+                font-size: 18px; 
+            }
+
+            .demo-animation-btn {
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: bold;
+                display: inline-block;
+                width: 200px;
+                margin-right: 16px; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-slide">Slide</a></li>
+            <li><a href="#h-fade">Fade</a></li>
+            <li><a href="#h-flip">Flip</a></li>
+            <li><a href="#h-zoom">Zoom</a></li>
+            <li><a href="#h-rotate">Rotate</a></li>
+            <li><a href="#h-shake">Shake</a></li>
+            <li><a href="#h-pulse">Pulse</a></li>
+            <li><a href="#h-slide-in">Slide In</a></li>
+            <li><a href="#h-slide-out">Slide Out</a></li>
+            <li><a href="#h-callback">Callback</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+            
+        <h3 class="section-head" id="h-slide">Slide</h3>
+
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-up" class="" style="">slideUp</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-down" class="mi-hide" style="">slideDown</div>
+                </div>
+            </div>
+
+            <a id="slide-up-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-up" data-to="slideUp" data-back="slideDown">Slide Up</a>
+            <a id="slide-down-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-down" data-to="slideDown" data-back="slideUp">Slide Down</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideUp'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideDown'</span>);</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-fade">Fade</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-fade-in" class="mi-hide">fadeIn</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-fade-out">fadeOut</div>
+                </div>
+            </div>
+
+            <a id="fade-in-btn" class="demo-animation-btn" href="#" data-el="#animation-box-fade-in" data-to="fadeIn" data-back="fadeOut">Fade In</a>
+            <a id="fade-out-btn" class="demo-animation-btn" href="#" data-el="#animation-box-fade-out" data-to="fadeOut" data-back="fadeIn">Fade Out</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'fadeIn'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'fadeOut'</span>);</pre>
+
+        </div>
+
+        <h3 class="section-head" id="h-flip">Flip</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-flip-in" class="mi-hide">flipIn</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-flip-out">flipOut</div>
+                </div>
+            </div>
+
+            <a id="flip-in-btn" class="demo-animation-btn" href="#" data-el="#animation-box-flip-in" data-to="flipIn" data-back="flipOut">Flip In</a>
+            <a id="flip-out-btn" class="demo-animation-btn" href="#" data-el="#animation-box-flip-out" data-to="flipOut" data-back="flipIn">Flip Out</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'flipIn'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'flipOut'</span>);</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-zoom">Zoom</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-zoom-in" class="mi-hide">zoomIn</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-zoom-out">zoomOut</div>
+                </div>
+            </div>
+
+            <a id="zoom-in-btn" class="demo-animation-btn" href="#" data-el="#animation-box-zoom-in" data-to="zoomIn" data-back="zoomOut">Zoom In</a>
+            <a id="zoom-out-btn" class="demo-animation-btn" href="#" data-el="#animation-box-zoom-out" data-to="zoomOut" data-back="zoomIn">Zoom Out</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'zoomIn'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'zoomOut'</span>);</pre>
+
+        </div>
+
+        <h3 class="section-head" id="h-rotate">Rotate</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-rotate">rotate</div>
+                </div>
+
+            </div>
+
+            <a id="rotate-btn" class="demo-animation-btn" href="#">Rotate</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'rotate'</span>);</pre>
+
+        </div>
+
+        <h3 class="section-head" id="h-shake">Shake</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-shake">shake</div>
+                </div>
+
+            </div>
+
+            <a id="shake-btn" class="demo-animation-btn" href="#">Shake</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'shake'</span>);</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-pulse">Pulse</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-pulse">pulse</div>
+                </div>
+
+            </div>
+
+            <a id="pulse-btn" class="demo-animation-btn" href="#">Pulse</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'pulse'</span>);</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-slide-in">Slide In</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-in-right" class="mi-hide">slideInRight</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-in-left" class="mi-hide">slideInLeft</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-in-down" class="mi-hide">slideInDown</div>
+                </div>
+            </div>
+
+            <a id="slide-in-right-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-in-right" data-to="slideInRight" data-back="slideOutRight">Slide In Right</a>
+            <a id="slide-in-left-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-in-left" data-to="slideInLeft" data-back="slideOutLeft">Slide In Left</a>
+            <a id="slide-in-down-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-in-down" data-to="slideInDown" data-back="slideOutUp">Slide In Down</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideInRight'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideInLeft'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideInDown'</span>);</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-slide-out">Slide Out</h3>
+
+        <div class="example">
+            <div class="demo-animation-wrap">
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-out-right">slideOutRight</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-out-left">slideOutLeft</div>
+                </div>
+                <div class="demo-animation-box">
+                    <div id="animation-box-slide-out-up">slideOutUp</div>
+                </div>
+            </div>
+
+            <a id="slide-out-right-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-out-right" data-to="slideOutRight" data-back="slideInRight">Slide Out Right</a>
+            <a id="slide-out-left-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-out-left" data-to="slideOutLeft" data-back="slideInLeft">Slide Out Left</a>
+            <a id="slide-out-up-btn" class="demo-animation-btn" href="#" data-el="#animation-box-slide-out-up" data-to="slideOutUp" data-back="slideInDown">Slide Out Up</a>
+
+<pre class="code"><span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideOutRight'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideOutLeft'</span>);
+<span class="mjs-variable">$(</span><span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'slideOutUp'</span>);</pre>
+
+        </div>
+
+        <h3 class="section-head" id="h-callback">Callback</h3>
+
+<pre class="code">$(<span class="mjs-string">'#element'</span>).animation(<span class="mjs-string">'fadeIn'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)</span> {
+    <span class="mjs-comment">// code ...</span>
+});</pre>
+    
+</div>
+
+</body>
+</html>
