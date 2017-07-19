@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            #navbar-demo {
+                display: flex;
+                align-items: center;
+                background: #f8f8f8;
+                padding: 24px 20px;
+                margin-bottom: 24px; 
+            }
+
+            #navbar-brand {
+                margin-right: 24px;
+            }
+
+            #navbar-main ul:after {
+                content: '';
+                display: table;
+                clear: both; 
+            }
+
+            #navbar-main li {
+                float: left;
+                margin-right: 20px; 
+            }
+
+            #navbar-demo.fixed {
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); 
+            }
+
+            #navbar-main li a {
+                color: #000;
+                text-decoration: none;
+                display: block; 
+            }
+            #navbar-main li a:hover {
+                -moz-transition: all linear 0.2s;
+                transition: all linear 0.2s;
+                color: rgba(0, 0, 0, 0.6);
+                text-decoration: underline; 
+            }
+
+            @media (max-width: 768px) {
+                #navbar-demo {
+                    flex-direction: column;
+                    text-align: center; 
+                }
+                #navbar-brand {
+                    margin: 0;
+                    margin-bottom: 20px; 
+                }
+                #navbar-main li {
+                    float: none;
+                    margin: 0;
+                    margin-bottom: 20px; 
+                } 
+            }
+
+            #demo-nav-collapse,
+            #demo-nav-collapse ul {
+                margin-left: 0;
+                list-style: none; 
+            }
+
+            #demo-nav-collapse li {
+                line-height: 32px; 
+            }
+
+            #demo-nav-collapse ul {
+                margin-left: 20px;
+                font-size: 14px; 
+            }
+
+            #demo-nav-collapse a {
+                color: #000;
+                text-decoration: none;
+                display: block; 
+            }
+            #demo-nav-collapse a:hover {
+                -moz-transition: all linear 0.2s;
+                transition: all linear 0.2s;
+                color: rgba(0, 0, 0, 0.6);
+                text-decoration: underline; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+<div class="component-index-box">
+    <ol>
+        <li><a href="#h-base">基础</a></li>
+        <li><a href="#h-centered">居中</a></li>
+        <li><a href="#h-custom-separator">自定义分隔符</a></li>
+    </ol>
+</div>
+
+<div class="component-show">
+
+	<!------------------------------------------------------------------>
+	
+	<h3 class="section-head" id="h-demo">Demo</h3>
+
+	<p>Scroll down to fix the navigation.</p>
+
+
+	<div id="navbar-demo" data-component="sticky">
+		<nav id="navbar-main">
+			<ul>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Account</a></li>
+			</ul>
+		</nav>
+	</div>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> data-component=<span class="mjs-string">"sticky"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;</pre>
+
+	<!------------------------------------------------------------------>
+
+	<h3 class="section-head" id="h-settings">Settings</h3>
+
+	<h5>offset</h5>
+
+	<ul>
+		<li>Type: <var>int</var></li>
+		<li>Default: <var>0</var></li>
+	</ul>
+
+	<p>
+		Sets top offset in pixels when navigation is fixed.
+	</p>
+
+	<!------------------------------------------------------------------>
+
+	<h3 class="section-head" id="h-callbacks">Callbacks</h3>
+
+	<h5>fixed</h5>
+	<p>Using this callback, you can act upon menu becoming fixed at the top of the page.</p>
+<pre class="code skip">$(<span class="mjs-string">'#my-nav'</span>).on(<span class="mjs-string">'fixed.sticky'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+	<span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+
+	<h5>unfixed</h5>
+	<p>Whenever fixed position of the menu is released, you can do something with this callback. </p>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-nav'</span>).on(<span class="mjs-string">'unfixed.sticky'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+	<span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+	<br><br>
+	<p><em>填充内容，使页面可以滚动</em></p>
+    <p>汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。天生丽质难自弃，一朝选在君王侧。回眸一笑百媚生，六宫粉黛无颜色。春寒赐浴华清池，温泉水滑洗凝脂。侍儿扶起娇无力，始是新承恩泽时。云鬓花颜金步摇，芙蓉帐暖度春宵。春宵苦短日高起，从此君王不早朝。</p>
+    <p>承欢侍宴无闲暇，春从春游夜专夜。后宫佳丽三千人，三千宠爱在一身。金屋妆成娇侍夜，玉楼宴罢醉和春。姊妹弟兄皆列土，可怜光彩生门户。遂令天下父母心，不重生男重生女。骊宫高处入青云，仙乐风飘处处闻。缓歌慢舞凝丝竹，尽日君王看不足。渔阳鼙鼓动地来，惊破霓裳羽衣曲。</p>
+    <p>九重城阙烟尘生，千乘万骑西南行。翠华摇摇行复止，西出都门百余里。六军不发无奈何，宛转蛾眉马前死。花钿委地无人收，翠翘金雀玉搔头。君王掩面救不得，回看血泪相和流。黄埃散漫风萧索，云栈萦纡登剑阁。峨嵋山下少人行，旌旗无光日色薄。蜀江水碧蜀山青，圣主朝朝暮暮情。</p>
+
+</div>
+
+</body>
+</html>
