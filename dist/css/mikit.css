@@ -2767,7 +2767,7 @@ button:hover,
 }
 
 .mi-dropdown.mi-open {
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .mi-dropdown ul {
