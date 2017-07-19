@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            #breadcrumb-custom-separator li:after {
+                content: '>'; 
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-demo">Demo</a></li>
+            <li><a href="#h-settings">Settings</a></li>
+            <li><a href="#h-callbacks">Callbacks</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+	<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-demo">Demo</h3>
+
+<p>
+    This feature is very easy to set up. It is based on <code>data-component</code> set to <var>offcanvas</var>, <code>data-target</code> set to the menu layer (<var>#offcanvas-right</var> in example below) and a feature-specific <code>data-direction</code> which is required for right menu to be set to <var>right</var>.
+</p>
+<p>
+    <a href="#" class="mi-button mi-outline" data-component="offcanvas" data-target="#offcanvas-left"><i class="mi-icon-menu"></i> Open Left</a>
+    <a href="#" class="mi-button mi-outline" data-component="offcanvas" data-target="#offcanvas-right" data-direction="right">Open Right <i class="mi-icon-menu"></i></a>
+</p>
+
+<div id="offcanvas-left" class="mi-offcanvas mi-hide">
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Showcase</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="offcanvas-right" class="mi-offcanvas mi-hide">
+    <a href="#" class="mi-close mi-icon-close"></a>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Showcase</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<pre class="code skip">// Left
+<span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"offcanvas"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#offcanvas-left"</span>&gt;</span>Open Left<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"offcanvas-left"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-hide"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">nav</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+
+// Right + Close
+<span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span> <span class="mjs-attr">data-component</span>=<span class="mjs-string">"offcanvas"</span> <span class="mjs-attr">data-target</span>=<span class="mjs-string">"#offcanvas-right"</span> <span class="mjs-attr">data-direction</span>=<span class="mjs-string">"right"</span>&gt;</span>Open Right<span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+
+<span class="mjs-tag">&lt;<span class="mjs-name">div</span> <span class="mjs-attr">id</span>=<span class="mjs-string">"offcanvas-right"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-hide"</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">a</span> <span class="mjs-attr">href</span>=<span class="mjs-string">"#"</span> <span class="mjs-attr">class</span>=<span class="mjs-string">"mi-close mi-icon-close"</span>&gt;</span><span class="mjs-tag">&lt;/<span class="mjs-name">a</span>&gt;</span>
+    <span class="mjs-tag">&lt;<span class="mjs-name">nav</span>&gt;</span>
+        <span class="mjs-tag">&lt;<span class="mjs-name">ul</span>&gt;</span>
+            <span class="mjs-tag">&lt;<span class="mjs-name">li</span>&gt;</span>...<span class="mjs-tag">&lt;/<span class="mjs-name">li</span>&gt;</span>
+        <span class="mjs-tag">&lt;/<span class="mjs-name">ul</span>&gt;</span>
+    <span class="mjs-tag">&lt;/<span class="mjs-name">nav</span>&gt;</span>
+<span class="mjs-tag">&lt;/<span class="mjs-name">div</span>&gt;</span>
+</pre>
+
+	<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-settings">Settings</h3>
+
+<h5>target</h5>
+
+<ul>
+    <li>Type: <var>string</var></li>
+    <li>Default: <var>null</var></li>
+</ul>
+
+<p>
+    Sets ID selector of an element that will slide from the side.
+</p>
+
+<h5>push</h5>
+
+<ul>
+    <li>Type: <var>boolean</var></li>
+    <li>Default: <var>true</var></li>
+</ul>
+
+
+<h5>direction</h5>
+
+<ul>
+    <li>Type: <var>string</var></li>
+    <li>Default: <var>'left'</var></li>
+</ul>
+
+<p>
+    The direction in which page will shift to give way for the sidebar menu. Default is <var>left</var> and is not required for left-side navigation, however, <var>right</var> value must be set for the right-side menu to work.
+</p>
+
+<h5>clickOutside</h5>
+
+<ul>
+    <li>Type: <var>boolean</var></li>
+    <li>Default: <var>true</var></li>
+</ul>
+
+<p>
+    Unless set to <var>false</var>, clicking anywhere on a page will make side menu to close.
+</p>
+
+<h5>width</h5>
+
+<ul>
+    <li>Type: <var>string</var></li>
+    <li>Default: <var>'250px'</var></li>
+</ul>
+<p>
+    Sidebar width in pixels.
+</p>
+
+<h5>animation</h5>
+
+<ul>
+    <li>Type: <var>boolean</var></li>
+    <li>Default: <var>true</var></li>
+</ul>
+
+<p>
+    Setting this to <var>false</var> turns off opening and closing animation.
+</p>
+
+	<!------------------------------------------------------------------>
+
+<h3 class="section-head" id="h-callbacks">Callbacks</h3>
+
+<h5>open</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-offcanvas'</span>).on(<span class="mjs-string">'open.offcanvas'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>opened</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-offcanvas'</span>).on(<span class="mjs-string">'opened.offcanvas'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>close</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-offcanvas'</span>).on(<span class="mjs-string">'close.offcanvas'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+<h5>closed</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-offcanvas'</span>).on(<span class="mjs-string">'closed.offcanvas'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+</div>
+
+    </body>
+</html>
