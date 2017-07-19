@@ -128,10 +128,11 @@
 			return (this.$target.hasClass('mi-open'));
 		},
 		enableEvents: function () {
+			/*
 			if (this.detect.isDesktop()) {
-				this.$target.on('mouseover.' + this.namespace, $.proxy(this.utils.disableBodyScroll, this.utils)).on('mouseout.' + this.namespace, $.proxy(this.utils.enableBodyScroll, this.utils));
+			    this.$target.on('mouseover.' + this.namespace, $.proxy(this.utils.disableBodyScroll, this.utils)).on('mouseout.' + this.namespace, $.proxy(this.utils.enableBodyScroll, this.utils));
 			}
-
+			*/
 			$(document).on('scroll.' + this.namespace, $.proxy(this.setPosition, this));
 			$(window).on('resize.' + this.namespace, $.proxy(this.setPosition, this));
 			$(document).on('click.' + this.namespace + ' touchstart.' + this.namespace, $.proxy(this.close, this));
