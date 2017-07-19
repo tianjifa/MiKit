@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            #breadcrumb-custom-separator li:after {
+                content: '>'; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-calling">Calling</a></li>
+            <li><a href="#h-actions">Actions</a></li>
+            <li><a href="#h-settings">Settings</a></li>
+            <li><a href="#h-callbacks">Callbacks</a></li>
+            <li><a href="#h-api">API</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+
+        <h4 id="h-calling" class="demo-head">Calling</h4>
+        <p>Here you add an actual call to the modal window. Clicking the "Open" button below will launch a <var>modal</var> with content of a <var>#my-modal</var> div. You can use buttons or links to open modals in Kube. Clicking anywhere outside of the modal or hitting <kbd>ESC</kbd> will close the window.</p>
+
+        <div class="example">
+            <p>
+                <button class="mi-button" data-component="modal" data-width="760px" data-target="#my-modal">Open</button>
+            </p>
+<pre class="code skip">// <span class="mjs-keyword">Call</span>
+&lt;button <span class="mjs-keyword">data</span>-component=<span class="mjs-string">"modal"</span> <span class="mjs-keyword">data</span>-target=<span class="mjs-string">"#my-modal"</span>&gt;<span class="mjs-keyword">Open</span>&lt;/button&gt;
+
+// Markup
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">id</span>=<span class="mjs-string">"my-modal"</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal-box mi-hide"</span>&gt;
+    &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal"</span>&gt;
+        &lt;span <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-close mi-icon-close"</span>&gt;&lt;/span&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal-header"</span>&gt;Modal Header&lt;/<span class="mjs-keyword">div</span>&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal-body"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+    &lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+        </div>
+
+        <p>打开链接</p>
+
+        <div class="example">
+            <p>
+                <button class="mi-button" data-component="modal" data-target="#ui-modal" data-url="modal.html">打开链接</button>
+            </p>
+<pre class="code skip">// <span class="mjs-keyword">Call</span>
+&lt;button <span class="mjs-keyword">data</span>-component=<span class="mjs-string">"modal"</span> <span class="mjs-keyword">data</span>-target=<span class="mjs-string">"#ui-modal"</span> <span class="mjs-keyword">data</span>-<span class="mjs-keyword">url</span>=<span class="mjs-string">"modal.html"</span>&gt;<span class="mjs-keyword">Open</span>&lt;/button&gt;
+
+// Markup
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">id</span>=<span class="mjs-string">"ui-modal"</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"modal-box mi-hide"</span>&gt;
+    &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal"</span>&gt;
+        &lt;span <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-close mi-icon-close"</span>&gt;&lt;/span&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal-header"</span>&gt;UI Modal&lt;/<span class="mjs-keyword">div</span>&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-keyword">class</span>=<span class="mjs-string">"mi-modal-body"</span>&gt;... <span class="mjs-keyword">content</span> <span class="mjs-keyword">from</span> modal.html ...&lt;/<span class="mjs-keyword">div</span>&gt;
+    &lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;/<span class="mjs-keyword">div</span>&gt;
+
+// modal.html
+&lt;p&gt;...&lt;/p&gt;
+&lt;a href=<span class="mjs-string">"#"</span> <span class="mjs-keyword">data</span>-<span class="mjs-keyword">action</span>=<span class="mjs-string">"modal-close"</span>&gt;<span class="mjs-keyword">Close</span>&lt;/a&gt;
+</pre>
+        </div>
+
+        <p>Direct open</p>
+
+        <div class="example">
+            <p>
+                <button class="mi-button" onclick="$.modalwindow({ target: '#ui-modal', url: 'modal.html' });">Direct Open</button>
+            </p>
+
+<pre class="code skip"><span class="mjs-comment">// Call</span>
+&lt;<span class="mjs-keyword">button</span> <span class="mjs-keyword">onclick</span>=<span class="mjs-string">"$.modalwindow({ target: '#ui-modal', url: 'modal.html' });"</span>&gt;Open&lt;/<span class="mjs-keyword">button</span>&gt;
+</pre>
+        </div>
+
+        <div id="ui-modal" class="mi-modal-box mi-hide">
+            <div class="mi-modal">
+                <span class="mi-close mi-icon-close"></span>
+                <div class="mi-modal-header">UI Modal</div>
+                <div class="mi-modal-body"></div>
+            </div>
+        </div>
+
+        <div id="my-modal" class="mi-modal-box mi-hide">
+            <div class="mi-modal">
+                <span class="mi-close mi-icon-close"></span>
+                <div class="mi-modal-header">
+                    My Modal
+                </div>
+                <div class="mi-modal-body">
+                    <p>汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。天生丽质难自弃，一朝选在君王侧。回眸一笑百媚生，六宫粉黛无颜色。春寒赐浴华清池，温泉水滑洗凝脂。侍儿扶起娇无力，始是新承恩泽时。云鬓花颜金步摇，芙蓉帐暖度春宵。春宵苦短日高起，从此君王不早朝。</p>
+                    <p>承欢侍宴无闲暇，春从春游夜专夜。后宫佳丽三千人，三千宠爱在一身。金屋妆成娇侍夜，玉楼宴罢醉和春。姊妹弟兄皆列土，可怜光彩生门户。遂令天下父母心，不重生男重生女。骊宫高处入青云，仙乐风飘处处闻。缓歌慢舞凝丝竹，尽日君王看不足。渔阳鼙鼓动地来，惊破霓裳羽衣曲。</p>
+                    <p>九重城阙烟尘生，千乘万骑西南行。翠华摇摇行复止，西出都门百余里。六军不发无奈何，宛转蛾眉马前死。花钿委地无人收，翠翘金雀玉搔头。君王掩面救不得，回看血泪相和流。黄埃散漫风萧索，云栈萦纡登剑阁。峨嵋山下少人行，旌旗无光日色薄。蜀江水碧蜀山青，圣主朝朝暮暮情。</p>
+                    <p>行宫见月伤心色，夜雨闻铃肠断声。天旋地转回龙驭，到此踌躇不能去。马嵬坡下泥土中，不见玉颜空死处。君臣相顾尽沾衣，东望都门信马归。归来池苑皆依旧，太液芙蓉未央柳。芙蓉如面柳如眉，对此如何不泪垂。春风桃李花开日，秋雨梧桐叶落时。西宫南内多秋草，落叶满阶红不扫。</p>
+                    <p>......</p>
+                    <p>临别殷勤重寄词，词中有誓两心知。七月七日长生殿，夜半无人私语时。在天愿作比翼鸟，在地愿为连理枝。天长地久有时尽，此恨绵绵无绝期。</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h4 id="h-actions" class="section-head">Actions</h4>
+
+        <p>Using <var>modal-close</var> action you now introducing a way to close you window, using a link or a button.</p>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">id</span>=<span class="mjs-string">"my-modal"</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-modal-box mi-hide"</span>&gt;
+    &lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-modal"</span>&gt;
+        &lt;span <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-close mi-icon-close"</span>&gt;&lt;/span&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-modal-header"</span>&gt;Modal Header&lt;/<span class="mjs-keyword">div</span>&gt;
+        &lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-modal-body"</span>&gt;
+            ...
+            &lt;a href=<span class="mjs-string">"#"</span> data-action=<span class="mjs-string">"modal-close"</span>&gt;Close&lt;/a&gt;
+        &lt;/<span class="mjs-keyword">div</span>&gt;
+    &lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-settings">Settings</h3>
+
+        <h5>target</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>null</var></li>
+        </ul>
+        <p>Defines a content layer for the modal window</p>
+
+        <h5>url</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>false</var></li>
+        </ul>
+        <p>Defines a URL in case your modal is opening via a URL.</p>
+
+        <h5>header</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>false</var></li>
+        </ul>
+        <p>Sets the header for the modal window. Optional, and is <var>false</var> by default.</p>
+
+        <h5>width</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>'600px'</var></li>
+        </ul>
+
+
+        <h5>height</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>false</var></li>
+        </ul>
+
+
+        <h5>maxHeight</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>false</var></li>
+        </ul>
+        <p>This setting defines the maximum height of the window. A scrollbar will be introduced in case there's more text than <var>maxHeight</var> can accommodate. </p>
+
+        <h5>position</h5>
+
+        <ul>
+            <li>Type: <var>string</var></li>
+            <li>Default: <var>'center'</var></li>
+        </ul>
+        <p>This is where your modal appears when opened. </p>
+
+        <h5>overlay</h5>
+
+        <ul>
+            <li>Type: <var>boolean</var></li>
+            <li>Default: <var>true</var></li>
+        </ul>
+        <p>When this is set to <var>false</var>, you modal window will just appear on top ow your page, without an overlay effect. By default, your page will be "covered" with a semi-transparent layer when you open a modal. </p>
+
+        <h5>animation</h5>
+
+        <ul>
+            <li>Type: <var>boolean</var></li>
+            <li>Default: <var>true</var></li>
+        </ul>
+        <p>Turns opening and closing animation on and off.</p>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-callbacks">Callbacks</h3>
+
+        <h5>open</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-modal'</span>).on(<span class="mjs-string">'open.modal'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+        <h5>opened</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-modal'</span>).on(<span class="mjs-string">'opened.modal'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+        <h5>close</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-modal'</span>).on(<span class="mjs-string">'close.modal'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+        <h5>closed</h5>
+
+<pre class="code skip">$(<span class="mjs-string">'#my-modal'</span>).on(<span class="mjs-string">'closed.modal'</span>, <span class="mjs-function"><span class="mjs-keyword">function</span>(<span class="mjs-params"></span>)
+</span>{
+    <span class="mjs-comment">// do something...</span>
+});
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-api">API</h3>
+
+        <p>You can use these API methods to programmatically operate and modify modal windows.</p>
+
+        <h5>close</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-modal'</span>).modal(<span class="mjs-string">'close'</span>);</pre>
+
+        <h5>setHeader</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-modal'</span>).modal(<span class="mjs-string">'setHeader'</span>, <span class="mjs-string">'My Header'</span>);</pre>
+
+        <p>This is another way to set a header for the modal on the fly without introducing a <code>div</code> with a <var>modal-header</var> class. </p>
+
+
+        <h5>setContent</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-modal'</span>).modal(<span class="mjs-string">'setContent'</span>, <span class="mjs-string">'My Content'</span>);</pre>
+
+        <p>Content of the modal window can be set up on the fly as well. No need for a <code>div</code> with <var>modal</var> class. </p>
+
+        <h5>setWidth</h5>
+
+<pre class="code skip"><span class="mjs-variable">$(</span><span class="mjs-string">'#my-modal'</span>).modal(<span class="mjs-string">'setWidth'</span>, <span class="mjs-string">'800px'</span>);</pre>
+
+    </div>
+
+    </body>
+</html>
