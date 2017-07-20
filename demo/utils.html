@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+            .mi-group:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-group">Group</a></li>
+            <li><a href="#h-visibility">Visibility</a></li>
+            <li><a href="#h-display">Display</a></li>
+            <li><a href="#h-print">Print</a></li>
+            <li><a href="#h-close">Close</a></li>
+            <li><a href="#h-caret">Caret</a></li>
+            <li><a href="#h-icons">Icons</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-group">Group</h3>
+
+        <p>Combines float elements to group with a clearfix.</p>
+
+<div class="example">
+<div class="mi-group">
+    <div class="mi-float-left">This text is visibly floating left</div>
+    <div class="mi-float-right">This text looks like a case of right float</div>
+</div>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-group"</span>&gt;
+    &lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-float-left"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+    &lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-float-right"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-visibility">Visibility</h3>
+
+        <p>Below is an invisible <code>div</code> with class <var>mi-invisible</var>. You can't see it, because it is invisible. You can't see invisible things.</p>
+
+        <div class="example">
+            <div class="mi-invisible">invisible</div>
+            <div class="mi-visible">But you can see this <code>div</code> because it has <var>mi-visible</var> class.</div>
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-invisible"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-visible"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-display">Display</h3>
+
+        <p>This is a very useful little bit. Whenever you need to hide some text or an element on a small screen, just throw in <var>mi-hide-sm</var> class.
+            Or, if you need to specifically show something only on small screens, <var>mi-show-sm</var> class is yours for the job.
+            You can also just plain hide stuff with <var>mi-hide</var> class. Can you see red words "I'm hidden" below? Exactly.
+        </p>
+        <div class="example">
+            <div class="mi-hide mi-color-red">I'm hidden</div>
+            <div class="mi-hide-sm">This text will not show up on a small screen.</div>
+            <p>Resize your window and trust us on this <span class="mi-hide-sm">↑</span>&nbsp;<span class="mi-show-sm">↓</span></p>
+            <div class="mi-show-sm">This text will only show up on a small screen</div>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-hide"</span>&gt;I'm hidden&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-hide-sm"</span>&gt;This <span class="mjs-built_in">text</span> will <span class="mjs-keyword">not</span> show up <span class="mjs-keyword">on</span> a small screen.&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-show-sm"</span>&gt;This will only show up <span class="mjs-keyword">on</span> a small screen&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-print">Print</h3>
+
+        <p>One more neat feature of Mikit. It helps you produce better ready-to-print pages by simply hiding irrelevant things. </p>
+        <div class="example">
+            <div class="mi-hide-print">This will be hidden on print, because it is some sort of web-specific thing.</div>
+            <div class="mi-show-print">This will be printed, because this text is somehow more relevant on paper than on screen.</div>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-hide-print"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-show-print"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;
+</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-close">Close</h3>
+
+        <p>Closing icon to close anything you want.</p>
+
+        <div class="example">
+            <span class="mi-icon-close small"></span>
+
+            <pre class="code skip">&lt;span <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-icon-close"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span></span></pre>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-caret">Caret</h3>
+
+        <p>Mikit has already built-in four-direction caret.</p>
+
+        <div class="example">
+            <span class="mi-caret mi-down"></span>
+            <span class="mi-caret mi-up"></span>
+            <span class="mi-caret mi-left"></span>
+            <span class="mi-caret mi-right"></span>
+
+<pre class="code skip">&lt;span <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-caret mi-down"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span></span>
+&lt;span <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-caret mi-up"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span></span>
+&lt;span <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-caret mi-left"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span></span>
+&lt;span <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-caret mi-right"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">span</span>&gt;</span></span>
+</pre>
+        </div>
+
+        <p>Example of usage:</p>
+
+        <div class="example">
+            <button class="button">Button <span class="mi-caret mi-down mi-color-white"></span></button> &nbsp;&nbsp;&nbsp;
+            <a href="#">Link <span class="mi-caret mi-up"></span></a> &nbsp;&nbsp;&nbsp;
+            Text <span class="mi-caret mi-down"></span> &nbsp;&nbsp;&nbsp;
+            <button class="mi-button mi-button-secondary mi-button-outline">Button <span class="mi-caret mi-down"></span></button>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-icons">Icons</h3>
+
+        <p>Some useful icons are already built-in to Mikit.</p>
+
+        <div class="example">
+            <i class="mi-icon-search"></i>
+
+            <pre class="code skip">&lt;i <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-icon-search"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">i</span>&gt;</span></span></pre>
+        </div>
+
+        <div class="example">
+            <i class="mi-icon-menu"></i>
+
+            <pre class="code skip">&lt;i <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-icon-menu"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">i</span>&gt;</span></span></pre>
+        </div>
+
+        <div class="example">
+            <i class="mi-icon-calendar"></i>
+
+            <pre class="code skip">&lt;i <span class="mjs-class"><span class="mjs-keyword">class</span></span>=<span class="mjs-string">"mi-icon-calendar"</span>&gt;<span class="xml"><span class="mjs-tag">&lt;/<span class="mjs-name">i</span>&gt;</span></span></pre>
+        </div>
+
+    </div>
+
+    </body>
+
+</html>
