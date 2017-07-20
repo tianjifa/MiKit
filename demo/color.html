@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .swatch-box {
+                text-align: center; 
+            }
+
+            .swatch-item {
+                display: inline-block;
+                margin: 24px; 
+            }
+            .swatch-item h5 {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 0; 
+                }
+            .swatch-item p {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                line-height: 20px;
+                color: rgba(46, 47, 51, 0.65); 
+                }
+
+            .swatch {
+                display: inline-block;
+                height: 120px;
+                width: 120px;
+                border-radius: 120px;
+                margin-bottom: 8px; 
+            }
+
+            .swatch-bg-headings {
+                background: #0d0d0e; 
+            }
+
+            .swatch-bg-text {
+                background: #313439; 
+            }
+
+            .swatch-bg-link {
+                background: #3794de; 
+            }
+
+            .swatch-bg-link-hover {
+                background: #e91e63; 
+            }
+
+            .swatch-bg-button-primary {
+                background: #1c86f2; 
+            }
+
+            .swatch-bg-button-secondary {
+                background: #313439; 
+            }
+
+            .swatch-bg-inverted {
+                background: #fff; 
+            }
+
+            .swatch-bg-inverted {
+                position: relative;
+                bottom: -8px;
+                margin-top: -8px;
+                border: 8px solid #f8f8f8; 
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-text">Text</a></li>
+            <li><a href="#h-links">Links</a></li>
+            <li><a href="#h-buttons">Buttons</a></li>
+            <li><a href="#h-states">States</a></li>
+            <li><a href="#h-extra">Extra</a></li>
+            <li><a href="#h-grayscale">Grayscale</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head">Text</h3>
+        <p>Contrasting black color for headings and less intense dark gray for the text helps to improve readability.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-headings"></span>
+                    <h5>Headings</h5>
+                    <p>$color-headings</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-text"></span>
+                    <h5>Text</h5>
+                    <p>$color-text</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 id="h-links" class="section-head">Links</h3>
+        <p>Classic blue links and soft red for the hover state makes links visible and predictable.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-link"></span>
+                    <h5>Link</h5>
+                    <p>$color-link</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-link-hover"></span>
+                    <h5>Hover</h5>
+                    <p>$color-link-hover</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 id="h-buttons" class="section-head">Buttons</h3>
+        <p>Blue color for primary buttons for greater consistency with links. Black color for secondary buttons allows you build a variety of UI.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-button-primary"></span>
+                    <h5>Primary</h5>
+                    <p>$color-button-primary</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-button-secondary"></span>
+                    <h5>Secondary</h5>
+                    <p>$color-button-secondary</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 id="h-states" class="section-head">States</h3>
+        <p>All possible states of the UI are in the simple and intuitive color scheme helps to focus the user's attention when creating an interactive UI.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-error"></span>
+                    <h5>Error</h5>
+                    <p>$color-error</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-focus"></span>
+                    <h5>Focus</h5>
+                    <p>$color-focus</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-success"></span>
+                    <h5>Success</h5>
+                    <p>$color-success</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-warning"></span>
+                    <h5>Warning</h5>
+                    <p>$color-warning</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 id="h-extra" class="section-head">Extra</h3>
+        <p>Special color to highlight areas of interaction with the interface. And the white color for all cases.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-highlight"></span>
+                    <h5>Highlight</h5>
+                    <p>$color-highlight</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch swatch-bg-inverted"></span>
+                    <h5>Inverted</h5>
+                    <p>$color-inverted</p>
+                </div>
+            </div>
+         </div>
+
+         <!------------------------------------------------------------------>
+
+        <h3 id="h-grayscale" class="section-head">Grayscale</h3>
+        <p>Harmonious and well-thought-out scheme of gray for a broad range of tasks in the designing of the interface from controls to backgrounds.</p>
+
+        <div class="example">
+            <div class="swatch-box">
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-black"></span>
+                    <h5>Black</h5>
+                    <p>$color-black</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-darkgray"></span>
+                    <h5>Darkgray</h5>
+                    <p>$color-darkgray</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-midgray"></span>
+                    <h5>Midgray</h5>
+                    <p>$color-midgray</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-gray"></span>
+                    <h5>Gray</h5>
+                    <p>$color-gray</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-lightgray"></span>
+                    <h5>Lightgray</h5>
+                    <p>$color-lightgray</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-silver"></span>
+                    <h5>Silver</h5>
+                    <p>$color-silver</p>
+                </div>
+                <div class="swatch-item">
+                    <span class="swatch mi-bg-aluminum"></span>
+                    <h5>Aluminum</h5>
+                    <p>$color-aluminum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
