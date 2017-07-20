@@ -2553,20 +2553,20 @@ button:hover,
     }
 }
 
-.mi-align-middle {
+.mi-flex-align-middle {
     align-items: center;
 }
 
-.mi-align-right {
+.mi-flex-align-right {
     justify-content: flex-end;
 }
 
-.mi-align-center {
+.mi-flex-align-center {
     justify-content: center;
 }
 
 @media (max-width: 768px) {
-    .align-left-sm {
+    .align-flex-left-sm {
         justify-content: flex-start;
     }
 }
