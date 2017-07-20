@@ -96,14 +96,6 @@
     content: "\e603";
 }
 
-.mi-dropdown .mi-close {
-    margin: 20px auto;
-}
-
-.mi-dropdown.mi-open {
-    /*overflow: auto;*/
-}
-
 .mi-close {
     display: inline-block;
     min-height: 20px;
