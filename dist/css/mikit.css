@@ -2697,14 +2697,6 @@ button:hover,
     content: "\e603";
 }
 
-.mi-dropdown .mi-close {
-    margin: 20px auto;
-}
-
-.mi-dropdown.mi-open {
-    /*overflow: auto;*/
-}
-
 .mi-close {
     display: inline-block;
     min-height: 20px;
@@ -2808,6 +2800,14 @@ button:hover,
 
 .mi-dropdown ul a:hover {
     background: rgba(0, 0, 0, 0.05);
+}
+
+.mi-dropdown .mi-close {
+    margin: 20px auto;
+}
+
+.mi-dropdown.mi-open {
+    /*overflow: auto;*/
 }
 
 
