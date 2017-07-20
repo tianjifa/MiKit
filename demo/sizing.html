@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+            
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+            .demo-sizing > div {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 11px;
+                padding-left: 4px;
+                background: #d8e9fa;
+                margin-bottom: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-width">Width</a></li>
+            <li><a href="#h-auto-width">Auto Width</a></li>
+            <li><a href="#h-max-width">Max Width</a></li>
+            <li><a href="#h-min-width">Min Width</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-width"><a href="#h-width">Width</a></h3>
+
+        <div class="example demo-sizing">
+            <div class="mi-w5">mi-w5</div>
+            <div class="mi-w10">mi-w10</div>
+            <div class="mi-w15">mi-w15</div>
+            <div class="mi-w20">mi-w20</div>
+            <div class="mi-w25">mi-w25</div>
+            <div class="mi-w30">mi-w30</div>
+            <div class="mi-w35">mi-w35</div>
+            <div class="mi-w40">mi-w40</div>
+            <div class="mi-w45">mi-w45</div>
+            <div class="mi-w50">mi-w50</div>
+            <div class="mi-w55">mi-w55</div>
+            <div class="mi-w60">mi-w60</div>
+            <div class="mi-w65">mi-w65</div>
+            <div class="mi-w70">mi-w70</div>
+            <div class="mi-w75">mi-w75</div>
+            <div class="mi-w80">mi-w80</div>
+            <div class="mi-w85">mi-w85</div>
+            <div class="mi-w90">mi-w90</div>
+            <div class="mi-w95">mi-w95</div>
+            <div class="mi-w100">mi-w100</div>
+
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-w5"</span>&gt;mi-w5&lt;/<span class="mjs-keyword">div</span>&gt;
+...
+&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-w100"</span>&gt;mi-w100&lt;/<span class="mjs-keyword">div</span>&gt;</pre>
+
+        </div>
+
+        <div class="example demo-sizing">
+
+            <p>100% width on small devices.</p>
+
+            <div class="mi-w50 mi-w100-sm">mi-w100-sm</div>
+
+<pre class="code skip">&lt;<span class="mjs-keyword">div</span> <span class="mjs-built_in">class</span>=<span class="mjs-string">"mi-w50 mi-w100-sm"</span>&gt;...&lt;/<span class="mjs-keyword">div</span>&gt;</pre>
+
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-auto-width">Auto Width</h3>
+
+        <div class="example">
+            .mi-w-auto<br>
+            .mi-w-auto-sm
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-max-width">Max Width</h3>
+
+        <div class="example">
+            .mi-max-w5 — .mi-max-w100<br>
+            .mi-max-w-auto-sm
+        </div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-min-width">Min Width</h3>
+
+
+        <div class="example">
+            .mi-min-w5 — .mi-min-w100
+        </div>
+
+    </div>
+
+    </body>
+
+</html>
