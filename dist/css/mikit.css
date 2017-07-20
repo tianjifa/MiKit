@@ -2708,7 +2708,13 @@ button:hover,
     position: fixed;
     top: 1rem;
     right: 1rem;
-}   
+}
+
+.mi-group:after {
+    content: '';
+    display: table;
+    clear: both;
+}
 
 /* ========================================================================
    Component UI CSS: Dropdown
