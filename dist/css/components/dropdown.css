@@ -53,3 +53,11 @@
 .mi-dropdown ul a:hover {
     background: rgba(0, 0, 0, 0.05);
 }
+
+.mi-dropdown .mi-close {
+    margin: 20px auto;
+}
+
+.mi-dropdown.mi-open {
+    /*overflow: auto;*/
+}
