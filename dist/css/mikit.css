@@ -2667,6 +2667,44 @@ button:hover,
     overflow: scroll;
 }
 
+.mi-caret.mi-up,
+.mi-caret.mi-down,
+.mi-caret.mi-left,
+.mi-caret.mi-right {
+    font-family: 'Mikit' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-caret.mi-up:before {
+    content: "\e604";
+}
+
+.mi-caret.mi-down:before {
+    content: "\e601";
+}
+
+.mi-caret.mi-left:before {
+    content: "\e605";
+}
+
+.mi-caret.mi-right:before {
+    content: "\e603";
+}
+
+.mi-dropdown .mi-close {
+    margin: 20px auto;
+}
+
+.mi-dropdown.mi-open {
+    /*overflow: auto;*/
+}
+
 .mi-close {
     display: inline-block;
     min-height: 20px;
@@ -2746,44 +2784,6 @@ button:hover,
     width: 100%;
     max-height: none;
     border: none;
-}
-
-.mi-caret.mi-up,
-.mi-caret.mi-down,
-.mi-caret.mi-left,
-.mi-caret.mi-right {
-    font-family: 'Mikit' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.mi-caret.mi-up:before {
-    content: "\e604";
-}
-
-.mi-caret.mi-down:before {
-    content: "\e601";
-}
-
-.mi-caret.mi-left:before {
-    content: "\e605";
-}
-
-.mi-caret.mi-right:before {
-    content: "\e603";
-}
-
-.mi-dropdown .mi-close {
-    margin: 20px auto;
-}
-
-.mi-dropdown.mi-open {
-    /*overflow: auto;*/
 }
 
 .mi-dropdown ul {
