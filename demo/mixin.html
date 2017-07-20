@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mikit</title>
+        <!-- Mikit core CSS -->
+        <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css"/>
+        <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/js/mikit.js"></script>
+        <style>
+            .component-index-box {
+                counter-reset: count;
+                max-width: 400px;
+                margin: 30px auto 60px auto;
+                padding: 32px;
+                background: #fbfbfb;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .component-index-box li {
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                margin-right: 24px;
+                counter-increment: count;
+            }
+
+            .component-index-box li a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+            }
+            
+            .component-show {
+                width: 1180px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
+            }
+
+            .example {
+                border: 1px solid rgba(0, 0, 0, 0.07);
+                padding: 32px;
+                margin-bottom: 16px;
+            }
+
+            .demo-gradient {
+                height: 40px;
+                margin-bottom: 24px; 
+            }
+
+            .demo-gradient-vertical {
+                background-color: #5faac8;
+                background-image: linear-gradient(to bottom, #5faac8 0%, #65ccb8 100%); 
+            }
+
+            .demo-gradient-vertical-to-opacity {
+                background: linear-gradient(to bottom, #5faac8 0%, rgba(95, 170, 200, 0) 100%); 
+            }
+
+            .demo-gradient-horizontal {
+                background-color: #5faac8;
+                background: linear-gradient(to right, #5faac8 0%, #65ccb8 100%); 
+            }
+
+            .demo-gradient-horizontal-to-opacity {
+                background: linear-gradient(to right, #5faac8 0%, rgba(95, 170, 200, 0) 100%); 
+            }
+
+            .demo-gradient-radial {
+                background-image: radial-gradient(circle, #5faac8, #65ccb8); 
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-get-started">Get Started</a></li>
+            <li><a href="#h-fonts">Fonts</a></li>
+            <li><a href="#h-breakpoints">Breakpoints</a></li>
+            <li><a href="#h-grid">Grid</a></li>
+            <li><a href="#h-flex">Flex</a></li>
+            <li><a href="#h-gradients">Gradients</a></li>
+            <li><a href="#h-utils">Utils</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-get-started">Get Started</h3>
+
+        <p>
+            Mikit has been designed to help you with web development, that's why it's so easy to use Mikit when building websites. To move forward quickly and efficiently, just link <code>mikit.scss</code> from Mikit package: this file contains variables, mixins and everything you need to simplify daily routine tasks.
+        </p>
+        <p>
+            For example, import <code>mikit.scss</code> into your <code>master.scss</code> styles file, which you will later compile into <code>master.css</code>
+        </p>
+
+<pre class="code skip"><span class="mjs-comment">// master.scss</span>
+@<span class="mjs-keyword">import</span> <span class="mjs-string">"dist/scss/mikit.scss"</span>;
+</pre>
+
+        <p>Now all Mikit's variables and mixins are readily available in <code>master.scss</code>, and you can use them whenever needed.</p>
+
+<pre class="code skip"><span class="mjs-comment">// master.scss</span>
+@<span class="mjs-keyword">import</span> <span class="mjs-string">"dist/scss/mikit.scss"</span>;
+
+<span class="mjs-comment">// use mixins</span>
+<span class="mjs-selector-id">#my-layout</span> {
+    @<span class="mjs-keyword">include</span> flex;
+}
+
+<span class="mjs-comment">// use variables</span>
+<span class="mjs-selector-id">#my-layout</span> {
+    <span class="mjs-attribute">padding</span>: <span class="mjs-variable">$base-line</span>;
+}
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-fonts">Fonts</h3>
+
+        <p>Generates a font-family declarations for text, headings, buttons or inputs.</p>
+
+<pre class="code skip"><span class="mjs-comment">// import Mikit</span>
+@<span class="mjs-keyword">import</span> <span class="mjs-string">"dist/scss/mikit.scss"</span>;
+
+<span class="mjs-comment">// use mixins</span>
+@<span class="mjs-keyword">include</span> text-font(<span class="mjs-string">"Lato, 'Helvetica Neue', sans-serif"</span>);
+@<span class="mjs-keyword">include</span> headings-font(<span class="mjs-string">"Lato, 'Helvetica Neue', sans-serif"</span>);
+@<span class="mjs-keyword">include</span> buttons-font(<span class="mjs-string">"Lato, 'Helvetica Neue', sans-serif"</span>);
+@<span class="mjs-keyword">include</span> inputs-font(<span class="mjs-string">"Lato, 'Helvetica Neue', sans-serif"</span>);
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-comment">// Text</span>
+<span class="mjs-selector-tag">body</span> {
+        <span class="mjs-attribute">font-family</span>: Lato, <span class="mjs-string">'Helvetica Neue'</span>, sans-serif;
+}
+
+<span class="mjs-comment">// Headings</span>
+<span class="mjs-selector-tag">h1</span><span class="mjs-selector-class">.title</span>, <span class="mjs-selector-tag">h1</span>, <span class="mjs-selector-tag">h2</span>, <span class="mjs-selector-tag">h3</span>, <span class="mjs-selector-tag">h4</span>, <span class="mjs-selector-tag">h5</span>, <span class="mjs-selector-tag">h6</span>, <span class="mjs-selector-class">.h1</span>, <span class="mjs-selector-class">.h2</span>, <span class="mjs-selector-class">.h3</span>, <span class="mjs-selector-class">.h4</span>, <span class="mjs-selector-class">.h5</span>, <span class="mjs-selector-class">.h6</span> {
+        <span class="mjs-attribute">font-family</span>: Lato, <span class="mjs-string">'Helvetica Neue'</span>, sans-serif;
+}
+
+<span class="mjs-comment">// Buttons</span>
+<span class="mjs-selector-tag">button</span>, <span class="mjs-selector-class">.button</span> {
+        <span class="mjs-attribute">font-family</span>: Lato, <span class="mjs-string">'Helvetica Neue'</span>, sans-serif;
+}
+
+<span class="mjs-comment">// Inputs</span>
+<span class="mjs-selector-tag">input</span>, <span class="mjs-selector-tag">textarea</span>, select {
+        <span class="mjs-attribute">font-family</span>: Lato, <span class="mjs-string">'Helvetica Neue'</span>, sans-serif;
+}
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-breakpoints">Breakpoints</h3>
+
+
+        <p>Breakpoint for small screens (max-width 768px by default).</p>
+
+
+<pre class="code skip">@<span class="mjs-keyword">include</span> breakpoint(sm) {
+    <span class="mjs-selector-class">.span</span> {
+        <span class="mjs-attribute">display</span>: none;
+    }
+}
+</pre>
+
+        <p>Breakpoint for medium screens (min-width 1024px by default).</p>
+
+<pre class="code skip">@<span class="mjs-keyword">include</span> breakpoint(md) {
+    <span class="mjs-selector-class">.span</span> {
+        <span class="mjs-attribute">display</span>: none;
+    }
+}
+</pre>
+
+        <p>Breakpoint for large screens (min-width 1200px by default).</p>
+<pre class="code skip">@<span class="mjs-keyword">include</span> breakpoint(lg) {
+    <span class="mjs-selector-class">.span</span> {
+        <span class="mjs-attribute">display</span>: none;
+    }
+}
+</pre>
+
+        <p>Custom breakpoints:</p>
+
+<pre class="code skip"><span class="mjs-comment">// min-width 768px;</span>
+<span class="mjs-variable">@include</span> breakpoint(<span class="mjs-number">768px</span>) {}
+
+<span class="mjs-comment">// min-width 768px and max-width 1024px;</span>
+<span class="mjs-variable">@include</span> breakpoint(<span class="mjs-number">768px</span>, <span class="mjs-number">1024px</span>) {}
+
+<span class="mjs-comment">// max-width 1024px;</span>
+<span class="mjs-variable">@include</span> breakpoint(<span class="mjs-number">0</span>, <span class="mjs-number">1024px</span>) {}
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-grid">Grid</h3>
+
+        <h5 id="h-grid-row">Row</h5>
+
+        <p>Generates a grid row.</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.my-row</span> {
+    <span class="mjs-variable">@include</span> grid-row;
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.my-row</span> {
+    <span class="mjs-attribute">display</span>: -ms-flexbox;
+    <span class="mjs-attribute">display</span>: -webkit-flex;
+    <span class="mjs-attribute">display</span>: flex;
+
+    <span class="mjs-attribute">-ms-flex-direction</span>: row;
+    <span class="mjs-attribute">-webkit-flex-direction</span>: row;
+    <span class="mjs-attribute">flex-direction</span>: row;
+
+    <span class="mjs-attribute">-ms-flex-wrap</span>: wrap;
+    <span class="mjs-attribute">-webkit-flex-wrap</span>: wrap;
+    <span class="mjs-attribute">flex-wrap</span>: wrap;
+}
+</pre>
+
+        <h5 id="h-grid-media">Media Grid</h5>
+
+        <p>Generates a media grid. See <a href="#h-media-grid">live example</a>.</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.my-media-grid</span> {
+    @include grid-media-<span class="mjs-attribute">columns</span>(<span class="mjs-number">3</span>);
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.my-media-grid</span> {
+    -webkit-<span class="mjs-attribute">column-count</span>: <span class="mjs-number">3</span>;
+    -moz-<span class="mjs-attribute">column-count</span>: <span class="mjs-number">3</span>;
+    <span class="mjs-attribute">column-count</span>: <span class="mjs-number">3</span>;
+
+    <span class="mjs-comment">// column gap is specified</span>
+    <span class="mjs-comment">// in the grid settings (variables.scss) as $grid-gutter</span>
+    -webkit-<span class="mjs-attribute">column-gap</span>: <span class="mjs-number">2%</span>;
+    -moz-<span class="mjs-attribute">column-gap</span>: <span class="mjs-number">2%</span>;
+    <span class="mjs-attribute">column-gap</span>: <span class="mjs-number">2%</span>;
+}
+
+<span class="mjs-selector-class">.my-media-grid</span> &gt; <span class="mjs-selector-tag">div</span> {
+    <span class="mjs-attribute">display</span>: inline-block;
+    <span class="mjs-attribute">width</span>: <span class="mjs-number">100%</span>;
+}
+
+@<span class="mjs-keyword">media</span> (max-width: 768px) {
+    <span class="mjs-selector-class">.my-media-grid</span> {
+        -webkit-<span class="mjs-attribute">column-count</span>: <span class="mjs-number">1</span>;
+        -moz-<span class="mjs-attribute">column-count</span>: <span class="mjs-number">1</span>;
+        <span class="mjs-attribute">column-count</span>: <span class="mjs-number">1</span>;
+    }
+}
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-flex">Flex</h3>
+
+<pre class="code skip"><span class="mjs-variable">@include</span> flex;
+<span class="mjs-variable">@include</span> flex-basis($basis);
+
+<span class="mjs-comment">// items</span>
+<span class="mjs-variable">@include</span> flex-items-wrap;
+<span class="mjs-variable">@include</span> flex-items-nowrap;
+<span class="mjs-variable">@include</span> flex-items-row
+<span class="mjs-variable">@include</span> flex-items-column;
+<span class="mjs-variable">@include</span> flex-items-left;
+<span class="mjs-variable">@include</span> flex-items-right;
+<span class="mjs-variable">@include</span> flex-items-center;
+<span class="mjs-variable">@include</span> flex-items-space-between;
+<span class="mjs-variable">@include</span> flex-items-space-around;
+<span class="mjs-variable">@include</span> flex-items-top;
+<span class="mjs-variable">@include</span> flex-items-middle;
+<span class="mjs-variable">@include</span> flex-items-bottom;
+
+<span class="mjs-comment">// item</span>
+<span class="mjs-variable">@include</span> flex-item-grow($grow);
+<span class="mjs-variable">@include</span> flex-item-auto;
+<span class="mjs-variable">@include</span> flex-item-one;
+<span class="mjs-variable">@include</span> flex-item-shrink($shrink);
+<span class="mjs-variable">@include</span> flex-item-width($width);
+</pre>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-gradients">Gradients</h3>
+
+        <h5 id="h-gradients-vertical">Vertical</h5>
+
+<pre class="code skip">@<span class="mjs-keyword">include</span> gradient-vertical(<span class="mjs-variable">$startColor</span>, <span class="mjs-variable">$endColor</span>);</pre>
+
+        <div class="demo-gradient demo-gradient-vertical"></div>
+
+<pre class="code skip"><span class="mjs-symbol">@include</span> gradient-vertical-<span class="mjs-keyword">to</span>-opacity($startColor, $opacity)<span class="mjs-comment">;</span></pre>
+
+        <div class="demo-gradient demo-gradient-vertical-to-opacity"></div>
+
+        <h5 id="h-gradients-horizontal">Horizontal</h5>
+
+
+<pre class="code skip">@<span class="mjs-keyword">include</span> gradient-horizontal(<span class="mjs-variable">$startColor</span>, <span class="mjs-variable">$endColor</span>);</pre>
+
+        <div class="demo-gradient demo-gradient-horizontal"></div>
+
+<pre class="code skip"><span class="mjs-symbol">@include</span> gradient-horizontal-<span class="mjs-keyword">to</span>-opacity($startColor, $opacity)<span class="mjs-comment">;</span></pre>
+
+        <div class="demo-gradient demo-gradient-horizontal-to-opacity"></div>
+
+        <h5 id="h-gradients-radial">Radial</h5>
+
+<pre class="code skip">@include gradient-<span class="mjs-keyword">radial</span>($innerColor, $outerColor);</pre>
+
+        <div class="demo-gradient demo-gradient-radial"></div>
+
+        <!------------------------------------------------------------------>
+
+        <h3 class="section-head" id="h-utils">Utils</h3>
+
+        <h5 id="h-utils-clearfix">Clearfix</h5>
+
+        <p>Provides an easy way to include a clearfix for containing floats.</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.layout</span> {
+    <span class="mjs-variable">@include</span> clearfix;
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.layout</span><span class="mjs-selector-pseudo">:after</span> {
+    <span class="mjs-attribute">content</span>: <span class="mjs-string">''</span>;
+    <span class="mjs-attribute">display</span>: table;
+    <span class="mjs-attribute">clear</span>: both;
+}
+</pre>
+
+        <h5 id="h-utils-transition">Transition</h5>
+
+        <p>This mixin provides a shorthand syntax for transitions.</p>
+
+<pre class="code skip"><span class="mjs-comment">// by default 'all linear .2s'</span>
+<span class="mjs-meta">@include</span> transition;
+
+<span class="mjs-comment">// custom transitions</span>
+<span class="mjs-meta">@include</span> transition(all .<span class="mjs-number">2</span>s ease-<span class="mjs-keyword">in</span>-<span class="mjs-keyword">out</span>);
+<span class="mjs-meta">@include</span> transition(opacity <span class="mjs-number">1</span>s ease-<span class="mjs-keyword">in</span>, width .<span class="mjs-number">2</span>s ease-<span class="mjs-keyword">in</span>);
+</pre>
+
+        <h5 id="h-utils-transform">Transform</h5>
+
+
+        <p>Provides a shorthand syntax for transforms.</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.span</span> {
+    @include <span class="mjs-attribute">transform</span>(rotate(<span class="mjs-number">90deg</span>));
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.span</span> {
+    <span class="mjs-attribute">-webkit-transform</span>: <span class="mjs-built_in">rotate</span>(90deg);
+    <span class="mjs-attribute">-moz-transform</span>: <span class="mjs-built_in">rotate</span>(90deg);
+    <span class="mjs-attribute">-ms-transform</span>: <span class="mjs-built_in">rotate</span>(90deg);
+    <span class="mjs-attribute">transform</span>: <span class="mjs-built_in">rotate</span>(90deg);
+}
+</pre>
+
+
+        <h5 id="h-utils-blur">Blur</h5>
+
+        <p>Provides a shorthand syntax for blur filter.</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.span</span> {
+    <span class="mjs-variable">@include</span> blur(<span class="mjs-number">5px</span>);
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.span</span> {
+    <span class="mjs-attribute">-webkit-filter</span>: <span class="mjs-built_in">blur</span>(5px);
+    <span class="mjs-attribute">-moz-filter</span>: <span class="mjs-built_in">blur</span>(5px);
+    <span class="mjs-attribute">-ms-filter</span>: <span class="mjs-built_in">blur</span>(5px);
+    <span class="mjs-attribute">filter</span>: <span class="mjs-built_in">blur</span>(5px);
+}
+</pre>
+
+
+        <h5 id="h-utils-retina-image">Retina Image</h5>
+
+        <p>Retina image must have a suffix <code>-2x</code>, for example: <code>image-2x.jpg</code></p>
+
+<pre class="code skip">@include retina-<span class="mjs-built_in">background</span>-<span class="mjs-built_in">image</span>($<span class="mjs-built_in">image</span>-url, $<span class="mjs-built_in">image</span>-type, $<span class="mjs-built_in">image</span>-<span class="mjs-built_in">width</span>, $<span class="mjs-built_in">image</span>-<span class="mjs-built_in">height</span>);
+
+// $<span class="mjs-built_in">image</span>-type - jpg, png, gif
+// $<span class="mjs-built_in">image</span>-<span class="mjs-built_in">height</span> - optional
+</pre>
+
+        <p>Example:</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.brand</span> {
+    @include retina-<span class="mjs-attribute">background-image</span>(<span class="mjs-string">'../logo'</span>, <span class="mjs-string">'png'</span>, <span class="mjs-number">100px</span>);
+}
+</pre>
+
+        <p>CSS Output</p>
+
+<pre class="code skip"><span class="mjs-selector-class">.brand</span> {
+    <span class="mjs-attribute">background-repeat</span>: no-repeat;
+    <span class="mjs-attribute">background-image</span>: <span class="mjs-built_in">url</span>(<span class="mjs-string">"../logo.png"</span>);
+}
+@<span class="mjs-keyword">media</span> only screen and (-webkit-min-device-pixel-ratio: <span class="mjs-number">2</span>),
+       only screen and (min--moz-device-pixel-ratio: <span class="mjs-number">2</span>),
+       only screen and (-o-min-device-pixel-ratio: <span class="mjs-number">2</span> / <span class="mjs-number">1</span>),
+       only screen and (min-device-pixel-ratio: <span class="mjs-number">2</span>),
+       only screen and (min-resolution: <span class="mjs-number">192dpi</span>),
+       only screen and (min-resolution: <span class="mjs-number">2dppx</span>)
+       {
+            <span class="mjs-selector-class">.brand</span> {
+                <span class="mjs-attribute">background-image</span>: <span class="mjs-built_in">url</span>(<span class="mjs-string">"../logo-2x.png"</span>);
+                <span class="mjs-attribute">background-size</span>: <span class="mjs-number">100px</span> auto;
+            }
+       }
+</pre>
+
+    </div>
+
+    </body>
+
+</html>
