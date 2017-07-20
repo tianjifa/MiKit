@@ -53,20 +53,3 @@
     	}
     }
 }
-.mi-caret.mi-down,
-.mi-caret.mi-up{
-    font-family: 'Mikit' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.mi-caret.mi-down:before {
-    content: "\e601"; 
-}
-.mi-caret.mi-up:before {
-    content: "\e604"; 
-}
