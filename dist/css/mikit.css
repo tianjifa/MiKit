@@ -2566,7 +2566,7 @@ button:hover,
 }
 
 @media (max-width: 768px) {
-    .align-flex-left-sm {
+    .mi-align-flex-left-sm {
         justify-content: flex-start;
     }
 }
