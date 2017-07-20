@@ -29,9 +29,16 @@
                 position: relative;
                 padding-left: 10px;
             }
+
             .component-show {
                 width: 1180px;
                 margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
             }
 
             .section-head {
@@ -264,7 +271,7 @@
 		
         <h3 class="section-head" id="h-checkboxes"><a href="#h-checkboxes">Checkboxes &amp; Radio</a></h3>
 
-        <p>Kube features full variety of stylish checkboxes and radio buttons. You can feature them on your pages by defining input type as checkbox or radio. There's also a neat option to place checkboxes inline by adding <code>.mi-form-checkboxes</code> class to the container (works for both checkboxes and radio buttons)</p>
+        <p>Mikit features full variety of stylish checkboxes and radio buttons. You can feature them on your pages by defining input type as checkbox or radio. There's also a neat option to place checkboxes inline by adding <code>.mi-form-checkboxes</code> class to the container (works for both checkboxes and radio buttons)</p>
 
 
         <div class="example demo-forms">
@@ -309,7 +316,7 @@
 		
         <h3 class="section-head" id="h-fieldset"><a href="#h-fieldset">Fieldset</a></h3>
 
-        <p>Fieldsets in Kube are nicely pre-formatted and ready to go. Just wrap your form in a fieldset tag and you're good to go.</p>
+        <p>Fieldsets in Mikit are nicely pre-formatted and ready to go. Just wrap your form in a fieldset tag and you're good to go.</p>
 
         <form method="post" action="" class="mi-form"><input type="hidden" name="authorize-token" value="x">
             <fieldset>
@@ -468,7 +475,7 @@
 
         <h3 class="section-head" id="h-states"><a href="#h-states">States</a></h3>
 
-        <p>By default, Kube features two different states: success and failure.</p>
+        <p>By default, Mikit features two different states: success and failure.</p>
 
         <div class="example demo-forms">
             <form method="post" action="" class="mi-form"><input type="hidden" name="authorize-token" value="x">
@@ -533,7 +540,7 @@
 
         <h3 class="section-head" id="h-descriptions"><a href="#h-descriptions">Descriptions</a></h3>
 
-        <p>Descriptions are simple: as long as form's element has desc class, Kube will treat it as a description.</p>
+        <p>Descriptions are simple: as long as form's element has desc class, Mikit will treat it as a description.</p>
 
         <div class="example demo-forms">
             <form method="post" action="" class="mi-form"><input type="hidden" name="authorize-token" value="x">
