@@ -105,3 +105,9 @@
         right: 1rem;
     }
 }
+
+.mi-group:after {
+    content: '';
+    display: table;
+    clear: both;
+}
