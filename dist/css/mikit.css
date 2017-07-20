@@ -2748,8 +2748,10 @@ button:hover,
     border: none;
 }
 
+.mi-caret.mi-up,
 .mi-caret.mi-down,
-.mi-caret.mi-up {
+.mi-caret.mi-left,
+.mi-caret.mi-right {
     font-family: 'Mikit' !important;
     font-style: normal;
     font-weight: normal;
@@ -2760,12 +2762,20 @@ button:hover,
     -moz-osx-font-smoothing: grayscale;
 }
 
+.mi-caret.mi-up:before {
+    content: "\e604";
+}
+
 .mi-caret.mi-down:before {
     content: "\e601";
 }
 
-.mi-caret.mi-up:before {
-    content: "\e604";
+.mi-caret.mi-left:before {
+    content: "\e605";
+}
+
+.mi-caret.mi-right:before {
+    content: "\e603";
 }
 
 .mi-dropdown .mi-close {
