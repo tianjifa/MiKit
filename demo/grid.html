@@ -35,6 +35,12 @@
                 margin: 0 auto;
             }
 
+            @media (max-width: 768px) {
+                .component-show {
+                    width: 100%;
+                }
+            }
+
             .section-head {
                 padding-top: 80px;
             }
@@ -281,7 +287,11 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row mi-auto"&gt;
+    &lt;div class="mi-col"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
@@ -401,7 +411,7 @@
 
     <h3 class="section-head" id="h-around">Around</h3>
 
-    <p>When you want your columns to be surrounded by an even margins on both sides, just use <code>.around</code> class.</p>
+    <p>When you want your columns to be surrounded by an even margins on both sides, just use <code>.mi-around</code> class.</p>
 
     <div class="example demo-grid">
 
@@ -421,7 +431,7 @@
 
     <h3 class="section-head" id="h-between">Between</h3>
 
-    <p>Sometime you just need space between columns, and not around them. Well, there's a class for that: <code>.between</code></p>
+    <p>Sometime you just need space between columns, and not around them. Well, there's a class for that: <code>.mi-between</code></p>
 
     <div class="example demo-grid">
 
