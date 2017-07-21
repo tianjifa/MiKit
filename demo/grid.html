@@ -31,7 +31,8 @@
             }
 
             .component-show {
-                width: 1180px;
+                width: 100%;
+                max-width: 1180px;
                 margin: 0 auto;
             }
 
@@ -51,98 +52,98 @@
                 margin-bottom: 16px;
             }
 
-	    .demo-grid .mi-row {
-		margin-bottom: 4px;
-		background: #f8f8f8;
-	    }
+            .demo-grid .mi-row {
+                margin-bottom: 4px;
+                background: #ebf4fc;
+            }
 
-	    .demo-grid .mi-col {
-		font-family: Consolas, Monaco, "Courier New", monospace;
-		font-size: 12px;
-		padding: 8px 12px;
-		background: #d8e9fa;
-		border-left: 1px solid rgba(0, 0, 0, 0.1);
-	    }
+            .demo-grid .mi-col {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                padding: 8px 12px;
+                background: #d8e9fa;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+            }
 
-	    .demo-grid .mi-row.mi-gutters {
-		background: none;
-	    }
+            .demo-grid .mi-row.mi-gutters {
+                background: none;
+            }
 
-	    .demo-grid .demo-col-nested {
-		border-left: none !important;
-		padding: 0 !important;
-	    }
+            .demo-grid .demo-col-nested {
+                border-left: none !important;
+                padding: 0 !important;
+            }
 
-	    .demo-grid .mi-col {
-		font-family: Consolas, Monaco, "Courier New", monospace;
-		font-size: 12px;
-		padding: 8px 12px;
-		background: #d8e9fa;
-		border-left: 1px solid rgba(0, 0, 0, 0.1);
-	    }
+            .demo-grid .mi-col {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                padding: 8px 12px;
+                background: #d8e9fa;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+            }
 
-	    #demo-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	    }
+            #demo-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
-	    #demo-sidebar, #demo-content {
-		font-family: Consolas, Monaco, "Courier New", monospace;
-		font-size: 12px;
-		padding: 8px 12px;
-		min-height: 80px;
-	    }
+            #demo-sidebar, #demo-content {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                padding: 8px 12px;
+                min-height: 80px;
+            }
 
-	    #demo-sidebar {
-		flex: 0 0 300px;
-		background: #c4def7;
-	    }
+            #demo-sidebar {
+                flex: 0 0 300px;
+                background: #c4def7;
+            }
 
-	    #demo-content {
-		flex: auto;
-		background: #ebf4fc;
-	    }
+            #demo-content {
+                flex: auto;
+                background: #ebf4fc;
+            }
 
-	    #demo-media-grid {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
-		-webkit-column-gap: 2%;
-		-moz-column-gap: 2%;
-		column-gap: 2%; 
-	    }
+            #demo-media-grid {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+                -webkit-column-gap: 2%;
+                -moz-column-gap: 2%;
+                column-gap: 2%; 
+            }
 
-	    #demo-media-grid > div {
-		display: inline-block;
-		width: 100%; 
-	    }
+            #demo-media-grid > div {
+                display: inline-block;
+                width: 100%; 
+            }
 
-	    @media (max-width: 768px) {
-		#demo-media-grid {
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-			column-count: 1; 
-		} 
-	    }
+            @media (max-width: 768px) {
+            #demo-media-grid {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1; 
+            } 
+            }
 
-	    #demo-media-grid > div {
-		font-family: Consolas, Monaco, "Courier New", monospace;
-		font-size: 12px;
-		padding: 8px 12px;
-		background: #eae2f2;
-		text-align: center;
-		margin-bottom: 20px;
-		height: 80px; 
-	    }
+            #demo-media-grid > div {
+                font-family: Consolas, Monaco, "Courier New", monospace;
+                font-size: 12px;
+                padding: 8px 12px;
+                background: #eae2f2;
+                text-align: center;
+                margin-bottom: 20px;
+                height: 80px; 
+            }
 
-	    #demo-media-grid > div:nth-child(2n) {
-		height: 200px; 
-	    }
+            #demo-media-grid > div:nth-child(2n) {
+                height: 200px; 
+            }
 
-	    #demo-media-grid > div:nth-child(5n) {
-		height: 120px;
-	    }
+            #demo-media-grid > div:nth-child(5n) {
+                height: 120px;
+            }
 
         </style>
     </head>
@@ -153,46 +154,46 @@
 <div class="component-index-box">
     <ol>
         <li>
-            <a href="#h-columns">Columns</a>
+            <a href="#h-columns">单元格Columns</a>
         </li>
         <li>
-            <a href="#h-gutters">Gutters</a>
+            <a href="#h-gutters">间距Gutters</a>
         </li>
         <li>
-            <a href="#h-auto-width">Auto Width</a>
+            <a href="#h-auto-width">自动宽度Auto Width</a>
         </li>
         <li>
-            <a href="#h-bricks">Bricks</a>
+            <a href="#h-bricks">堆叠Bricks</a>
         </li>
         <li>
-            <a href="#h-offset">Offset</a>
+            <a href="#h-offset">偏移Offset</a>
         </li>
         <li>
-            <a href="#h-nested">Nested</a>
+            <a href="#h-nested">嵌套Nested</a>
         </li>
         <li>
-            <a href="#h-equal-height">Equal Height</a>
+            <a href="#h-equal-height">等高Equal Height</a>
         </li>
         <li>
-            <a href="#h-reordering">Reordering</a>
+            <a href="#h-reordering">重置排序Reordering</a>
         </li>
         <li>
-            <a href="#h-around">Around</a>
+            <a href="#h-around">围绕Around</a>
         </li>
         <li>
-            <a href="#h-between">Between</a>
+            <a href="#h-between">隔离Between</a>
         </li>
         <li>
-            <a href="#h-align">Alignment</a>
+            <a href="#h-alignment">对齐Alignment</a>
         </li>
         <li>
-            <a href="#h-push">Push</a>
+            <a href="#h-push">单元格对齐Push</a>
         </li>
         <li>
-            <a href="#h-fixed-column">Fixed Width Column</a>
+            <a href="#h-fixed-column">单元格固定Fixed Width Column</a>
         </li>
         <li>
-            <a href="#h-media-grid">Media Grid</a>
+            <a href="#h-media-grid">媒体网格Media Grid</a>
         </li>
     </ol>
 </div>
@@ -200,7 +201,7 @@
 <div class="component-show">
     
     <h3 id="h-columns" class="section-head">网格</h3>
-    <p>Columns are building blocks for many websites. Here's how columns are formed in Mikit, and here's how you can use them right away.</p>
+    <p>Mikit网格系统可以快速布局网站。</p>
     <div class="example demo-grid">
         <div class="mi-row">
             <div class="mi-col mi-col-1">1</div>
@@ -321,7 +322,7 @@
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-bricks">Bricks</h3>
+    <h3 class="section-head" id="h-bricks">网格堆叠Bricks</h3>
 
     <div class="example demo-grid">
 
@@ -333,14 +334,19 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-6"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-6"&gt;...&lt;/div&gt;	
+    &lt;div class="mi-col mi-col-6"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-6"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Bricks + Gutters</h5>
+    <h5>堆叠Bricks + 间距Gutters</h5>
     <div class="example demo-grid">
 
         <div class="mi-row mi-gutters">
@@ -353,16 +359,21 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row mi-gutters"&gt;
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;	
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-offset">Offset</h3>
+    <h3 class="section-head" id="h-offset">偏移Offset</h3>
 
-    <p>Offsetting columns is very simple in Mikit. Just use column's class as usual, for example, <code>mi-col mi-col-2</code> and then add the offset value <code>mi-offset-4</code>. This will offset this column and all following columns by 4.</p>
+    <p>在Mikit中Offset(偏移网格设置)很简单,只需要在网格类中使用Offset网格类即可,例如在元素类 <code>mi-col mi-col-2</code> 中添加类 <code>mi-offset-4</code>,这样会使被添加offset类的网格偏移4个单元格 (注意：mi-offset-偏移单元格数)</p>
 
     <div class="example demo-grid">
 
@@ -372,17 +383,80 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-2"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-6 mi-offset-4"&gt;...&lt;/div&gt;	
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-nested">嵌套Nested</h3>
+
+    <p>Mikit 网格可以自由嵌套，示例：外层网格 <code>.mi-row</code> 包含有两列 <code>.mi-col mi-col-6</code>，在第二单元格中嵌套了一个由 <code>.mi-row</code> 包含的3列单元格组成的内层网格。</p>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-6">6</div>
+            <div class="mi-col mi-col-6 demo-col-nested">
+                <div class="mi-row">
+                    <div class="mi-col mi-col-4">4</div>
+                    <div class="mi-col mi-col-4">4</div>
+                    <div class="mi-col mi-col-4">4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-code">
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-6"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-6"&gt;
+        &lt;div class="mi-row"&gt;
+            &lt;div class="mi-col mi-col-4"&gt;
+            &lt;div class="mi-col mi-col-4"&gt;
+            &lt;div class="mi-col mi-col-4"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+    </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-reordering">Reordering</h3>
+    <h3 class="section-head" id="h-equal-height">等高Equal Height</h3>
 
-    <h5>First</h5>
+    <p>在Mikit中单元格默认是等高的</p>
+
+    <div class="example demo-grid">
+
+        <div class="mi-row">
+            <div class="mi-col mi-col-6">1</div>
+            <div class="mi-col mi-col-6">1<br> 2<br> 3</div>
+        </div>
+        <div class="demo-code">
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-6"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="mi-col mi-col-6"&gt;
+        ...
+        ...
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <h3 class="section-head" id="h-reordering">重置排序Reordering</h3>
+
+    <h5>第一个</h5>
     <div class="example demo-grid">
 
         <div class="mi-row">
@@ -391,14 +465,17 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-4"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-8 mi-first-item"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Last</h5>
+    <h5>最后一个</h5>
     <div class="example demo-grid">
 
         <div class="mi-row">
@@ -407,16 +484,19 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-3 mi-last-item"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-9"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-around">Around</h3>
+    <h3 class="section-head" id="h-around">围绕Around</h3>
 
-    <p>When you want your columns to be surrounded by an even margins on both sides, just use <code>.mi-around</code> class.</p>
+    <p>当您希望单元格被两边的均匀边距围绕时，只需使用<code>.mi-around</code>类即可。</p>
 
     <div class="example demo-grid">
 
@@ -427,16 +507,20 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row mi-around"&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-between">Between</h3>
+    <h3 class="section-head" id="h-between">隔离Between</h3>
 
-    <p>Sometime you just need space between columns, and not around them. Well, there's a class for that: <code>.mi-between</code></p>
+    <p>有时你只需要单元格之间的空间，而不是围绕他们，则需要 <code>.mi-between</code>。</p>
 
     <div class="example demo-grid">
 
@@ -447,16 +531,20 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">&lt;div class="mi-row mi-between"&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h3 class="section-head" id="h-alignment">Alignment</h3>
+    <h3 class="section-head" id="h-alignment">对齐Alignment</h3>
 
-    <h5>Align Center</h5>
+    <h5>水平居中 Align Center</h5>
     <div class="example demo-grid">
 
         <div class="mi-row mi-flex-align-center">
@@ -464,7 +552,7 @@
         </div>
 
         <div class="demo-code">
-<pre>
+<pre class="prettyprint lang-html">
 &lt;div class="mi-row mi-flex-align-center"&gt;
     &lt;div class="mi-col mi-col-6">6&lt;/div&gt;
 &lt;/div&gt;
@@ -475,7 +563,7 @@
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Align Right</h5>
+    <h5>又对齐 Align Right</h5>
     <div class="example demo-grid">
 
         <div class="mi-row mi-flex-align-right">
@@ -484,7 +572,7 @@
         </div>
 
         <div class="demo-code">
-<pre>
+<pre class="prettyprint lang-html">
 &lt;div class="mi-row mi-flex-align-right"&gt;
     &lt;div class="mi-col mi-col-3">3&lt;/div&gt;
     &lt;div class="mi-col mi-col-3">3&lt;/div&gt;
@@ -496,7 +584,7 @@
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Align Middle</h5>
+    <h5>垂直居中 Align Middle</h5>
     <div class="example demo-grid">
 
         <div class="mi-row mi-flex-align-middle" style="height: 104px; border: 1px solid #eee;">
@@ -506,7 +594,7 @@
         </div>
 
         <div class="demo-code">
-<pre>
+<pre class="prettyprint lang-html">
 &lt;div class="mi-row mi-flex-align-middle" style="height: 104px; border: 1px solid #eee;"&gt;
     &lt;div class="mi-col mi-col-4" style="height: 36px;">4&lt;/div&gt;
     &lt;div class="mi-col mi-col-4" style="height: 56px;">4&lt;/div&gt;
@@ -517,9 +605,9 @@
 
     </div>
 
-    <h3 class="section-head" id="h-push">Push</h3>
+    <h3 class="section-head" id="h-push">单元格对齐 Push</h3>
 
-    <h5>Push Center</h5>
+    <h5>水平居中 Push Center</h5>
     <div class="example demo-grid">
 
         <div class="mi-row">
@@ -527,14 +615,18 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">            
+&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-4 mi-push-center">.push-center&lt;/div&gt;
+&lt;/div&gt;
+</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Push Right</h5>
+    <h5>右对齐 Push Right</h5>
     <div class="example demo-grid">
 
         <div class="mi-row">
@@ -543,12 +635,17 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">            
+&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-6">...&lt;/div&gt;
+    &lt;div class="mi-col mi-col-4 mi-push-right">.push-right&lt;/div&gt;
+&lt;/div&gt;
+</pre>
         </div>
 
     </div>
 
-    <h5>Push Middle</h5>
+    <h5>垂直居中 Push Middle</h5>
     <div class="example demo-grid">
 
         <div class="mi-row" style="height: 104px;">
@@ -556,29 +653,37 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">            
+&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-8 mi-push-middle">.push-right&lt;/div&gt;
+&lt;/div&gt;
+</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Push Mixed</h5>
+    <h5>混合对齐 Push Mixed</h5>
     <div class="example demo-grid">
 
         <div class="mi-row" style="height: 104px;">
-            <div class="mi-col mi-col-8 mi-push-middle mi-push-center">.push-middle.push-center</div>
+            <div class="mi-col mi-col-8 mi-push-middle mi-push-center">.push-middle .push-center</div>
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">            
+&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-8 mi-push-middle mi-push-center">.push-middle .push-center&lt;/div&gt;
+&lt;/div&gt;
+</pre>
         </div>
 
     </div>
 
     <!-- ---------------------------------------------- -->
 
-    <h5>Push Bottom</h5>
+    <h5>底部对齐 Push Bottom</h5>
     <div class="example demo-grid">
 
         <div class="mi-row" style="height: 104px;">
@@ -586,18 +691,18 @@
         </div>
 
         <div class="demo-code">
-            demo-code
+<pre class="prettyprint lang-html">            
+&lt;div class="mi-row"&gt;
+    &lt;div class="mi-col mi-col-8 mi-push-bottom">.push-bottom&lt;/div&gt;
+&lt;/div&gt;
+</pre>
         </div>
 
     </div>
 
 <!-- ---------------------------------------------- -->
-	<h3 class="section-head" id="h-fixed-column">
-		Fixed Width Column
-	</h3>
-	<p>
-		Here's one more bit of magic. You can set a fixed width column and still have a responsive and flexible layout right beside this fixed width column.
-	</p>
+	<h3 class="section-head" id="h-fixed-column">单元格固定 Fixed Width Column</h3>
+	<p>您可以设置一个固定宽度的单元格列，并且在这个固定宽度列旁边有一个响应灵活的布局。</p>
 	<div class="example demo-grid">
 		<div id="demo-container">
 			<div id="demo-sidebar">
@@ -631,9 +736,7 @@
 	<h3 class="section-head" id="h-media-grid">
 		Media Grid
 	</h3>
-	<p>
-		Media grid is a great example of Mikit's flexibility and versatility. Whenever you have some media to display, you can choose to use Media grid. This type of grid is ideal for featuring photos; it adds some visual music and slight randomness to your layout.
-	</p>
+	<p>媒体网格是Mikit的灵活性和通用性的一个很好的例子。当你有一些媒体展示，你可以选择使用媒体网格。这种类型的网格非常适合图片展示。</p>
 	<div class="example demo-grid">
 		<div id="demo-media-grid">
 			<div>
