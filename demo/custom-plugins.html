@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mikit</title>
+    <!-- Mikit core CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/css/mikit.min.css" />
+    <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/js/mikit.min.js"></script>
+    <style>
+        .component-index-box {
+            counter-reset: count;
+            max-width: 400px;
+            margin: 30px auto 60px auto;
+            padding: 32px;
+            background: #fbfbfb;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .component-index-box li {
+            line-height: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            margin-right: 24px;
+            counter-increment: count;
+        }
+
+        .component-index-box li a {
+            display: block;
+            text-decoration: none;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .component-show {
+            width: 1180px;
+            margin: 0 auto;
+        }
+
+        .example {
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            padding: 32px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="component-index-box">
+        <ol>
+            <li><a href="#h-basic-template">基础模版</a></li>
+            <li><a href="#h-development">基础模版</a></li>
+        </ol>
+    </div>
+
+    <div class="component-show">
+
+        <p>Missra有很好的可扩展性和灵活性，在不涉及核心代码情况下使用插件可以扩展现有的功能，使它们更具交互性，或者创建全新的功能。</p>
+
+        <h3 id="h-plugin" class="section-head">插件模板</h3>
+
+        <p>下面是一个通用插件的模板，该模板提供了一个在Missra里用插件可以做什么的总体思路。</p>
+
+<pre class="prettyprint lang-js">(function (Missra) {
+    Missra.Myplugin = function (element, options) {
+        this.namespace = 'myplugin';
+
+        // 默认设置
+        this.defaults = {
+            mysetting: true
+        };
+
+        // 父类的构造方法
+        Missra.apply(this, arguments);
+
+        // 初始化
+        this.start();
+    };
+
+    // 功能
+    Missra.Myplugin.prototype = {
+        start: function () {
+            // 插件元素
+            console.log(this.$element);
+
+            // 调用选项
+            console.log(this.opts.mysetting);
+
+            // 调用方法
+            this.method();
+        },
+        method: function () {
+            // do something...
+
+            // 回调函数
+            this.callback('show');
+
+            // 带参数的回调函数
+            this.callback('show', value1, value2);
+        }
+    };
+
+    // 继承
+    Missra.Myplugin.inherits(Missra);
+
+    // Plugin
+    Missra.Plugin.create('Myplugin');
+    Missra.Plugin.autoload('Myplugin');
+
+}(Missra));
+</pre>
+
+        <h3 id="h-call" class="section-head">调用插件 Call</h3>
+        <p>
+            调用一个插件非常简单，只需用插件的名称添加数据组件，它就会自动启动。
+        </p>
+
+        <pre class="prettyprint lang-js"><span class="pun">&lt;</span><span class="pln">div data</span><span class="pun">-</span><span class="pln">component</span><span class="pun">=</span><span class="str">"myplugin"</span><span class="pun">&gt;&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></pre>
+        
+        <span>或者手动调用</span>
+
+<pre class="prettyprint lang-js">&lt;div id="my-element"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    $('#my-element').myplugin();
+&lt;/script&gt;</pre>
+
+        <h3 id="h-callbacks" class="section-head">
+            回调函数 Callbacks
+        </h3>
+        <p>
+            Missra插件可以响应事件回调的反应。当需要插件来响应某个动作或事件时，只需使用回调函数即可。
+        </p>
+
+<pre class="prettyprint lang-js">&lt;div id="my-element" data-component="myplugin"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+$('#myplugin').on('show.myplugin', function() {
+    // do something...
+});
+&lt;/script&gt;</pre>
+
+        <span>所有插件方法和变量都可以在插件中找到：</span>
+
+<pre class="prettyprint lang-js">&lt;script&gt;
+    $('#myplugin').on('show.myplugin', function () {
+        // plugin element
+        console.log(this.$element);
+
+        // call plugin method
+        this.method();
+    }); 
+&lt;/script&gt;</pre>
+
+    </div>
+
+</body>
+
+</html>
