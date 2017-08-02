@@ -168,3 +168,56 @@ label .mi-form-error {
     font-size: $font-size-smaller;
     line-height: $base-line-smaller;
 }
+
+// Append & Prepend
+.mi-form-append,
+.mi-form-prepend {
+	@include flex;
+
+	& input {
+		@include flex-item-one;
+	}
+	& .mi-button,
+	& span {
+		@include flex-item-shrink;
+    }
+	& span {
+        @include flex;
+        @include flex-items-column;
+        @include flex-items-center;
+
+		font-weight: normal;
+		border: $input-border-width solid $input-border-color;
+		background-color: $color-aluminum;
+		padding: 0 .875rem;
+		color: rgba(0, 0, 0, .5);
+		font-size: $font-size-smaller;
+		white-space: nowrap;
+	}
+}
+.mi-form-prepend {
+    & input {
+        border-radius: 0 $input-border-radius $input-border-radius 0;
+    }
+    & .mi-button {
+        margin-right: -1px;
+        border-radius: $input-border-radius 0 0 $input-border-radius !important;
+    }
+    & span {
+        border-right: none;
+        border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+}
+.mi-form-append {
+    & input {
+        border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+    & .mi-button {
+        margin-left: -1px;
+        border-radius: 0 $input-border-radius $input-border-radius 0 !important;
+    }
+    & span {
+        border-left: none;
+        border-radius: 0 $input-border-radius $input-border-radius 0;
+    }
+}
