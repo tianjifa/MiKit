@@ -1176,6 +1176,64 @@ label .mi-form-error {
     line-height: 20px;
 }
 
+.mi-form-append,
+.mi-form-prepend {
+    display: flex;
+}
+
+.mi-form-append input,
+.mi-form-prepend input {
+    flex: 1;
+}
+
+.mi-form-append .mi-button,
+.mi-form-append span,
+.mi-form-prepend .mi-button,
+.mi-form-prepend span {
+    flex-shrink: 0;
+}
+
+.mi-form-append span,
+.mi-form-prepend span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: normal;
+    border: 1px solid #d4d4d4;
+    background-color: #f8f8f8;
+    padding: 0 .875rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.mi-form-prepend input {
+    border-radius: 0 3px 3px 0;
+}
+
+.mi-form-prepend .mi-button {
+    margin-right: -1px;
+    border-radius: 3px 0 0 3px !important;
+}
+
+.mi-form-prepend span {
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.mi-form-append input {
+    border-radius: 3px 0 0 3px;
+}
+
+.mi-form-append .mi-button {
+    margin-left: -1px;
+    border-radius: 0 3px 3px 0 !important;
+}
+
+.mi-form-append span {
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+}
 
 
 /* ========================================================================
