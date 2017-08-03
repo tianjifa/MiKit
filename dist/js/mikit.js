@@ -9,13 +9,13 @@
 if (typeof jQuery === 'undefined') {
 	throw new Error('Mikit\'s requires jQuery')
 };
-;(function ($) {
+(function ($) {
 	var version = $.fn.jquery.split('.');
 	if (version[0] == 1 && version[1] < 8) {
 		throw new Error('Mikit\'s requires at least jQuery v1.8');
 	}
 })(jQuery);
-;(function () {
+(function () {
 	// Inherits
 	Function.prototype.inherits = function (parent) {
 		var F = function () {};
