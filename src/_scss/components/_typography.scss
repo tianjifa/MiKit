@@ -182,13 +182,13 @@ hr {
     margin-top: -1px;
 }
 blockquote {
-	padding-left: 1rem;
-	border-left: 4px solid rgba(0, 0, 0, .1);
-	font-style: italic;
-	color: rgba($color-text, .65);
-	& p {
-    	    margin-bottom: .5rem;
-	}
+    padding-left: 1rem;
+    border-left: 4px solid rgba(0, 0, 0, .1);
+    font-style: italic;
+    color: rgba($color-text, .65);
+    & p {
+        margin-bottom: .5rem;
+    }
 }
 blockquote:before {
     content: none;
@@ -218,49 +218,46 @@ mark, code, samp, kbd {
     color: rgba($color-text, .85);
 }
 code {
-	background: $color-silver;
+    background: $color-silver;
 }
 mark {
-	background: $color-warning;
+    background: $color-warning;
 }
 samp {
-	color: #fff;
-	background: $color-focus;
+    color: #fff;
+    background: $color-focus;
 }
 kbd {
-	border: 1px solid rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
 }
 sub,
 sup {
     font-size: x-small;
-	line-height: 0;
-	margin-left: 1rem/4;
-	position: relative;
+    line-height: 0;
+    margin-left: 1rem/4;
+    position: relative;
 }
 sup {
-	top: 0;
+    top: 0;
 }
 sub {
-	bottom: 1px;
+    bottom: 1px;
 }
 
 // Preformatted
 pre, code, samp, var, kbd {
-	font-family: $monospace-font-family;
+    font-family: $monospace-font-family;
 }
 pre, code, samp, var, kbd, mark {
-	font-size: 87.5%;
+    font-size: 87.5%;
 }
 pre,
 pre code {
     background: $color-aluminum;
-	padding: 0;
-	top: 0;
     display: block;
-    line-height: $base-line-small;
     color: rgba($color-text, .85);
-	overflow: hidden;
-	white-space: pre-wrap;
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 pre {
     padding: 1rem;
@@ -268,7 +265,7 @@ pre {
 
 // Figure
 figcaption {
-	opacity: .6;
+    opacity: .6;
 }
 figure figcaption {
     position: relative;
@@ -340,13 +337,13 @@ fieldset {
 
 // Alignment
 .mi-align-left {
-	text-align: left;
+    text-align: left;
 }
 .mi-align-center {
-	text-align: center;
+    text-align: center;
 }
 .mi-align-right {
-	text-align: right;
+    text-align: right;
 }
 
 // Text style
@@ -372,20 +369,20 @@ fieldset {
     opacity: 1;
 }
 .mi-text-smaller {
-	font-size: $font-size-smaller;
-	line-height: $base-line-smaller;
+    font-size: $font-size-smaller;
+    line-height: $base-line-smaller;
 }
 .mi-text-small {
-	font-size: $font-size-small;
-	line-height: $base-line-small;
+    font-size: $font-size-small;
+    line-height: $base-line-small;
 }
 .mi-text-big {
-	font-size: $font-size-big;
-	line-height: $base-line-big;
+    font-size: $font-size-big;
+    line-height: $base-line-big;
 }
 .mi-text-large {
-	font-size: $font-size-large;
-	line-height: $base-line-large;
+    font-size: $font-size-large;
+    line-height: $base-line-large;
 }
 
 // Text Columns
