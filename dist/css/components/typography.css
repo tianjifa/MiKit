@@ -318,8 +318,6 @@ mark {
 pre,
 pre code {
     display: block;
-    padding: 0;
-    line-height: 20px;
     color: rgba(49, 52, 57, 0.85);
     background: #f8f8f8;
     overflow: hidden;
