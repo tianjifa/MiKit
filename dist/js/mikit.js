@@ -1338,7 +1338,7 @@ if (typeof jQuery === 'undefined') {
 			return (this.$element.closest('.mi-fixed').length !== 0);
 		},
 		getPlacement: function (height) {
-			return ($(document).height() < height) ? 'top' : 'bottom';
+			return ( ( $(document).scrollTop() + $(window).height() ) < height ) ? 'top' : 'bottom';
 		},
 		getOffset: function (position) {
 			return (this.isNavigationFixed()) ? this.$element.position() : this.$element.offset();
