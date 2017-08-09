@@ -53,9 +53,9 @@
 	</div>
 
 	<div class="component-show">
-		<p>作为一个轻量级、易用的、完整的、基于jQuery的Web UI框架，使用Missra可以帮助您快速创建网页模板，把更多的事件留给您喜爱做的事。 开始使用Missra是非常简单和快速的，你可以在一分钟之内学会使用。 以下是设置Missra的方法，以及"开箱即用"的基本定制。</p>
+		<p>作为一个轻量级、易用的、完整的、基于jQuery的Web UI框架，使用Mikit可以帮助您快速创建网页模板，把更多的事件留给您喜爱做的事。 开始使用Mikit是非常简单和快速的，你可以在一分钟之内学会使用。 以下是设置Mikit的方法，以及"开箱即用"的基本定制。</p>
 		<h3 id="h-basic-template" class="section-head">基础模版</h3>
-		<p>使用Missra设置你的Web应用框架，只需将此代码添加到您的Web页面中，即可使基本模板立即生效。&nbsp;</p>
+		<p>使用Mikit设置你的Web应用框架，只需将此代码添加到您的Web页面中，即可使基本模板立即生效。&nbsp;</p>
 
 <pre class="prettyprint lang-js">&lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -63,14 +63,14 @@
         &lt;title&gt;Basic Template&lt;/title&gt;
         &lt;meta charset="utf-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-        &lt;!-- Missra CSS --&gt;
+        &lt;!-- Mikit CSS --&gt;
         &lt;link rel="stylesheet" href="assets/css/kube.css"&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;h1&gt;Hello, world!&lt;/h1&gt;
-        &lt;!-- jQuery + Missra.js  --&gt;
+        &lt;!-- jQuery + Mikit.js  --&gt;
         &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;
-        &lt;script src="assets/js/missra.js"&gt;&lt;/script&gt;
+        &lt;script src="assets/js/mikit.js"&gt;&lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;</pre>
 
@@ -86,16 +86,16 @@
 	
 	
 		<h3 id="h-development" class="section-head">使用Mikit开发</h3>
-		<p>Mikit被设计来帮助你的网站开发，这就是为什么使用Mikit制作网站如此容易。为了加快开发速度提高开发效率，只需从Mikit源文件(包括variables,mixins 和简化日常任务所需的工具)里引入missra.scss文件即可。例如：在项目master.scss样式文件中引入missra.scss&nbsp;将会编译成master.css:</p>
+		<p>Mikit被设计来帮助你的网站开发，这就是为什么使用Mikit制作网站如此容易。为了加快开发速度提高开发效率，只需从Mikit源文件(包括variables,mixins 和简化日常任务所需的工具)里引入mikit.scss文件即可。例如：在项目master.scss样式文件中引入mikit.scss&nbsp;将会编译成master.css:</p>
 <pre class="prettyprint lang-js">// master.scss
-@import "dist/scss/missra.scss";</pre>
+@import "dist/scss/mikit.scss";</pre>
 	
 		<p>
-			现在Missra所有的变量和集合在master.scss都是现成的，你可以在需要的时候使用它们。例如：
+			现在Mikit所有的变量和集合在master.scss都是现成的，你可以在需要的时候使用它们。例如：
 		</p>
 	
 <pre class="prettyprint lang-js">// master.scss
-@import "dist/scss/missra.scss";
+@import "dist/scss/mikit.scss";
 
 #sidebar {
     @include flex-item-width(200px);
@@ -104,7 +104,7 @@
 	<p>另外，你可以从variables.scss设置</p>
 
 <pre class="prettyprint lang-js">// master.scss
-@import "dist/scss/missra.scss";
+@import "dist/scss/mikit.scss";
 
 #my-layout {
     padding: $base-line;
