@@ -40,7 +40,7 @@ Mikit支持最新现代版主流浏览器:
 
 ## 快速开始
 - [快速开始向导](http://mikit.missra.com/quick-start/) — 一分钟快速开始使用
-- [开发人员使用Mikit](http://mikit.missra.com/development/) — 开始定制开发
+- [开发人员使用Mikit](http://mikit.missra.com/custom-plugins/) — 开始定制开发
 
 ## License
 您可以以任何您喜欢的方式项目中使用Mikit，请务必保留Mikit版权。
