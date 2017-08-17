@@ -24,8 +24,10 @@
     & a:hover {
     	@include transition;
     	color: $color-text;
-    	text-decoration: underline;
-    	background-color: #F0F0F0;
+        /* text-decoration: underline; */
+        /* background-color: #F0F0F0; */
+        border: 1px solid rgba(0,0,0,.09);
+        border-bottom: 1px solid #fff;
     }
 }
 
