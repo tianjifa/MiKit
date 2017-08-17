@@ -32,8 +32,10 @@
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s;
     color: #313439;
-    text-decoration: underline;
-    background-color: #F0F0F0;
+    /* text-decoration: underline; */
+    /* background-color: #F0F0F0; */
+    border: 1px solid rgba(0,0,0,.09);
+    border-bottom: 1px solid #fff;
 }
 
 @media (min-width: 768px) {
