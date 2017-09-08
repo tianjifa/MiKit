@@ -2,8 +2,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var cssbeautify = require('gulp-cssbeautify');
 var rename = require('gulp-rename');
 var minify = require('gulp-clean-css');
+var notify = require('gulp-notify');
+
+var successNotify = false;
 
 var scripts = [
 	"src/_js/Core/Mikit.js",
@@ -25,11 +29,20 @@ var scripts = [
 
 gulp.task('sass', function() {
     return gulp.src('src/mikit.scss')
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(cssbeautify({
+            indent: '    ',
+            openbrace: 'end-of-line',
+            autosemicolon: true
+        }))
         .pipe(gulp.dest('dist/css'))
         .pipe(rename('mikit.min.css'))
         .pipe(minify())
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'))
+        .pipe(notify(function(file) {  
+            return successNotify && 'scss/sass compiled successfully!';  
+        })); 
+        
 });
 
 gulp.task('combine', function() {
@@ -45,7 +58,10 @@ gulp.task('combine', function() {
             'src/_scss/mixins/_utils.scss'
         ])
         .pipe(concat('mikit.scss'))
-        .pipe(gulp.dest('dist/scss'));
+        .pipe(gulp.dest('dist/scss'))
+        .pipe(notify(function(file) {  
+            return successNotify && 'scss/sass combined successfully!';  
+        })); 
 });
 
 gulp.task('scripts', function() {
@@ -54,7 +70,10 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/js'))
         .pipe(rename('mikit.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(notify(function(file) {  
+            return successNotify && 'scripts compiled successfully!';  
+        }));
 });
 
 gulp.task('watch', function() {
