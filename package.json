@@ -1,7 +1,12 @@
 {
   "name": "mikit",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A web framework for professional developers and designers alike.",
+  "author": {
+    "name": "Mikit",
+    "email": "mikit@missra.com"
+  },
+  "homepage": "http://mikit.missra.com",
   "main": "dist/css/mikit.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/xmissra/mikit.git"
   },
+  
   "keywords": [
     "css",
     "javaScript",
@@ -17,7 +23,5 @@
     "mikit",
     "sass"
   ],
-  "author": "Mikit",
-  "license": "MIT",
-  "homepage": "https://github.com/xmissra/mikit#readme"
+  "license": "MIT"
 }
