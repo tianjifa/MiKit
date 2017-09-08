@@ -119,5 +119,5 @@ button:hover,
 
 // Secondary
 .mi-button.mi-button-secondary {
-	@include mi-button($color-button-secondary-text, $color-button-secondary);
+	@include button($color-button-secondary-text, $color-button-secondary);
 }
