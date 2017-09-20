@@ -25,7 +25,6 @@ td {
 th,
 td {
 	padding: $table-padding-tb $table-padding-rl;
-	border-bottom: $table-border;
 	&:first-child {
 		padding-left: 0;
 	}
