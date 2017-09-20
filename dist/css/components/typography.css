@@ -258,8 +258,7 @@ code,
 samp,
 kbd {
     position: relative;
-    top: -1px;
-    padding: 4px 4px 2px 4px;
+    padding: 4px 4px;
     display: inline-block;
     line-height: 1;
     color: rgba(49, 52, 57, 0.85);
