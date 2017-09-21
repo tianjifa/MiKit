@@ -30,7 +30,7 @@
 .mi-message .mi-close {
     position: absolute;
     right: 1rem;
-    top: 1.0rem;
+    top: 0.875rem;
     cursor: pointer;
 }
 
