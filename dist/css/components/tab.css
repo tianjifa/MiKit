@@ -9,7 +9,7 @@
 
 .mi-tab li em,
 .mi-tab li.mi-active a {
-    color: #313439;
+    color: #353535;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: default;
     text-decoration: none;
@@ -32,7 +32,7 @@
 .mi-tab a:hover {
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s;
-    color: #313439;
+    color: #353535;
     /* text-decoration: underline; */
     /* background-color: #F0F0F0; */
     border: 1px solid rgba(0,0,0,.09);
