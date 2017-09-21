@@ -2872,10 +2872,10 @@ button:hover,
 .mi-message {
     position: relative;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     background: #e5e5e5;
     padding: 1rem 2.5rem 1rem 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 .mi-message a {
