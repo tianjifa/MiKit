@@ -154,7 +154,7 @@ button:hover,
 
 .mi-button.mi-button-secondary {
     color: #fff;
-    background-color: #313439;
+    background-color: #353535;
 }
 
 .mi-button.mi-button-secondary:hover {
@@ -170,8 +170,8 @@ button:hover,
 
 .mi-button.mi-button-secondary.mi-button-outline {
     background: none;
-    color: #313439;
-    border-color: #313439;
+    color: #353535;
+    border-color: #353535;
 }
 
 .mi-button.mi-button-secondary.mi-button-outline:hover {
