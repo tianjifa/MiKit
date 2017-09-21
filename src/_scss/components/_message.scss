@@ -1,14 +1,10 @@
 .mi-message {
-    font-family: $monospace-font-family;
+    position: relative;
     font-size: $font-size-small;
     line-height: $base-line-small;
     background: $color-silver;
-    color: $color-text;
-    padding: 1rem;
-    padding-right: 2.5em;
-    padding-bottom: .75rem;
+    padding: 1rem 2.5rem 1rem 1rem;
     margin-bottom: $base-line;
-    position: relative;
 
     & a {
         color: inherit;
