@@ -2870,12 +2870,10 @@ button:hover,
  ========================================================================== */ 
 
 .mi-message {
-    font-size: 14px;
-    line-height: 20px;
+    position: relative;
     background: #e5e5e5;
     padding: 1rem 2.5rem 1rem 1rem;
     margin-bottom: 1.5rem;
-    position: relative;
 }
 
 .mi-message a {
