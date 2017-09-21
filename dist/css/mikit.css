@@ -550,7 +550,7 @@ fieldset {
 }
 
 .mi-color-darkgray {
-    color: #313439;
+    color: #353535;
 }
 
 
@@ -600,7 +600,7 @@ fieldset {
 }
 
 .mi-bg-darkgray {
-    background-color: #313439;
+    background-color: #353535;
 }
 
 .mi-bg-highlight {
@@ -1150,7 +1150,7 @@ input[type="checkbox"] {
 
 label {
     display: block;
-    color: #313439;
+    color: #353535;
 }
 
 label .mi-form-req {
@@ -1388,7 +1388,7 @@ button:hover,
 
 .mi-button.mi-button-secondary {
     color: #fff;
-    background-color: #313439;
+    background-color: #353535;
 }
 
 .mi-button.mi-button-secondary:hover {
@@ -1404,8 +1404,8 @@ button:hover,
 
 .mi-button.mi-button-secondary.mi-button-outline {
     background: none;
-    color: #313439;
-    border-color: #313439;
+    color: #353535;
+    border-color: #353535;
 }
 
 .mi-button.mi-button-secondary.mi-button-outline:hover {
@@ -1433,7 +1433,7 @@ button:hover,
     line-height: 18px;
     padding: 0 10px;
     font-weight: 500;
-    color: #313439;
+    color: #353535;
     border: 1px solid transparent;
     vertical-align: middle;
     text-decoration: none;
@@ -1571,7 +1571,7 @@ button:hover,
 }
 
 .mi-breadcrumb li.mi-active a {
-    color: #313439;
+    color: #353535;
     text-decoration: none;
     cursor: text;
 }
@@ -1607,7 +1607,7 @@ button:hover,
 
 .mi-pagination a {
     text-decoration: none;
-    color: #313439;
+    color: #353535;
 }
 
 .mi-pagination a:hover {
@@ -3042,7 +3042,7 @@ button:hover,
 
 .mi-tab li em,
 .mi-tab li.mi-active a {
-    color: #313439;
+    color: #353535;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: default;
     text-decoration: none;
@@ -3065,7 +3065,7 @@ button:hover,
 .mi-tab a:hover {
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s;
-    color: #313439;
+    color: #353535;
     /*text-decoration: underline;*/
     /*background-color: #F0F0F0;*/
     border: 1px solid rgba(0,0,0,.09);
